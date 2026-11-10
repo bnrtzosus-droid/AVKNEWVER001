@@ -45,7 +45,7 @@ Si le domaine de production n'est pas `pessia-associes.fr`, changez `BASE_URL` d
 
 ## Crédits photos
 
-- Bandeau d’accueil : « Plato in the Long Room » par Jameson Berrios sur [Unsplash](https://unsplash.com/photos/baYgBFHY7M8) (licence Unsplash, libre d’usage).
+- Bandeau d’accueil : marteau de juge par Sasun Bughdaryan sur [Unsplash](https://unsplash.com/photos/T69Smz0SJ6w) (licence Unsplash, libre d’usage ; image retournée en miroir).
 - Les autres images proviennent du site d’origine pessia-associes.fr.
 
 ## À brancher
