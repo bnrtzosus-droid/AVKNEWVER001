@@ -104,15 +104,16 @@ footer a[data-bio]{cursor:pointer}
 footer a[data-bio]:hover{text-decoration:underline;color:#fff}
 
 :root{--sat:env(safe-area-inset-top,0px)}
+#hbar{display:none}
 @media(max-width:980px){
-#topfix::before{content:"";position:fixed;top:calc(6px + var(--sat));left:8px;right:8px;height:54px;border-radius:16px;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.22);z-index:60;pointer-events:none}
+#hbar{display:block;position:fixed;top:calc(6px + var(--sat));left:8px;right:8px;height:54px;border-radius:16px;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.22);z-index:60;pointer-events:none}
 #burger{top:calc(11px + var(--sat)) !important;left:14px !important}
 .usr{top:calc(13px + var(--sat))}
 .usr img{width:40px !important;height:40px !important}
 main>section:first-child:not(.homehero),main>article:first-child{padding-top:calc(88px + var(--sat)) !important}
 .homehero{padding-top:calc(170px + var(--sat)) !important}
-/* scrolled: a full-width bar that also closes the area behind the status bar, so no text shows above it */
-html.scrolled #topfix::before{top:0;left:0;right:0;height:calc(60px + var(--sat));border-radius:0;box-shadow:0 -140px 0 0 #fff,0 2px 14px rgba(0,0,0,.2)}
+/* scrolled: full-width bar that also covers the status-bar area, so no page text shows above it */
+html.scrolled #hbar{top:0;left:0;right:0;height:calc(60px + var(--sat));border-radius:0;box-shadow:0 2px 14px rgba(0,0,0,.2)}
 html.scrolled #burger{top:calc(8px + var(--sat)) !important;left:10px !important}
 html.scrolled .usr{top:calc(10px + var(--sat));right:14px}
 }

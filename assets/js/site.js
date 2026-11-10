@@ -131,7 +131,12 @@
 
   /* ---------- keep the menu button readable on any background (white pill once the page is scrolled) ---------- */
   var root = document.documentElement;
-  function onScroll() { root.classList.toggle("scrolled", (window.pageYOffset || 0) > 40); }
+  var themeMeta = document.querySelector('meta[name="theme-color"]'), baseTheme = themeMeta ? themeMeta.getAttribute("content") : "";
+  function onScroll() {
+    var on = (window.pageYOffset || 0) > 40;
+    root.classList.toggle("scrolled", on);
+    if (themeMeta) themeMeta.setAttribute("content", on ? "#ffffff" : baseTheme);   // status-bar / browser chrome turns white with the bar
+  }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
