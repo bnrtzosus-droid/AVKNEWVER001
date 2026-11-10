@@ -43,6 +43,11 @@ Si le domaine de production n'est pas `pessia-associes.fr`, changez `BASE_URL` d
 - Polices et images hébergées sur le site (WebP), dimensions des images renseignées par `tools/build.py` (nécessite Pillow : `pip install pillow`)
 - Respect de `prefers-reduced-motion` : toutes les animations sont désactivées
 
+## Crédits photos
+
+- Bandeau d’accueil : « Plato in the Long Room » par Jameson Berrios sur [Unsplash](https://unsplash.com/photos/baYgBFHY7M8) (licence Unsplash, libre d’usage).
+- Les autres images proviennent du site d’origine pessia-associes.fr.
+
 ## À brancher
 
 Les formulaires (rendez-vous, « Une question ? ») n'envoient pas encore de message : ils attendent un
