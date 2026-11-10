@@ -182,6 +182,12 @@
     draw();
   })();
 
+
+  /* ---------- once the page is loaded, fetch the remaining lazy images in the background so they are already there when scrolled to ---------- */
+  function warm() { $$("img[loading='lazy']").forEach(function (i) { i.loading = "eager"; }); }
+  if (document.readyState === "complete") setTimeout(warm, 300);
+  else window.addEventListener("load", function () { setTimeout(warm, 300); });
+
   /* ---------- cookie notice ---------- */
   var accept = function () {
     document.documentElement.setAttribute("data-ck", "1");
