@@ -62,7 +62,7 @@
     if (t.id === "burger") { setNav($("#mobnav").style.display !== "flex"); return; }
     if (t.hasAttribute("data-bio")) { openBio(+t.getAttribute("data-bio")); return; }
     var track = $('[data-route="' + route + '"] .pa-track');
-    if (track) track.scrollBy({ left: +t.getAttribute("data-scroll") * 364, behavior: "smooth" });
+    if (track) var it = track.firstElementChild; track.scrollBy({ left: +t.getAttribute("data-scroll") * (it ? it.offsetWidth : 364), behavior: "smooth" });
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeBio(); });
   $$("[data-bio]").forEach(function (el) {
