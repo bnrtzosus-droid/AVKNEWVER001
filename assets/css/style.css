@@ -108,4 +108,7 @@ footer a[data-bio]:hover{text-decoration:underline;color:#fff}
 #burger{top:11px !important;left:14px !important}
 .usr img{width:40px !important;height:40px !important}
 main>section:first-child:not(.homehero),main>article:first-child{padding-top:88px !important}
+html.scrolled #topfix::before{top:0;left:0;right:0;height:60px;border-radius:0;box-shadow:0 2px 14px rgba(0,0,0,.2)}
+html.scrolled #burger{top:8px !important;left:10px !important}
+html.scrolled .usr{top:10px;right:14px}
 }
