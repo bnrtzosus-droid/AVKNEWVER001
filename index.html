@@ -28,6 +28,10 @@ body{margin:0;font-family:'Montserrat',Helvetica,Arial,sans-serif;color:#666;bac
 a{color:#428c9e;text-decoration:none}a:hover{color:#2f6c7b}*{box-sizing:border-box}
 .pa-track::-webkit-scrollbar{display:none}input,select,textarea,button{font-family:inherit}
 button{transition:background .2s,color .2s}a,.nl{transition:color .2s}
+[data-route],footer{transition:opacity .28s ease}
+html.rt-out [data-route],html.rt-out footer{opacity:0;transition-duration:.16s}
+#ldbar{position:fixed;left:0;top:0;height:3px;width:0;background:#428c9e;z-index:120;opacity:0;pointer-events:none}
+@media(prefers-reduced-motion:reduce){[data-route],footer{transition:none}}
 .nl.active{color:#428c9e !important}
 .dd-wrap{display:none}.dd:hover .dd-wrap,.dd:focus-within .dd-wrap{display:contents}
 .mob{display:none}#mobnav{display:none}
@@ -96,6 +100,7 @@ footer h2{font-size:22px !important}
 </style>
 </head>
 <body>
+<div id="ldbar"></div>
 <div style="font-family:'Montserrat',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.7;color:#666;background:#fff">
 
 <div id="topfix" style="position:sticky;top:0;z-index:50"><div class="not-phone"><div style="background:#428c9e;color:#fff">

@@ -40,7 +40,7 @@
     $("#bio-x").focus();
   }
 
-  function applyHash() {
+  function applyRoute() {
     var parts = (location.hash || "").replace(/^#\/?/, "").split("/");
     route = ROUTES[parts[0]] || "home";
     var sec = parts[1];
@@ -54,6 +54,27 @@
     closeBio();
     var el = sec && document.getElementById(sec);
     window.scrollTo(0, el ? el.getBoundingClientRect().top + window.scrollY - 110 : 0);
+  }
+
+  // Page change: short fade + thin progress bar (instead of an abrupt swap)
+  var root = document.documentElement, first = true, tmr = 0, tmr2 = 0;
+  var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function routeOf() { return ROUTES[(location.hash || "").replace(/^#\/?/, "").split("/")[0]] || "home"; }
+  function applyHash() {
+    if (first || calm) { first = false; applyRoute(); return; }
+    var next = routeOf();
+    if (next === route) { applyRoute(); return; }       // same page (anchor jump): no fade
+    clearTimeout(tmr); clearTimeout(tmr2);
+    var bar = $("#ldbar");
+    root.classList.add("rt-out");
+    if (bar) { bar.style.transition = "none"; bar.style.opacity = "1"; bar.style.width = "0"; void bar.offsetWidth; bar.style.transition = "width .35s ease"; bar.style.width = "75%"; }
+    tmr = setTimeout(function () {
+      applyRoute();
+      if (bar) { bar.style.transition = "width .15s ease"; bar.style.width = "100%"; }
+      void document.body.offsetWidth;
+      root.classList.remove("rt-out");
+      tmr2 = setTimeout(function () { if (bar) { bar.style.transition = "opacity .25s ease"; bar.style.opacity = "0"; } }, 180);
+    }, 170);
   }
 
   document.addEventListener("click", function (e) {
