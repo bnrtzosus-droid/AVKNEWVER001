@@ -46,7 +46,10 @@ html{scroll-padding-top:110px}
 .h6:hover{color:#428c9e !important;font-size:21px !important}
 .cards .card:hover h4{color:#428c9e}
 .arr{position:absolute;top:50%;transform:translateY(-50%);background:none;border:0;padding:6px;color:#333;cursor:pointer;line-height:0}.arr:hover{color:#428c9e}
-@media(min-width:981px){.hero-btns a:first-child{margin-left:-39px}}
+.homehero .wrap{text-align:center}
+.homehero .ph2{margin-left:auto !important;margin-right:auto !important}
+.homehero .hero-btns{justify-content:center !important}
+@media(max-width:767px){.homehero .wrap{text-align:left}.homehero .hero-btns{align-items:center !important}}
 @media(max-width:1180px){.arr{display:none}}
 @media(max-width:980px){.cards{grid-template-columns:repeat(2,1fr) !important}.rv{flex-basis:50% !important}.team-wrap{grid-template-columns:1fr !important;gap:50px !important}}
 @media(max-width:600px){.cards{grid-template-columns:1fr !important}.rv{flex-basis:100% !important}.team3{grid-template-columns:repeat(2,1fr) !important}}
