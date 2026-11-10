@@ -16,7 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'src')
 BASE_URL = 'https://pessia-associes.fr'
 SITE = 'Furlan & Associés'
-LOGO = '/assets/img/Logo-Picto-PESSIA-AVOCATS_S.png'
+LOGO = '/assets/img/logo-512.png'
 
 # key, output file, url path, <title>, meta description, active menu item, extra scripts
 PAGES = [
