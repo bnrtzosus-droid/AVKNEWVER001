@@ -140,6 +140,48 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+
+  /* ---------- appointment calendar (rendez-vous page) ---------- */
+  var cal = $("#rdv-cal");
+  if (cal) (function () {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var view = new Date(today.getFullYear(), today.getMonth(), 1), sel = null, hour = "";
+    var HOURS = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00"];
+    var DAYS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."];
+    var fmt = function (d, o) { return d.toLocaleDateString("fr-FR", o); };
+    function draw() {
+      var first = (view.getDay() + 6) % 7, n = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+      var h = '<div><div class="cal-h"><button type="button" data-m="-1" aria-label="Mois précédent"' +
+        (view <= new Date(today.getFullYear(), today.getMonth(), 1) ? " disabled" : "") + '>‹</button><span>' +
+        fmt(view, { month: "long", year: "numeric" }) + '</span><button type="button" data-m="1" aria-label="Mois suivant">›</button></div><div class="cal-g">';
+      DAYS.forEach(function (d) { h += "<span>" + d + "</span>"; });
+      for (var i = 0; i < first; i++) h += "<i></i>";
+      for (var d = 1; d <= n; d++) {
+        var dt = new Date(view.getFullYear(), view.getMonth(), d), wk = dt.getDay() % 6 === 0;
+        var on = sel && +dt === +sel;
+        h += '<button type="button" data-d="' + d + '"' + (dt < today || wk ? " disabled" : "") + (on ? ' class="sel" aria-pressed="true"' : "") + ">" + d + "</button>";
+      }
+      h += '</div></div><div class="cal-t">';
+      if (sel) {
+        h += "<b>" + esc(fmt(sel, { weekday: "long", day: "numeric", month: "long" })) + '</b><div class="cal-s">';
+        HOURS.forEach(function (t) { h += '<button type="button" data-h="' + t + '"' + (t === hour ? ' class="sel"' : "") + ">" + t.replace(":", "h") + "</button>"; });
+        h += "</div>";
+      } else h += "<b>Horaires</b><p>Choisissez d’abord un jour disponible (du lundi au vendredi).</p>";
+      cal.innerHTML = h + "</div>";
+      $("#rdv-date").value = sel ? sel.getFullYear() + "-" + ("0" + (sel.getMonth() + 1)).slice(-2) + "-" + ("0" + sel.getDate()).slice(-2) : "";
+      $("#rdv-heure").value = hour;
+    }
+    cal.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b || b.disabled) return;
+      if (b.hasAttribute("data-m")) view = new Date(view.getFullYear(), view.getMonth() + +b.getAttribute("data-m"), 1);
+      else if (b.hasAttribute("data-d")) { sel = new Date(view.getFullYear(), view.getMonth(), +b.getAttribute("data-d")); hour = ""; }
+      else if (b.hasAttribute("data-h")) hour = b.getAttribute("data-h");
+      draw();
+    });
+    draw();
+  })();
+
   /* ---------- cookie notice ---------- */
   var accept = function () {
     document.documentElement.setAttribute("data-ck", "1");
