@@ -46,6 +46,14 @@ def ver(path):
         return hashlib.md5(f.read()).hexdigest()[:8]
 
 
+def bust(page):
+    """Append a content hash to every local image URL so a replaced image is never served from a stale browser cache."""
+    def one(m):
+        path = m.group(1)
+        return '%s?v=%s' % (path, ver(path)) if os.path.exists(os.path.join(ROOT, path.lstrip('/'))) else path
+    return re.sub(r'(/assets/img/[A-Za-z0-9_.\-]+\.(?:webp|png|jpg|svg))(?![?\w])', one, page)
+
+
 def read(*p):
     with open(os.path.join(SRC, *p), encoding='utf8') as f:
         return f.read()
@@ -144,13 +152,13 @@ def main():
     shutil.copyfile(os.path.join(SRC, 'style.css'), os.path.join(ROOT, 'assets', 'css', 'style.css'))
     urls = []
     for key, out, url, title, desc, nav, scripts in PAGES:
-        write(out, layout(title, desc, url, nav, scripts, lazy(read('pages', key + '.html'))))
+        write(out, bust(layout(title, desc, url, nav, scripts, lazy(read('pages', key + '.html')))))
         urls.append(url)
     nf = '''<section style="background:#fff;padding:clamp(80px,12vw,140px) 0;text-align:center"><div class="wrap" style="width:min(90%,700px);margin:0 auto">
 <h1 style="margin:0 0 14px;font-size:clamp(40px,8vw,72px);font-weight:700;color:#428c9e;line-height:1.1">404</h1>
 <p style="margin:0 0 30px;font-size:20px">Cette page est introuvable.</p>
 <a href="/" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Retour à l’accueil</a></div></section>'''
-    write('404.html', layout('Page introuvable – Pessia & Associés', 'Cette page est introuvable.', '/404', None, [], nf, robots='noindex'))
+    write('404.html', bust(layout('Page introuvable – Pessia & Associés', 'Cette page est introuvable.', '/404', None, [], nf, robots='noindex')))
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           ''.join('  <url><loc>%s%s</loc></url>\n' % (BASE_URL, u) for u in urls) + '</urlset>\n')
     write('robots.txt', 'User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' % BASE_URL)
