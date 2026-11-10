@@ -219,6 +219,38 @@ const lang = (p) => p.evaluate(() => document.documentElement.lang);
       ok((await p.evaluate(() => localStorage.getItem('pa-lang'))) === 'sv', 'Swedish chosen from the mobile menu and stored');
       await c.close();
     }
+
+    console.log('\n9. Layout: no overflow, no broken words in titles/buttons (6 languages x 8 pages x 4 widths)');
+    for (const l of LANGS) {
+      const c = await ctx(browser, { locale: l });
+      await c.addInitScript((l) => { try { localStorage.setItem('pa-lang', l); } catch (e) {} }, l);
+      const issues = [];
+      for (const w of [360, 402, 768, 1024, 1440]) {
+        const p = await c.newPage();
+        await p.setViewportSize({ width: w, height: 900 });
+        for (const pg of PAGES) {
+          await p.goto(BASE + pg);
+          await p.waitForFunction(() => !document.documentElement.classList.contains('i18n-wait'));
+          await p.waitForTimeout(120);
+          const r = await p.evaluate(() => {
+            const out = [], vw = document.documentElement.clientWidth;
+            if (document.documentElement.scrollWidth > vw + 1) out.push('page overflows ' + document.documentElement.scrollWidth + '>' + vw);
+            document.querySelectorAll('main h1,main h2,main h3,main h4,main a.h1,main a.h4,main button').forEach((el) => {
+              if (!el.clientWidth || el.closest('.cal') || getComputedStyle(el).display === 'none') return;
+              el.style.setProperty('overflow-wrap', 'normal', 'important');
+              if (el.scrollWidth > el.clientWidth + 1) out.push('broken word in "' + el.textContent.trim().slice(0, 30) + '"');
+              el.style.removeProperty('overflow-wrap');
+            });
+            document.querySelectorAll('main .cards, main .cards > *').forEach((el) => { if (el.scrollWidth > el.clientWidth + 1) out.push('cards overflow'); });
+            return out;
+          });
+          r.forEach((x) => issues.push(w + ' ' + pg + ' ' + x));
+        }
+        await p.close();
+      }
+      ok(issues.length === 0, l + ': layout intact at 360 / 402 / 768 / 1024 / 1440 px', issues.slice(0, 3).join(' | '));
+      await c.close();
+    }
   } catch (e) {
     failed++;
     console.log('  FAIL unexpected error: ' + e.message);

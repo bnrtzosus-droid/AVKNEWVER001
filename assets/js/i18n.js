@@ -70,7 +70,34 @@
     }
   }
 
+
+  /* ---------- keep long translated words inside their box (titles shrink just enough, never overflow) ---------- */
+  var FIT = "h1,h2,h3,h4,.ph1,.ph2";
+  var fitTimer = 0;
+  function fitAll() {
+    var list = document.querySelectorAll("main " + FIT.split(",").join(",main ") + ",footer h2,footer h3,footer h4");
+    for (var i = 0; i < list.length; i++) {
+      var el = list[i];
+      if (el._fit === undefined) el._fit = [el.style.getPropertyValue("font-size"), el.style.getPropertyPriority("font-size")];
+      if (el._fit[0]) el.style.setProperty("font-size", el._fit[0], el._fit[1]); else el.style.removeProperty("font-size");
+      if (!el.clientWidth) continue;
+      var size = parseFloat(getComputedStyle(el).fontSize), min = size * 0.55;
+      el.style.setProperty("overflow-wrap", "normal", "important");   // measure the longest word, not the broken one
+      while (el.scrollWidth > el.clientWidth && size > min) {
+        size -= 0.5;
+        el.style.setProperty("font-size", size + "px", "important");
+      }
+      el.style.removeProperty("overflow-wrap");
+    }
+  }
+  function fitSoon() { clearTimeout(fitTimer); fitTimer = setTimeout(fitAll, 120); }
+  window.addEventListener("resize", fitSoon);
+  window.addEventListener("orientationchange", fitSoon);
+  window.addEventListener("load", fitSoon);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitSoon);
+
   function done() {
+    fitAll();
     root.classList.remove("i18n-wait");
     syncSwitchers();
     document.dispatchEvent(new CustomEvent("pa:lang", { detail: lang }));
