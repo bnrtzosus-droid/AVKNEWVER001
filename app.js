@@ -56,25 +56,24 @@
     window.scrollTo(0, el ? el.getBoundingClientRect().top + window.scrollY - 110 : 0);
   }
 
-  // Page change: short fade + thin progress bar (instead of an abrupt swap)
-  var root = document.documentElement, first = true, tmr = 0, tmr2 = 0;
+  // Page change: cross-fade old -> new (no blank frame), thin progress bar as on the live site
+  var first = true, tmr = 0;
   var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   function routeOf() { return ROUTES[(location.hash || "").replace(/^#\/?/, "").split("/")[0]] || "home"; }
+  function bar(on) {
+    var b = $("#ldbar"); if (!b) return;
+    clearTimeout(tmr);
+    if (on) { b.style.transition = "none"; b.style.opacity = "1"; b.style.width = "0"; void b.offsetWidth; b.style.transition = "width .3s ease"; b.style.width = "80%"; }
+    else { b.style.transition = "width .12s ease"; b.style.width = "100%"; tmr = setTimeout(function () { b.style.transition = "opacity .25s ease"; b.style.opacity = "0"; }, 150); }
+  }
   function applyHash() {
     if (first || calm) { first = false; applyRoute(); return; }
-    var next = routeOf();
-    if (next === route) { applyRoute(); return; }       // same page (anchor jump): no fade
-    clearTimeout(tmr); clearTimeout(tmr2);
-    var bar = $("#ldbar");
-    root.classList.add("rt-out");
-    if (bar) { bar.style.transition = "none"; bar.style.opacity = "1"; bar.style.width = "0"; void bar.offsetWidth; bar.style.transition = "width .35s ease"; bar.style.width = "75%"; }
-    tmr = setTimeout(function () {
-      applyRoute();
-      if (bar) { bar.style.transition = "width .15s ease"; bar.style.width = "100%"; }
-      void document.body.offsetWidth;
-      root.classList.remove("rt-out");
-      tmr2 = setTimeout(function () { if (bar) { bar.style.transition = "opacity .25s ease"; bar.style.opacity = "0"; } }, 180);
-    }, 170);
+    if (routeOf() === route) { applyRoute(); return; }      // same page (anchor jump)
+    bar(true);
+    if (document.startViewTransition) {
+      var vt = document.startViewTransition(function () { applyRoute(); });
+      vt.finished.then(function () { bar(false); }, function () { bar(false); });
+    } else { applyRoute(); bar(false); }
   }
 
   document.addEventListener("click", function (e) {
@@ -103,4 +102,8 @@
 
   window.addEventListener("hashchange", applyHash);
   applyHash();
+
+  (window.requestIdleCallback || function (f) { setTimeout(f, 800); })(function () {
+    ["2024/07/Rectangle-2.png", "2024/07/Rectangle-25.png", "2024/07/Rectangle-47.png"].forEach(function (u) { new Image().src = "https://pessia-associes.fr/wp-content/uploads/" + u; });
+  });
 })();
