@@ -15,27 +15,27 @@ import shutil
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'src')
 BASE_URL = 'https://pessia-associes.fr'
-SITE = 'Pessia & Associés'
+SITE = 'Furlan & Associés'
 LOGO = '/assets/img/Logo-Picto-PESSIA-AVOCATS_S.png'
 
 # key, output file, url path, <title>, meta description, active menu item, extra scripts
 PAGES = [
-    ('home', 'index.html', '/', 'Pessia & Associés – Cabinet d’avocats en droit de la famille à Lyon & Annecy',
+    ('home', 'index.html', '/', 'Furlan & Associés – Cabinet d’avocats en droit de la famille à Lyon & Annecy',
      'Cabinet d’avocats en droit de la famille et des successions à Lyon et Annecy : divorce, successions, transmission de patrimoine, droit international.', 'home', []),
-    ('cabinet', 'cabinet.html', '/cabinet', 'Notre cabinet – Pessia & Associés',
-     'Découvrez le cabinet Pessia & Associés, son équipe d’avocats et ses valeurs : confiance, transparence et écoute.', 'cabinet', ['/assets/js/bios.js']),
-    ('famille', 'droit-de-la-famille.html', '/droit-de-la-famille', 'Droit de la famille et des successions – Pessia & Associés',
+    ('cabinet', 'cabinet.html', '/cabinet', 'Notre cabinet – Furlan & Associés',
+     'Découvrez le cabinet Furlan & Associés, son équipe d’avocats et ses valeurs : confiance, transparence et écoute.', 'cabinet', ['/assets/js/bios.js']),
+    ('famille', 'droit-de-la-famille.html', '/droit-de-la-famille', 'Droit de la famille et des successions – Furlan & Associés',
      'Successions, fiscalité du divorce, divorce et succession transfrontaliers, transmission de patrimoine, droit international privé à Lyon et Annecy.', 'famille', []),
-    ('actualites', 'actualites.html', '/actualites', 'Actualités – Pessia & Associés',
-     'Les actualités du cabinet d’avocats Pessia & Associés en droit de la famille à Lyon.', 'actualites', []),
+    ('actualites', 'actualites.html', '/actualites', 'Actualités – Furlan & Associés',
+     'Les actualités du cabinet d’avocats Furlan & Associés en droit de la famille à Lyon.', 'actualites', []),
     ('article', 'enjeux-droit-famille-patrimoine.html', '/enjeux-droit-famille-patrimoine',
-     'Les enjeux du droit de la famille et du patrimoine : pourquoi faire appel à un avocat spécialisé ? – Pessia & Associés',
+     'Les enjeux du droit de la famille et du patrimoine : pourquoi faire appel à un avocat spécialisé ? – Furlan & Associés',
      'Divorce, succession, donation, gestion patrimoniale : pourquoi faire appel à un cabinet spécialisé en droit de la famille et du patrimoine.', 'actualites', []),
-    ('rdv', 'rendez-vous.html', '/rendez-vous', 'Rendez-vous – Pessia & Associés',
+    ('rdv', 'rendez-vous.html', '/rendez-vous', 'Rendez-vous – Furlan & Associés',
      'Prenez directement rendez-vous avec un avocat en droit de la famille à Lyon ou Annecy.', 'rdv', []),
-    ('conf', 'politique-de-confidentialite.html', '/politique-de-confidentialite', 'Politique de confidentialité – Pessia & Associés',
+    ('conf', 'politique-de-confidentialite.html', '/politique-de-confidentialite', 'Politique de confidentialité – Furlan & Associés',
      'Politique de confidentialité du site pessia-associes.fr.', None, []),
-    ('cgu', 'cgu.html', '/cgu', 'Conditions générales d’utilisation – Pessia & Associés',
+    ('cgu', 'cgu.html', '/cgu', 'Conditions générales d’utilisation – Furlan & Associés',
      'Conditions générales d’utilisation du site pessia-associes.fr.', None, []),
 ]
 
@@ -158,7 +158,7 @@ def main():
 <h1 style="margin:0 0 14px;font-size:clamp(40px,8vw,72px);font-weight:700;color:#428c9e;line-height:1.1">404</h1>
 <p style="margin:0 0 30px;font-size:20px">Cette page est introuvable.</p>
 <a href="/" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Retour à l’accueil</a></div></section>'''
-    write('404.html', bust(layout('Page introuvable – Pessia & Associés', 'Cette page est introuvable.', '/404', None, [], nf, robots='noindex')))
+    write('404.html', bust(layout('Page introuvable – Furlan & Associés', 'Cette page est introuvable.', '/404', None, [], nf, robots='noindex')))
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           ''.join('  <url><loc>%s%s</loc></url>\n' % (BASE_URL, u) for u in urls) + '</urlset>\n')
     write('robots.txt', 'User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' % BASE_URL)

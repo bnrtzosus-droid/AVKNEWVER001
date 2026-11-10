@@ -1,4 +1,4 @@
-# Pessia & Associés – site web
+# Furlan & Associés – site web
 
 Site statique multi-pages (HTML / CSS / JS, sans dépendance), avec de vraies adresses :
 
