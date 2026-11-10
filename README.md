@@ -45,8 +45,27 @@ Si le domaine de production n'est pas `pessia-associes.fr`, changez `BASE_URL` d
 
 ## Crédits photos
 
-- Bandeau d’accueil : marteau de juge par Sasun Bughdaryan sur [Unsplash](https://unsplash.com/photos/T69Smz0SJ6w) (licence Unsplash, libre d’usage ; image retournée en miroir).
-- Les autres images proviennent du site d’origine pessia-associes.fr.
+Photos libres de droits ([licence Unsplash](https://unsplash.com/license)) :
+
+| Emplacement | Photographe |
+|---|---|
+| Bandeau d’accueil (marteau) | Sasun Bughdaryan |
+| Bandeau « Droit de la famille et des successions » (signature) | Dimitri Karastelev |
+| Droit des successions (album photo) | Laura Fuhrman |
+| Fiscalité du divorce et des successions | Kelly Sikkema |
+| Divorce transfrontalier (alliances) | Micah & Sammie Chaffin |
+| Succession transfrontalière (globe) | Christian Lue |
+| Droit de la famille (promenade) | Filip Rankovic Grobgaard |
+| Transmission de patrimoine (maison) | Ries Bosch |
+| Droit international (passeport) | Global Residence Index |
+| Bandeau Cabinet (salle de réunion) | Benjamin Child |
+| Valeurs du cabinet (poignée de main) | Rock Staar |
+| Bandeau Actualités et page Droit de la famille (façade, famille) | Chris Bischoff, Margo Evardson |
+| Article (palais de justice) | Miles Smith |
+| Bandeau Rendez-vous (agenda) | Eric Rothermel |
+
+Les photos des avocats, les avatars des avis et le logo proviennent du site d’origine pessia-associes.fr.
+Les pictogrammes de contact (téléphone, adresse, e-mail) sont des icônes Material Design (Apache 2.0).
 
 ## À brancher
 
