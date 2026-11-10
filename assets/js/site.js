@@ -90,41 +90,6 @@
     history.pushState(null, "", a.hash);
   });
 
-  /* ---------- scroll reveal: every text block appears as it enters the screen ---------- */
-  var SEL =
-    "main :is(h2,h3,h4,p,ul,ol):not(.ph2), .cards .card, .mission .wrap > div > div, .team3 > div, .team-wrap > div:last-child > *, " +
-    "[data-bio], .rdvform, main section .wrap img, main article img, main a[style*='border-radius:100px']";
-  var cand = $$(SEL).filter(function (el) {
-    if (el.closest(".homehero, .pa-track, footer, header, #mobnav, #cookie")) return false;
-    var sec = el.closest("section");
-    return !(sec && sec.querySelector(".ph1"));                  // hero banners animate on their own
-  });
-  var set = new Set(cand);
-  var targets = cand.filter(function (el) {                      // keep outermost blocks only
-    for (var p = el.parentNode; p && p.nodeType === 1 && p.tagName !== "MAIN"; p = p.parentNode) if (set.has(p)) return false;
-    return true;
-  });
-  var groups = new Map();
-  targets.forEach(function (el) {
-    var par = el.parentNode, n = groups.get(par) || 0;
-    groups.set(par, n + 1);
-    el.classList.add("reveal");
-    el.style.setProperty("--d", Math.min(n, 5) * 0.08 + "s");
-  });
-  // once the entrance is done, drop the helper classes so hover effects work normally again
-  function shown(el) {
-    el.classList.add("in");
-    setTimeout(function () { el.classList.remove("reveal", "in"); el.style.removeProperty("--d"); }, 1100 + parseFloat(el.style.getPropertyValue("--d") || 0) * 1000);
-  }
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { shown(en.target); io.unobserve(en.target); } });
-    }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
-    targets.forEach(function (el) { io.observe(el); });
-  } else {
-    targets.forEach(function (el) { el.classList.remove("reveal"); });
-  }
-
   /* ---------- testimonials: automatic scrolling (pauses on hover/touch and when off-screen) ---------- */
   $$(".pa-track").forEach(function (track) {
     if (reduce || track.children.length < 2) return;

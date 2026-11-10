@@ -38,8 +38,8 @@ Si le domaine de production n'est pas `pessia-associes.fr`, changez `BASE_URL` d
 ## Effets et performance
 
 - Transition en fondu entre les pages (View Transitions inter-documents ; repli sans animation sur les anciens navigateurs)
+- Aucune animation sur les textes ni sur les images ; les avis clients défilent automatiquement (pause au survol/toucher)
 - Préchargement de la page suivante au survol (règles de spéculation sur Chromium, `prefetch` ailleurs)
-- Apparition progressive du contenu au défilement ; le contenu reste visible sans JavaScript
 - Polices et images hébergées sur le site (WebP), dimensions des images renseignées par `tools/build.py` (nécessite Pillow : `pip install pillow`)
 - Respect de `prefers-reduced-motion` : toutes les animations sont désactivées
 
