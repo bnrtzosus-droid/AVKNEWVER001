@@ -111,7 +111,7 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
 {('<meta name="robots" content="%s">' % robots) if robots else ''}
