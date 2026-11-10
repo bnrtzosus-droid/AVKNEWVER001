@@ -27,6 +27,8 @@ html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease
 html.js .reveal.in{opacity:1;transform:none}
 a[style*="border-radius:100px"],button[style*="border-radius:100px"]{transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease}
 a[style*="border-radius:100px"]:hover,button[style*="border-radius:100px"]:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.16)}
+/* width/height attributes only reserve space; CSS decides the displayed size */
+main img{height:auto}
 .cimgw{display:block;overflow:hidden;background:#e8f1f3}
 .cimg{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
 .cards .card:hover .cimg{transform:scale(1.06)}
