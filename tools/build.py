@@ -60,8 +60,35 @@ E = lambda s: html.escape(s, quote=True)
 header, footer, cookie = read('partials', 'header.html'), read('partials', 'footer.html'), read('partials', 'cookie.html')
 
 
+_dims = {}
+
+
+def dims(src):
+    """(width, height) of a local image, so the browser can reserve space before it loads."""
+    if src not in _dims:
+        _dims[src] = None
+        path = os.path.join(ROOT, src.lstrip('/'))
+        if src.endswith(('.webp', '.png', '.jpg')) and os.path.exists(path):
+            try:
+                from PIL import Image
+                with Image.open(path) as im:
+                    _dims[src] = im.size
+            except ImportError:
+                pass
+    return _dims[src]
+
+
 def lazy(s):
-    return re.sub(r'<img (?![^>]*loading=)', '<img loading="lazy" decoding="async" ', s)
+    def one(m):
+        tag = m.group(0)
+        if 'loading=' not in tag:
+            tag = tag.replace('<img ', '<img loading="lazy" decoding="async" ', 1)
+        src = re.search(r'src="([^"]+)"', tag)
+        d = dims(src.group(1)) if src else None
+        if d and ' width=' not in tag:
+            tag = tag.replace('<img ', '<img width="%d" height="%d" ' % d, 1)
+        return tag
+    return re.sub(r'<img [^>]*>', one, s)
 
 
 def layout(title, desc, url, nav, scripts, body, robots=None):
@@ -91,7 +118,8 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
 <link rel="icon" href="{LOGO}">
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 {preload}<link rel="stylesheet" href="/assets/css/style.css?v={CSS_V}">
-<script>try{{if(localStorage.getItem("pa-cookie")==="1")document.documentElement.setAttribute("data-ck","1")}}catch(e){{}}</script>
+<script>document.documentElement.classList.add("js");try{{if(localStorage.getItem("pa-cookie")==="1")document.documentElement.setAttribute("data-ck","1")}}catch(e){{}}</script>
+<script type="speculationrules">{{"prerender":[{{"where":{{"and":[{{"href_matches":"/*"}},{{"not":{{"href_matches":"/assets/*"}}}}]}},"eagerness":"moderate"}}]}}</script>
 </head>
 <body>
 <div style="font-family:'Montserrat',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.7;color:#666;background:#fff">

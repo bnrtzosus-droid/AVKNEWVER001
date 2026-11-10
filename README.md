@@ -35,6 +35,14 @@ python3 tools/serve.py      # aperçu local sur http://localhost:8000 (mêmes ad
 Si le domaine de production n'est pas `pessia-associes.fr`, changez `BASE_URL` dans `tools/build.py`
 (balises canoniques, sitemap, robots.txt) puis relancez le build.
 
+## Effets et performance
+
+- Transition en fondu entre les pages (View Transitions inter-documents ; repli sans animation sur les anciens navigateurs)
+- Préchargement de la page suivante au survol (règles de spéculation sur Chromium, `prefetch` ailleurs)
+- Apparition progressive du contenu au défilement ; le contenu reste visible sans JavaScript
+- Polices et images hébergées sur le site (WebP), dimensions des images renseignées par `tools/build.py` (nécessite Pillow : `pip install pillow`)
+- Respect de `prefers-reduced-motion` : toutes les animations sont désactivées
+
 ## À brancher
 
 Les formulaires (rendez-vous, « Une question ? ») n'envoient pas encore de message : ils attendent un

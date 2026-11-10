@@ -3,13 +3,47 @@ body{margin:0;font-family:'Montserrat',Helvetica,Arial,sans-serif;color:#666;bac
 a{color:#428c9e;text-decoration:none}a:hover{color:#2f6c7b}*{box-sizing:border-box}
 .pa-track::-webkit-scrollbar{display:none}input,select,textarea,button{font-family:inherit}
 button{transition:background .2s,color .2s}a,.nl{transition:color .2s}
+/* ---------- motion ---------- */
 @view-transition{navigation:auto}
-::view-transition-old(root),::view-transition-new(root){animation-duration:.25s}
+::view-transition-old(root),::view-transition-new(root){mix-blend-mode:normal;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+::view-transition-old(root){animation:vt-out .22s ease both}
+::view-transition-new(root){animation:vt-in .42s both}
+@keyframes vt-out{to{opacity:0}}
+@keyframes vt-in{from{opacity:0;transform:translateY(12px)}}
+@media(min-width:981px){#topfix{view-transition-name:site-header}}
+::view-transition-group(site-header){animation-duration:0s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideIn{from{transform:translateX(-100%)}to{transform:none}}
+@keyframes ckUp{from{opacity:0;transform:translateY(100%)}to{opacity:1;transform:none}}
+@supports not (view-transition-name:none){main{animation:fadeIn .5s ease both}}
+.ph1{animation:rise .85s cubic-bezier(.2,.7,.2,1) .05s both}
+.ph2{animation:rise .85s cubic-bezier(.2,.7,.2,1) .18s both}
+.hero-btns{animation:rise .85s cubic-bezier(.2,.7,.2,1) .32s both}
+#mobnav{animation:fadeIn .25s ease}
+#mobpanel{animation:slideIn .32s cubic-bezier(.2,.7,.2,1)}
+.ckbar{animation:ckUp .6s cubic-bezier(.2,.7,.2,1) .8s both}
+html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+html.js .reveal.in{opacity:1;transform:none}
+a[style*="border-radius:100px"],button[style*="border-radius:100px"]{transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease}
+a[style*="border-radius:100px"]:hover,button[style*="border-radius:100px"]:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.16)}
+.cimgw{display:block;overflow:hidden;background:#e8f1f3}
+.cimg{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.cards .card:hover .cimg{transform:scale(1.06)}
+.tph,[data-bio] img{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease}
+.team3>div:hover .tph,[data-bio]:hover img{transform:scale(1.04);box-shadow:0 10px 26px rgba(0,0,0,.18)}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation:none !important;transition:none !important}
+html.js .reveal{opacity:1 !important;transform:none !important}
+::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none !important}
+}
 html{scroll-padding-top:110px}
 @media(max-width:980px){html{scroll-padding-top:20px}}
 #cookie{display:block}html[data-ck] #cookie{display:none}
 .nl.active{color:#428c9e !important}
-.dd-wrap{display:none}.dd:hover .dd-wrap,.dd:focus-within .dd-wrap{display:contents}
+.dd-wrap{display:contents}
+.dd-wrap>div{opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .22s ease,transform .22s ease,visibility 0s .22s}
+.dd:hover .dd-wrap>div,.dd:focus-within .dd-wrap>div{opacity:1;visibility:visible;transform:none;transition-delay:0s}
 .mob{display:none}#mobnav{display:none}
 @media(max-width:980px){.desk{display:none !important}.mob{display:contents}}
 @media(min-width:981px){#mobnav{display:none !important}}
@@ -21,6 +55,7 @@ html{scroll-padding-top:110px}
 .h4:hover{background:transparent !important;color:#fff !important}
 .h5:hover{background:#428c9e !important;color:#fff !important}
 .h6:hover{color:#428c9e !important;font-size:21px !important}
+.cards .card h4{transition:color .25s ease}
 .cards .card:hover h4{color:#428c9e}
 .arr{position:absolute;top:50%;transform:translateY(-50%);background:none;border:0;padding:6px;color:#333;cursor:pointer;line-height:0}.arr:hover{color:#428c9e}
 @media(min-width:981px){.hero-btns a:first-child{margin-left:-39px}}

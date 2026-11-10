@@ -76,6 +76,59 @@
   // leaving the page through the browser's back/forward cache must not keep the menu open
   window.addEventListener("pageshow", function () { setNav(false); });
 
+
+
+  /* ---------- smooth scroll for links to a section of the current page ---------- */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href*='#']") : null;
+    if (!a || !a.hash || a.hash === "#" || a.pathname !== location.pathname || e.defaultPrevented) return;
+    var el = document.getElementById(decodeURIComponent(a.hash.slice(1)));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    history.pushState(null, "", a.hash);
+  });
+
+  /* ---------- scroll reveal (progressive enhancement: content is visible without JS) ---------- */
+  var targets = $$(
+    "main section h2:not(.ph2), main section h3:not(.bh3), .cards .card, .mission .wrap > div > div, .team3 > div, .team-wrap > div:last-child, " +
+    "[data-bio], .rdvform, main article > div > *, main section .wrap > p"
+  ).filter(function (el, i, a) { return a.indexOf(el) === i && !el.closest(".homehero") && !el.closest(".pa-track"); });
+  var groups = new Map();
+  targets.forEach(function (el) {
+    var par = el.parentNode, n = groups.get(par) || 0;
+    groups.set(par, n + 1);
+    el.classList.add("reveal");
+    el.style.setProperty("--d", Math.min(n % 4, 3) * 0.09 + "s");
+  });
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -5% 0px" });
+    targets.forEach(function (el) { io.observe(el); });
+    setTimeout(function () { targets.forEach(function (el) { var r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add("in"); }); }, 1500);
+  } else {
+    targets.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ---------- prefetch next page on hover/touch (Safari/Firefox; Chromium uses speculation rules) ---------- */
+  var done = {};
+  function prefetch(e) {
+    var a = e.target.closest ? e.target.closest("a[href^='/']") : null;
+    if (!a || a.hash && a.pathname === location.pathname) return;
+    var href = a.pathname;
+    if (done[href] || href.indexOf("/assets/") === 0) return;
+    done[href] = 1;
+    var l = document.createElement("link");
+    l.rel = "prefetch"; l.href = href; l.as = "document";
+    document.head.appendChild(l);
+  }
+  if (!(window.HTMLScriptElement && HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules"))) {
+    document.addEventListener("pointerover", prefetch, { passive: true });
+    document.addEventListener("touchstart", prefetch, { passive: true });
+  }
+
   /* ---------- cookie notice ---------- */
   var accept = function () {
     document.documentElement.setAttribute("data-ck", "1");
