@@ -90,27 +90,61 @@
     history.pushState(null, "", a.hash);
   });
 
-  /* ---------- scroll reveal (progressive enhancement: content is visible without JS) ---------- */
-  var targets = $$(
-    "main section h2:not(.ph2), main section h3:not(.bh3), .cards .card, .mission .wrap > div > div, .team3 > div, .team-wrap > div:last-child, " +
-    "[data-bio], .rdvform, main article > div > *, main section .wrap > p"
-  ).filter(function (el, i, a) { return a.indexOf(el) === i && !el.closest(".homehero") && !el.closest(".pa-track"); });
+  /* ---------- scroll reveal: every text block appears as it enters the screen ---------- */
+  var SEL =
+    "main :is(h2,h3,h4,p,ul,ol):not(.ph2), .cards .card, .mission .wrap > div > div, .team3 > div, .team-wrap > div:last-child > *, " +
+    "[data-bio], .rdvform, main section .wrap img, main article img, main a[style*='border-radius:100px']";
+  var cand = $$(SEL).filter(function (el) {
+    if (el.closest(".homehero, .pa-track, footer, header, #mobnav, #cookie")) return false;
+    var sec = el.closest("section");
+    return !(sec && sec.querySelector(".ph1"));                  // hero banners animate on their own
+  });
+  var set = new Set(cand);
+  var targets = cand.filter(function (el) {                      // keep outermost blocks only
+    for (var p = el.parentNode; p && p.nodeType === 1 && p.tagName !== "MAIN"; p = p.parentNode) if (set.has(p)) return false;
+    return true;
+  });
   var groups = new Map();
   targets.forEach(function (el) {
     var par = el.parentNode, n = groups.get(par) || 0;
     groups.set(par, n + 1);
     el.classList.add("reveal");
-    el.style.setProperty("--d", Math.min(n % 4, 3) * 0.09 + "s");
+    el.style.setProperty("--d", Math.min(n, 5) * 0.08 + "s");
   });
+  // once the entrance is done, drop the helper classes so hover effects work normally again
+  function shown(el) {
+    el.classList.add("in");
+    setTimeout(function () { el.classList.remove("reveal", "in"); el.style.removeProperty("--d"); }, 1100 + parseFloat(el.style.getPropertyValue("--d") || 0) * 1000);
+  }
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
-    }, { threshold: 0.12, rootMargin: "0px 0px -5% 0px" });
+      entries.forEach(function (en) { if (en.isIntersecting) { shown(en.target); io.unobserve(en.target); } });
+    }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
     targets.forEach(function (el) { io.observe(el); });
-    setTimeout(function () { targets.forEach(function (el) { var r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add("in"); }); }, 1500);
   } else {
-    targets.forEach(function (el) { el.classList.add("in"); });
+    targets.forEach(function (el) { el.classList.remove("reveal"); });
   }
+
+  /* ---------- testimonials: automatic scrolling (pauses on hover/touch and when off-screen) ---------- */
+  $$(".pa-track").forEach(function (track) {
+    if (reduce || track.children.length < 2) return;
+    var paused = false, visible = false, resume = 0;
+    function step() {
+      if (paused || !visible || document.hidden) return;
+      var it = track.firstElementChild, w = it ? it.offsetWidth : 300;
+      if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 4) track.scrollTo({ left: 0, behavior: "smooth" });
+      else track.scrollBy({ left: w, behavior: "smooth" });
+    }
+    function hold(ms) { paused = true; clearTimeout(resume); if (ms) resume = setTimeout(function () { paused = false; }, ms); }
+    track.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") hold(0); });
+    track.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") { clearTimeout(resume); paused = false; } });
+    track.addEventListener("touchstart", function () { hold(6000); }, { passive: true });
+    var sec = track.closest("section");
+    if (sec) sec.addEventListener("click", function (e) { if (e.target.closest("[data-scroll]")) hold(6000); });
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(track);
+    else visible = true;
+    setInterval(step, 4200);
+  });
 
   /* ---------- prefetch next page on hover/touch (Safari/Firefox; Chromium uses speculation rules) ---------- */
   var done = {};
