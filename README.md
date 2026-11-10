@@ -61,7 +61,7 @@ Photos libres de droits ([licence Unsplash](https://unsplash.com/license)) :
 | Bandeau Cabinet (salle de réunion) | Benjamin Child |
 | Valeurs du cabinet (poignée de main) | Cytonn Photography |
 | Bandeau Actualités et page Droit de la famille (façade, famille) | Chris Bischoff, Margo Evardson |
-| Article (palais de justice) | Miles Smith |
+| Article (Duomo de Milan) | Ouael Ben Salah |
 | Bandeau Rendez-vous (marteau et livre) | Sasun Bughdaryan |
 
 Les photos des avocats, les avatars des avis et le logo proviennent du site d’origine pessia-associes.fr.
