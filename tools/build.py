@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+"""Generate the static site (one real HTML file per page) from src/.
+
+    python3 tools/build.py
+
+Edit the partials/pages in src/, then re-run this script and commit the result.
+Change BASE_URL below if the production domain is not pessia-associes.fr.
+"""
+import html
+import os
+import re
+import shutil
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SRC = os.path.join(ROOT, 'src')
+BASE_URL = 'https://pessia-associes.fr'
+SITE = 'Pessia & Associés'
+LOGO = 'https://pessia-associes.fr/wp-content/uploads/2024/09/Logo-Picto-PESSIA-AVOCATS_S.png'
+
+# key, output file, url path, <title>, meta description, active menu item, extra scripts
+PAGES = [
+    ('home', 'index.html', '/', 'Pessia & Associés – Cabinet d’avocats en droit de la famille à Lyon & Annecy',
+     'Cabinet d’avocats en droit de la famille et des successions à Lyon et Annecy : divorce, successions, transmission de patrimoine, droit international.', 'home', []),
+    ('cabinet', 'cabinet.html', '/cabinet', 'Notre cabinet – Pessia & Associés',
+     'Découvrez le cabinet Pessia & Associés, son équipe d’avocats et ses valeurs : confiance, transparence et écoute.', 'cabinet', ['/assets/js/bios.js']),
+    ('famille', 'droit-de-la-famille.html', '/droit-de-la-famille', 'Droit de la famille et des successions – Pessia & Associés',
+     'Successions, fiscalité du divorce, divorce et succession transfrontaliers, transmission de patrimoine, droit international privé à Lyon et Annecy.', 'famille', []),
+    ('actualites', 'actualites.html', '/actualites', 'Actualités – Pessia & Associés',
+     'Les actualités du cabinet d’avocats Pessia & Associés en droit de la famille à Lyon.', 'actualites', []),
+    ('article', 'enjeux-droit-famille-patrimoine.html', '/enjeux-droit-famille-patrimoine',
+     'Les enjeux du droit de la famille et du patrimoine : pourquoi faire appel à un avocat spécialisé ? – Pessia & Associés',
+     'Divorce, succession, donation, gestion patrimoniale : pourquoi faire appel à un cabinet spécialisé en droit de la famille et du patrimoine.', 'actualites', []),
+    ('rdv', 'rendez-vous.html', '/rendez-vous', 'Rendez-vous – Pessia & Associés',
+     'Prenez directement rendez-vous avec un avocat en droit de la famille à Lyon ou Annecy.', 'rdv', []),
+    ('conf', 'politique-de-confidentialite.html', '/politique-de-confidentialite', 'Politique de confidentialité – Pessia & Associés',
+     'Politique de confidentialité du site pessia-associes.fr.', None, []),
+    ('cgu', 'cgu.html', '/cgu', 'Conditions générales d’utilisation – Pessia & Associés',
+     'Conditions générales d’utilisation du site pessia-associes.fr.', None, []),
+]
+
+
+def read(*p):
+    with open(os.path.join(SRC, *p), encoding='utf8') as f:
+        return f.read()
+
+
+def write(path, text):
+    with open(os.path.join(ROOT, path), 'w', encoding='utf8', newline='\n') as f:
+        f.write(text)
+
+
+E = lambda s: html.escape(s, quote=True)
+header, footer, cookie = read('partials', 'header.html'), read('partials', 'footer.html'), read('partials', 'cookie.html')
+
+
+def lazy(s):
+    return re.sub(r'<img (?![^>]*loading=)', '<img loading="lazy" decoding="async" ', s)
+
+
+def layout(title, desc, url, nav, scripts, body, robots=None):
+    head = header
+    if nav:
+        head = head.replace('class="nl" data-nav="%s"' % nav, 'class="nl active" data-nav="%s" aria-current="page"' % nav)
+    extra = ''.join('<script src="%s" defer></script>\n' % s for s in scripts)
+    return f'''<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{E(title)}</title>
+<meta name="description" content="{E(desc)}">
+{('<meta name="robots" content="%s">' % robots) if robots else ''}
+<link rel="canonical" href="{BASE_URL}{url}">
+<meta name="theme-color" content="#428c9e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{E(SITE)}">
+<meta property="og:title" content="{E(title)}">
+<meta property="og:description" content="{E(desc)}">
+<meta property="og:url" content="{BASE_URL}{url}">
+<meta property="og:image" content="{LOGO}">
+<link rel="icon" href="{LOGO}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script>try{{if(localStorage.getItem("pa-cookie")==="1")document.documentElement.setAttribute("data-ck","1")}}catch(e){{}}</script>
+</head>
+<body>
+<div style="font-family:'Montserrat',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.7;color:#666;background:#fff">
+{head}
+<main id="contenu">
+{body}
+</main>
+{footer}
+{cookie}
+<div id="bio-root"></div>
+</div>
+<script src="/assets/js/site.js" defer></script>
+{extra}</body>
+</html>
+'''
+
+
+def main():
+    os.makedirs(os.path.join(ROOT, 'assets', 'css'), exist_ok=True)
+    shutil.copyfile(os.path.join(SRC, 'style.css'), os.path.join(ROOT, 'assets', 'css', 'style.css'))
+    urls = []
+    for key, out, url, title, desc, nav, scripts in PAGES:
+        write(out, layout(title, desc, url, nav, scripts, lazy(read('pages', key + '.html'))))
+        urls.append(url)
+    nf = '''<section style="background:#fff;padding:clamp(80px,12vw,140px) 0;text-align:center"><div class="wrap" style="width:min(90%,700px);margin:0 auto">
+<h1 style="margin:0 0 14px;font-size:clamp(40px,8vw,72px);font-weight:700;color:#428c9e;line-height:1.1">404</h1>
+<p style="margin:0 0 30px;font-size:20px">Cette page est introuvable.</p>
+<a href="/" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Retour à l’accueil</a></div></section>'''
+    write('404.html', layout('Page introuvable – Pessia & Associés', 'Cette page est introuvable.', '/404', None, [], nf, robots='noindex'))
+    write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+          ''.join('  <url><loc>%s%s</loc></url>\n' % (BASE_URL, u) for u in urls) + '</urlset>\n')
+    write('robots.txt', 'User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' % BASE_URL)
+    print('built %d pages + 404, sitemap, robots' % len(PAGES))
+
+
+if __name__ == '__main__':
+    main()

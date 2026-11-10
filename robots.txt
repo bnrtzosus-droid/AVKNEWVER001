@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pessia-associes.fr/sitemap.xml
