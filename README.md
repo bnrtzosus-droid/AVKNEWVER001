@@ -57,12 +57,12 @@ Photos libres de droits ([licence Unsplash](https://unsplash.com/license)) :
 | Succession transfrontalière (globe) | Christian Lue |
 | Droit de la famille (promenade) | Filip Rankovic Grobgaard |
 | Transmission de patrimoine (maison) | Ries Bosch |
-| Droit international (aile d’avion) | Johny Goerend |
+| Droit international (statue de la Justice) | Sasun Bughdaryan |
 | Bandeau Cabinet (salle de réunion) | Benjamin Child |
 | Valeurs du cabinet (poignée de main) | Rock Staar |
 | Bandeau Actualités et page Droit de la famille (façade, famille) | Chris Bischoff, Margo Evardson |
 | Article (palais de justice) | Miles Smith |
-| Bandeau Rendez-vous (horloge) | Moritz Kindler |
+| Bandeau Rendez-vous (marteau et livre) | Sasun Bughdaryan |
 
 Les photos des avocats, les avatars des avis et le logo proviennent du site d’origine pessia-associes.fr.
 Les pictogrammes de contact (téléphone, adresse, e-mail) sont des icônes Material Design (Apache 2.0).
