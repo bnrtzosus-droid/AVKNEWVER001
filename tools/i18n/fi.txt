@@ -1,0 +1,309 @@
+h003 | Etusivu
+h004 | Toimistomme
+h005 | Perheoikeus <span style="font-size:12px">▾</span>
+h006 | Perintöoikeus
+h007 | Rajat ylittävä avioero
+h008 | Rajat ylittävä perintö
+h009 | Avioeron verotus
+h010 | Perheoikeus
+h011 | Varallisuuden siirto
+h012 | Kansainvälinen oikeus
+h013 | Ajankohtaista
+h014 | Varaa aika
+h019 | Toimisto
+h021 | Ajanvaraus
+h022 | Milano
+h024 | Tiimimme
+h025 | Asianajaja Abramo FURLAN
+h026 | Asianajaja Ancilla GIANGRANDE
+h027 | Asianajaja Camelia SARTORI
+h028 | Asianajaja Rosmunda DE SANTIS
+h029 | Asianajaja Fiorenza GUADAGNO
+h030 | Asianajaja Semplicio CAVALLERO
+h031 | Osaamisemme
+h032 | Avioeron verotus
+h033 | Varallisuuden siirto ja perintö
+h034 | Kansainvälinen oikeus
+h035 | Varaa aika
+h036 | Toimisto Furlan &amp; Associés – Kaikki oikeudet pidätetään – <a href="/politique-de-confidentialite" style="color:#428c9e">Tietosuojaseloste</a> – <a href="/cgu" style="color:#428c9e">Käyttöehdot</a> – <a href="mailto:contact@furlan-associes.fr" style="color:#428c9e">contact@furlan-associes.fr</a> – <a href="tel:0428870161" style="color:#428c9e">04 28 87 01 61</a>
+h037 | Käytämme evästeitä parhaan mahdollisen käyttökokemuksen takaamiseksi verkkosivustollamme. Jos jatkat sivuston käyttöä, oletamme, että hyväksyt sen.
+h080 | Perheoikeuteen erikoistunut<br/>asianajotoimisto Milanossa
+h081 | Lue lisää
+h082 | F&amp;A tukee sinua oikeudellisissa asioissasi
+h083 | Luottamus
+h084 | Sitoudumme rakentamaan vahvoja suhteita asiakkaisiimme ja säilyttämään ehdottoman luottamuksellisuuden.
+h085 | Läpinäkyvyys
+h086 | Pidämme sinut ajan tasalla asiasi jokaisessa vaiheessa ja selitämme selkeästi, mistä on kyse ja mitä päätöksiä on tehty.
+h087 | Kuuntelu
+h088 | Kiinnitämme erityistä huomiota tarpeidesi ymmärtämiseen ja tilanteeseesi sopivan oikeudellisen neuvonnan tarjoamiseen.
+h089 | Perhe- ja perintöoikeus
+h090 | Helpota perintö- ja varallisuuden siirtoasioitasi
+h091 | Suojaa oikeutesi ja saavuta oikeudenmukainen ja tasapuolinen ratkaisu perintöösi, samalla kun suojaat läheistesi edut.
+h092 | Avioeron ja perinnön verotus
+h093 | Optimoi elatusapujen, hyvitysten, perintöjen ja varallisuuden siirtojen verotus.
+h094 | Liiku turvallisesti Italian ja Sveitsin lainsäädännön välillä turvataksesi oikeutesi, eläkejärjestelysi jakamisen ja menettelysi ratkaisun.
+h095 | Ennakoi ja hoida monimutkaisten kansainvälisten perintöjen selvitys optimoimalla verotukselliset ja oikeudelliset vaikutukset Italiassa ja ulkomailla sijaitsevaan omaisuuteesi.
+h096 | Suojaa oikeutesi ja helpota sujuvaa siirtymistä elämäsi uuteen lukuun
+h097 | Optimoi omaisuutesi hallinta ja siirto ja turvaa samalla läheistesi tulevaisuus.
+h098 | Löydä perheesi vakaus kansainvälistä lainsäädäntöä noudattaen.
+h099 | Asiakkaamme kertovat
+h101 | 18. syyskuuta 2024
+h102 | Reagoiva, kuunteleva, pätevä ja karismaattinen asianajaja: suosittelen häntä varauksetta
+h104 | 15. heinäkuuta 2024
+h105 | Maître Furlanin reagointinopeus on esimerkillinen, kiitos hänelle!
+h107 | 11. kesäkuuta 2024
+h108 | Erittäin hyvä vastaanotto, aito kuuntelu ja hyvä lähestymistapa. Rauhoittava ja rehellinen
+h110 | 14. maaliskuuta 2024
+h111 | Maître Furlan on vakava, pätevä ja ammattitaitoinen asianajaja, joka on tavoitettavissa ja poikkeuksellisen tehokas
+h113 | 6. maaliskuuta 2024
+h114 | Valitsimme Me Furlanin hänen kaksoisosaamisensa vuoksi notaari- ja oikeudellisilla aloilla. Heti kävi ilmi, että valintamme oli täydellinen, sillä Me Furlanin taidot mahdollistivat asiamme nopean ja tyydyttävän päättämisen. Lisään, että hänen asiantuntevien neuvojensa ja tapahtumien ennakoinnin ansiosta pysyimme rauhallisina ja vakuuttuneina hänen tavastaan puolustaa meitä. Lisäksi olemme kiitollisia hänen tavoitettavuudestaan ja reagointinopeudestaan jokaisessa tarpeessa. Voimme vain suositella Me Furlania. Philippe &amp; Carmen Mosset
+h116 | 28. heinäkuuta 2023
+h117 | Tapasin Maître Furlanin kahdesti ystävänäni luona erittäin monimutkaisessa ja tuskallisessa asiassa, joka koski hänen poikansa lapsia. Huomasin lisäksi tässä asianajajassa erittäin inhimillisen, erittäin hyvin kuuntelevan ihmisen, jonka ammattitaito osoitettiin voittamalla oikeudenkäynti. Näin perheen saavan takaisin toivon ja hymyn. Suosittelen Maître Furlania lämpimästi ja empimättä. Bravo ja kiitos heidän puolestaan. Rouva Roux Jeannette
+h119 | Maître Furlan oli poikkeuksellinen kohtaaminen. Vuoden ajan hän on taistellut sen puolesta, että poikani saisi tavata lapsiaan uudelleen, ja hän voitti. Ammattitaitoinen ja sensaatiomaisen hyvin tavoitettavissa. Aina kun meillä oli kysymyksiä tai epäilyksiä (sähköpostitse tai puhelimitse), hän käytti aikaa vastaamiseen, aina hyväntahtoisesti ja tilanteemme todellisuutta kunnioittaen. Maître Furlan antoi pojalleni takaisin toivon ja hymyn, jotka hän oli menettänyt kaikkien näiden pitkien kuukausien aikana. Bravo, Maître. Suosittelen teitä vilpittömästi ja silmät ummessa. Hyvin helpottunut äiti, onnellinen poikansa puolesta. Kiitos, Maître, että olitte rinnallamme
+h121 | 18. toukokuuta 2023
+h122 | Maître, haluan kiittää teitä lämpimästi sitoutumisestanne avioeroani koskevassa asiassa. Ammattitaitonne ja omistautumisenne olivat minulle arvokkaita näinä vaikeina hetkinä. Arvostin suuresti inhimillisyyttänne ja olen teille erittäin kiitollinen. Maître, parhain ja kunnioittavin terveisin
+h124 | 3. toukokuuta 2023
+h125 | Voin vain suositella Maître Furlania. Asia ratkesi hänen sitoutumisensa, sinnikkyytensä ja täydellisen ammattitaitonsa ansiosta. Kuunteleva, asiallinen ja samalla miellyttävä: ilo saada eettisen asianajajan edustus! Kiitos vielä kaikesta. Kiitän myös hänen harjoittelijalakimiestään, jolle toivon hienoa ammatillista tulevaisuutta.
+h128 | Varaa aika asianajajalle
+h130 | Perintöoikeuteen ja perheoikeuteen erikoistunut asianajaja
+h132 | Asianajaja
+h137 | Yhteystietomme
+h142 | Tutustu perhe- ja perintöoikeuteen erikoistuneeseen toimistoomme Milanossa
+h143 | Perhe- ja perintöoikeuteen erikoistunut asianajaja
+h144 | Katso profiili →
+h145 | Toimistomme arvot
+h146 | <strong>Furlan &amp; Associés</strong> -toimistossa tunnistamme verotuksen ratkaisevan merkityksen perhe- ja varallisuusasioissa. Tarjoamme sinulle henkilökohtaista tukea verotuksellisten näkökohtien hallinnassa, olipa kyse perinnönjaon suunnittelusta, verojen optimoinnista omaisuuden jaossa ja siirroissa tai perintöverojen hallinnasta. Varmistamme, että jokainen päätös on taloudellisten ja varallisuuteen liittyvien etujesi mukainen.
+h147 | Kysymys? Kuuntelemme sinua.
+h148 | Tiimimme vastaa kaikkiin kysymyksiisi mahdollisimman pian
+h149 | Etunimi
+h150 | Sukunimi
+h151 | Sähköpostiosoite
+h152 | Mistä asiasta on kyse?
+h153 | Perintö
+h154 | Viesti
+h155 | Lähetä pyyntöni
+h158 | Ota yhteyttä asianajajaan
+h159 | Toimisto Furlan &amp; Associés tukee sinua perhe- ja varallisuusoikeuden kaikilla osa-alueilla erityisosaamisenaan perinnöt, lahjat ja varainhoito. Toimimme erityisesti <a href="/droit-de-la-famille#succesion"><strong>perintöoikeuden</strong></a>, <a href="/droit-de-la-famille#fiscalite"><strong>avioeron ja perinnön verotuksen</strong></a>, <a href="/droit-de-la-famille#famille"><strong>perheoikeuden</strong></a>, <a href="/droit-de-la-famille#patrimoine"><strong>varallisuuden siirron</strong></a> ja <a href="/droit-de-la-famille#dip"><strong>kansainvälisen yksityisoikeuden (KYO)</strong></a> alalla ja tarjoamme sinulle tarpeisiisi räätälöityjä ratkaisuja.
+h160 | Toimisto FURLAN ja kumppanit sijaitsee <strong>Milanossa (20121) Lombardiassa</strong>. Tuemme sinua menettelyissä, joissa on <a href="/droit-de-la-famille#divorce-transfrontalier"><strong>rajat ylittäviä erityispiirteitä.</strong></a>
+h161 | Testamentti, lahja ja testamentattu omaisuus
+h162 | Perintöjen hallinta ja ennakointi
+h163 | Perinnönjaon toimittaminen
+h164 | Kuolinpesän yhteisomistus
+h165 | Oikeudellinen osittaminen
+h166 | Henkivakuutussopimus
+h167 | Perillisten selvitys
+h168 | Henkivakuutus ei pääsääntöisesti kuulu kuolinpesään. Se jää siksi pakollisia perillisiä suojaavien sääntöjen ulkopuolelle, kuten liiallisten lahjojen ja testamenttien alentamisen sekä ennakkoperinnön huomioon ottamista koskevien säännösten ulkopuolelle, joiden tarkoituksena on turvata perillisten tasa-arvo.
+h169 | Vakuutuslaki kuitenkin säätää, että henkivakuutussopimukseen maksetut ilmeisen liialliset vakuutusmaksut voidaan palauttaa kuolinpesään. Kyse on siitä, arvioidaanko sopimukseen maksettujen määrien suhteellisuutta vainajan tuloihin tai omaisuuteen nähden.
+h170 | <strong>Toimisto Furlan &amp; Associés</strong> tukee sinua koko tätä arviointia koskevan neuvottelun ajan. Jos riitaa ei voida ratkaista sovinnolla, ohjaamme sinut parhaalle oikeudelliselle tielle etujesi puolustamiseksi.
+h171 | Tarvitsen asianajajan
+h172 | Tuemme ja neuvomme sinua kaikissa perheen verotukseen liittyvissä veroasioissa. Olipa kyse omaisuuden jaosta, avio-oikeusjärjestelmän purkamisesta, avioehtosopimuksen laatimisesta tai muuttamisesta, omaisuutesi ennakkosiirron suunnittelusta tai perintöjen selvittämisestä, autamme sinua asiantuntevilla neuvoilla ja optimoiduilla verotusratkaisuilla.
+h173 | Elatusapujen verotus
+h174 | Hyvityksen verotus
+h175 | Italian ja kansainvälinen perintöverotus (verojen kumuloituminen)
+h176 | Perukirjan ja määrättyjen perintöverojen tarkastus
+h177 | Seuraamusten ja viivästyskorkojen riitauttaminen perintöverojen myöhästyneen ilmoittamisen tai maksamisen jälkeen
+h178 | Varaa aika
+h179 | Ymmärrämme paikallisten riitojen monimutkaisuuden, joissa on rajat ylittäviä erityispiirteitä, ja tuemme sinua menettelyn jokaisessa vaiheessa.
+h180 | Toimistolla on erityistä osaamista Sveitsin toisen pilarin jakamisessa sekä AHV-eläkkeen jakamisessa (1. pilari).
+h181 | Ammatillisen eläketurvan jakaminen on nimittäin yksi avioeron lisävaikutuksista Sveitsissä, joka on välttämättä otettava huomioon.
+h182 | Toimisto hallitsee myös EPL-ennakkojen kysymyksen eli tilanteen, jossa ammatillinen eläkekassa myöntää lainan puolisolle, mikä tapahtuu erityisesti perheen kodin oston yhteydessä.
+h183 | Tämä kysymys nousee nimittäin säännöllisesti esiin.
+h184 | Kun tämä myynti tapahtuu avioeromenettelyn aikana, on ensiarvoisen tärkeää luokitella tämä ennakko oikeudellisesti ja ottaa se huomioon puolisoiden avio-oikeusjärjestelmän laskennassa, purkamisessa ja jaossa.
+h185 | Toimisto FURLAN ja kumppanit on pätevä kansainvälisissä perinnöissä ja tukee sinua erityisesti rajat ylittävien perintöjen selvittämisessä.
+h186 | Sovellamme tätä varten kansainvälisiä instrumentteja, erityisesti EU:n perintöasetusta nro 650/2012 ja Sveitsissä sovellettavaa kansainvälistä yksityisoikeutta koskevaa liittovaltion lakia (IPRG).
+h187 | Tuemme sinua rajat ylittävän perinnön selvittämisen kaikissa vaiheissa:
+h188 | Lakimääräisten, pakollisten ja määrättyjen perillisten sekä heidän osuuksiensa määrittäminen (kolmen perillisryhmän järjestelmä),
+h189 | Elossa olevan puolison oikeudet (joka 1. tammikuuta 2023 alkaen menettää pakollisen perillisen asemansa, jos avioeromenettely on vireillä kuolinhetkellä ja jos puolisot olivat yhtä mieltä avioeron periaatteesta tai olivat jo asuneet erillään vähintään kaksi vuotta),
+h190 | Jaettavan omaisuusmassan ja pakollisten osuuksien laskentamassan määrittäminen,
+h191 | Jako,
+h192 | Sveitsin perinnönjaon suunnittelun välineet,
+h193 | Sveitsin perintöoikeuden riidat.
+h194 | Löydä perheoikeuden asianajaja
+h195 | <strong>Furlan &amp; Associés</strong> tukee sinua avioliittotilanteesi oikeudellisten näkökohtien jokaisessa vaiheessa. Harkitsitpa liittoa, eroa tai avioeroa, perheoikeuteen erikoistunut tiimimme on käytettävissäsi tarjotakseen sinulle ammattimaista ja henkilökohtaista tukea. Koska avioeron verotus on ratkaiseva tekijä, neuvomme sinua tilanteesi verovaikutuksista, jotta voit tehdä tietoon perustuvia ja tarpeisiisi sopivia päätöksiä.
+h196 | Rekisteröidyn parisuhteen sopimuksen (PACS) laatiminen
+h197 | Avioliiton mitättömyys
+h198 | Ei-oikeudellinen avioero yhteisestä sopimuksesta
+h199 | Oikeudellinen avioero
+h200 | Hyvitys
+h201 | Asumuseroa
+h202 | Avoliitossa elävien parien ero (PACS ja avoliitto)
+h203 | Avio-oikeusjärjestelmän purkaminen ja jako (avio-oikeus, omaisuuden erillisyys, hankintojen osuus jne.)
+h204 | Tarjoamme sinulle kattavaa tukea ja räätälöityä neuvontaa perheen verotuksesta. Olipa kyse omaisuuden jaosta, avio-oikeusjärjestelmien purkamisesta, kiinteistöyhtiön (SCI) perustamisesta ja hallinnasta, avioehtosopimusten laatimisesta tai muuttamisesta tai omaisuutesi ennakkosiirron suunnittelusta, ehdotamme sinulle optimoituja ja tarpeisiisi sopivia ratkaisuja.
+h205 | Perheen verotus
+h206 | Omaisuuden jakoon liittyvä verotus
+h207 | Kiinteistöyhtiö (SCI)
+h208 | Neuvonta avioehtosopimusten laatimisessa tai muuttamisessa
+h209 | Omaisuuden ennakkosiirto
+h210 | Ota yhteyttä perintöoikeuden asianajajaan
+h211 | Kansainvälinen oikeus (KYO)
+h212 | Ymmärrämme haasteet ja monimutkaisuuden, joita kohtaat lapsen kansainvälisessä sieppauksessa tai exequatur-menettelyssä. Siksi tiimimme on täällä tarjoamassa asiantuntemustaan ja sopivaa oikeudellista tukea näissä herkissä tilanteissa.
+h213 | Lapsen kansainvälinen sieppaus
+h214 | Exequatur-menettely
+h215 | Ota yhteyttä kansainvälisen oikeuden asianajajaan
+h218 | Tutustu perheoikeuteen erikoistuneen toimistomme uutisiin Milanossa.
+h219 | Perhe- ja varallisuusoikeuden haasteet: miksi kannattaa kääntyä erikoistuneen asianajajan puoleen?
+h220 | 24. heinäkuuta 2024
+h221 | Perheen omaisuuden hallinta, perinnöt, lahjat ja avioerot ovat kaikki monimutkaisia tilanteita, jotka vaativat syvällistä oikeudellista asiantuntemusta. Juuri näinä ratkaisevina hetkinä tuki...
+h222 | lue lisää
+h225 | kirjoittanut FloFrndz | 24. heinäkuuta 2024 | Luokittelematon | 0 kommenttia
+h226 | Perheen omaisuuden hallinta, perinnöt, lahjat ja avioerot ovat kaikki monimutkaisia tilanteita, jotka vaativat syvällistä oikeudellista asiantuntemusta. Juuri näinä ratkaisevina hetkinä <strong>perhe- ja varallisuusoikeuteen</strong> erikoistuneen toimiston tuesta tulee välttämätön, jotta kohdatut ongelmat saadaan ratkaistua rauhallisesti ja turvallisesti.
+h227 | Perheoikeus: arjen ytimessä oleva ala
+h228 | <strong>Perheoikeus</strong> koskettaa elämämme perustavanlaatuisia puolia. Olipa kyse <strong>avioeroista</strong>, <strong>erosta</strong>, lasten huoltajuudesta tai avio-oikeusjärjestelmien purkamisesta, jokaisella tehdyllä päätöksellä voi olla pysyviä seurauksia perherakenteelle ja asianosaisten hyvinvoinnille.
+h229 | <strong>Furlan &amp; Associés</strong> -toimistossa ymmärrämme näiden kysymysten merkityksen. Perheoikeuteen erikoistunut toimistomme tukee sinua näissä herkissä hetkissä tarjoamalla henkilökohtaista oikeudellista tukea omia ja perheesi etuja kunnioittaen. Asianajajamme tekevät kaikkensa edistääkseen sovinnollisia ratkaisuja ja ovat samalla valmiita puolustamaan oikeuksiasi päättäväisesti riitatilanteessa.
+h230 | Varallisuusoikeus: omaisuuden säilyttäminen ja siirtäminen
+h231 | <strong>Perheen varallisuusoikeus</strong> sisältää omaisuuden hallinnan ja siirron. <strong>Perintöihin</strong>, <strong>lahjoihin</strong> tai <strong>avio-oikeusjärjestelmien purkamiseen</strong> liittyvät kysymykset aiheuttavat usein jännitteitä perheissä. Siksi on olennaista kääntyä erikoistuneen asianajajan puoleen näiden tilanteiden ennakoimiseksi ja tietoon perustuvien päätösten tekemiseksi.
+h232 | <strong>Toimisto Furlan &amp; Associés</strong> tukee sinua <strong>varainhoidon</strong> kaikissa vaiheissa. Haluatpa valmistella perintösi tai kohtaatko omaisuuden jakoon liittyviä perheriitoja, tarjoamme sinulle henkilökohtaista neuvontaa ja tarpeisiisi sopivia ratkaisuja. Sitoudumme suojelemaan etujasi ja varmistamaan omaisuuden siirron, joka kunnioittaa asianosaisten tahtoa.
+h233 | Miksi valita Furlan &amp; Associés?
+h234 | Valitsemalla <strong>toimisto Furlan &amp; Associés</strong> valitset asiantuntemuksen, kuuntelun ja reagointinopeuden. Tiimimme, joka koostuu <strong>henkilö-, perhe- ja varallisuusoikeuteen</strong> erikoistuneista asianajajista, tukee sinua jokaisessa vaiheessa varmistaakseen erityistarpeisiisi sopivat oikeudelliset ratkaisut.
+h235 | Pidämme tärkeänä tarjota sinulle henkilökohtaista seurantaa, olipa kyse perheriidoista, varainhoidosta tai perintöriidoista. Asiantuntemuksemme ansiosta autamme sinua ennakoimaan mahdollisia konflikteja ja puolustamaan oikeuksiasi inhimillisellä ja huomaavaisella otteella.
+h236 | Asiantuntemusalueemme:
+h237 | <strong>Perheoikeus</strong>: avioero, ero, lasten huoltajuus, adoptio, avio-oikeusjärjestelmien purkaminen
+h238 | <strong>Perintöoikeus</strong>: perintöjen selvitys, perintöriidat, lahjat
+h239 | <strong>Perheen varallisuusoikeus</strong>: perheen omaisuuden hallinta ja suojaaminen, verokiistat, omaisuuden siirto
+h240 | Yhteenveto
+h241 | <strong>Furlan &amp; Associés</strong> -toimistossa ymmärrämme, kuinka tärkeää on tehdä tietoon perustuvia päätöksiä perhe-elämän herkimmissä hetkissä. Tiimimme on rinnallasi neuvomassa, edustamassa ja tarjoamassa laadukasta oikeudellista tukea kaikilla <strong>perheoikeuden</strong> ja <strong>varallisuuden</strong> osa-alueilla. Luota asiantuntemukseemme oikeuksiesi turvallisuuden ja omaisuutesi suojan takaamiseksi.
+h242 | ← Takaisin uutisiin
+h245 | Varaa aika suoraan perheoikeuden asianajajalle.
+h252 | Tietosuojaseloste
+h253 | Päivitetty viimeksi: 1.10.2024
+h254 | Furlan &amp; Associés -toimistossa sitoudumme suojaamaan yksityisyyttäsi. Tämä tietosuojaseloste kuvaa, miten keräämme, käytämme ja suojaamme henkilötietojasi, kun vierailet verkkosivustollamme pessia-associes.fr.
+h255 | 1. Henkilötietojen kerääminen
+h256 | Keräämme henkilötietoja, kun olet vuorovaikutuksessa sivustomme kanssa, erityisesti kun:
+h257 | Täytät yhteydenottolomakkeen
+h258 | Tilaat uutiskirjeemme
+h259 | Lataat asiakirjoja
+h260 | Osallistut kyselyihin
+h261 | Keräämämme tiedot voivat sisältää nimesi, sähköpostiosoitteesi, puhelinnumerosi ja kaikki muut tiedot, jotka päätät antaa.
+h262 | 2. Henkilötietojen käyttö
+h263 | Käytämme henkilötietojasi:
+h264 | Vastaamaan pyyntöihisi ja kysymyksiisi
+h265 | Parantamaan sivustoamme ja palveluitamme
+h266 | Lähettämään sinulle tietoja ja päivityksiä
+h267 | Kertomaan sinulle tuotteistamme ja palveluistamme
+h268 | Analysoimaan sivustomme käyttöä
+h269 | 3. Henkilötietojen jakaminen
+h270 | Emme myy emmekä vuokraa henkilötietojasi kolmansille osapuolille. Voimme jakaa tietojasi:
+h271 | Puolestamme toimiville palveluntarjoajille (esim. verkkopalvelun ylläpito, markkinointipalvelut)
+h272 | Viranomaisille, jos laki sitä edellyttää tai oikeuksiemme suojaamiseksi
+h273 | 4. Tietoturva
+h274 | Toteutamme kohtuulliset toimenpiteet henkilötietojesi suojaamiseksi katoamiselta, varkaudelta ja luvattomalta pääsyltä. Mikään internetin kautta tapahtuva siirtotapa tai sähköinen tallennus ei kuitenkaan ole 100-prosenttisen turvallinen.
+h275 | 5. Oikeutesi
+h276 | Yleisen tietosuoja-asetuksen (GDPR) mukaisesti sinulla on oikeus:
+h277 | Päästä käsiksi henkilötietoihisi
+h278 | Oikaista virheelliset tietosi
+h279 | Pyytää tietojesi poistamista
+h280 | Rajoittaa tietojesi käsittelyä
+h281 | Vastustaa tietojesi käsittelyä
+h282 | Pyytää tietojesi siirrettävyyttä
+h283 | Näiden oikeuksien käyttämiseksi ota meihin yhteyttä seuraavassa osoitteessa: contact@furlan-associes.fr
+h284 | 6. Evästeet
+h285 | Sivustomme käyttää evästeitä selauskokemuksesi parantamiseksi. Voit hallita evästeasetuksiasi milloin tahansa selaimesi kautta.
+h286 | 7. Tietosuojaselosteen muutokset
+h287 | Pidätämme oikeuden muuttaa tätä tietosuojaselostetta milloin tahansa. Muutokset julkaistaan tällä sivulla päivityspäivämäärän kanssa. Kehotamme sinua tutustumaan tähän selosteeseen säännöllisesti.
+h288 | 8. Yhteystiedot
+h289 | Jos sinulla on kysyttävää tästä tietosuojaselosteesta, ota meihin yhteyttä seuraavassa osoitteessa: contact@furlan-associes.fr
+h290 | ← Takaisin sivustolle
+h293 | Käyttöehdot
+h294 | Tervetuloa sivustolle pessia-associes.fr. Käyttämällä tätä sivustoa hyväksyt noudattavasi näitä käyttöehtoja. Jos et hyväksy näitä ehtoja, älä käytä tätä sivustoa.
+h295 | 1. Tarkoitus
+h296 | Näiden ehtojen tarkoituksena on määritellä sivuston pessia-associes.fr käyttöoikeuden ja käytön edellytykset.
+h297 | 2. Immateriaalioikeudet
+h298 | Kaikki tämän sivuston sisältö, mukaan lukien mutta ei rajoittuen tekstit, kuvat, logot ja grafiikka, on Furlan &amp; Associésin tai niiden kolmansien osapuolten omaisuutta, jotka ovat sallineet sen käytön. Kaikki jäljentäminen, levittäminen tai muokkaaminen ilman kirjallista lupaa on kielletty.
+h299 | 3. Pääsy sivustolle
+h300 | Sivuston käyttö on maksutonta. Furlan &amp; Associés pyrkii varmistamaan jatkuvan pääsyn sivustolle, mutta ei voi taata pysyvää saatavuutta. Käyttäjä vastaa laitteistostaan ja internetyhteydestään.
+h301 | 4. Sivuston käyttö
+h302 | Käyttäjä sitoutuu käyttämään sivustoa voimassa olevien lakien ja näiden ehtojen mukaisesti. Sivuston käyttö laittomiin tai haitallisiin tarkoituksiin on kielletty.
+h303 | 5. Linkit kolmansien osapuolten sivustoille
+h304 | Sivusto voi sisältää linkkejä muille sivustoille. Furlan &amp; Associés ei ole vastuussa näiden sivustojen sisällöstä eikä sitä voida pitää vastuullisena niistä mahdollisesti aiheutuvista vahingoista.
+h305 | 6. Henkilötietojen suojaus
+h306 | Furlan &amp; Associés sitoutuu kunnioittamaan käyttäjiensä henkilötietojen luottamuksellisuutta. Kerättyjä tietoja käsitellään tietosuojaselosteemme mukaisesti.
+h307 | 7. Ehtojen muuttaminen
+h308 | Furlan &amp; Associés pidättää oikeuden muuttaa näitä ehtoja milloin tahansa. Muutokset tulevat voimaan heti, kun ne julkaistaan sivustolla. Käyttäjän vastuulla on tutustua ehtoihin säännöllisesti.
+h309 | 8. Sovellettava laki
+h310 | Näihin ehtoihin sovelletaan Ranskan lakia. Riitatilanteessa toimivaltaisia ovat Ranskan tuomioistuimet.
+h311 | 9. Yhteystiedot
+h312 | Jos sinulla on kysyttävää näistä ehdoista, ota meihin yhteyttä seuraavassa osoitteessa: contact@furlan-associes.fr.
+h315 | Tätä sivua ei löytynyt.
+h316 | Takaisin etusivulle
+t015 | Valikko
+t016 | Etusivu – Furlan & Associés
+t017 | Päävalikko
+t018 | Sulje valikko
+t020 | Laajenna
+t039 | Sulje
+t040 | Varaa aika asianajaja FURLANille
+t041 | Asianajaja Abramo FURLANilla on Master 2 -tutkinto siviili- ja notaarioikeudessa sekä yliopistotutkinto (DU) Perhe Euroopassa.
+t042 | Perheoikeuden asianajajana asianajaja FURLAN vannoi virkavalansa joulukuussa 2018.
+t043 | Hän on suorittanut erikoistumistodistuksen alalla:
+t044 | Henkilöiden, perheen ja heidän omaisuutensa oikeus
+t045 | Perintö- ja lahjaoikeus, myöntäjänä Consiglio Nazionale Forense.
+t046 | Asianajaja FURLAN toimii perheoikeuden kaikilla aloilla erikoistuen perheen varallisuusoikeuteen, erityisesti seuraavissa asioissa:
+t047 | Perintöjen selvitys
+t048 | Avio-oikeusjärjestelmien laskenta, purkaminen ja jako.
+t049 | Hän avustaa asiakkaitaan myös perintöverokiistoissa.
+t050 | PVH Avocats -toimiston osakas ja perustaja asianajaja Abramo FURLAN päätti perustaa Furlan & Associés -toimiston huhtikuussa 2024, toimiston, joka on omistautunut perheiden varallisuuskysymyksille.
+t051 | Varaa aika asianajaja GIANGRANDEn kanssa
+t052 | Suoritettuaan Master II -tutkinnon oikeudellisissa ja tuomioistuinkäytännöissä Bolognan yliopistossa Ancilla GIANGRANDE aloitti asianajajakoulun tammikuussa 2022.
+t053 | Hän liittyi toimistoon marraskuussa 2023 ja vannoi virkavalansa saman vuoden joulukuussa.
+t054 | Asianajaja Ancilla GIANGRANDE toimii pääasiassa seuraavilla aloilla:
+t055 | Perheoikeus
+t056 | Avioero
+t057 | Perintöoikeus
+t058 | Varaa aika asianajaja SARTORIn kanssa
+t059 | Asianajaja Camelia SARTORIlla on Master II -tutkinto oikeudenkäytössä, oikeudenkäynnissä ja menettelyssä Milanon yliopistosta, ja hän aloitti asianajajakoulun tammikuussa 2023.
+t060 | Hänen koko opintopolkunsa on suuntautunut perheoikeuteen; hän koulutti itseään erityisesti Milanon hovioikeuden perheasioiden jaostossa ennen kuin vannoi virkavalansa joulukuussa 2024.
+t061 | Hän liittyi toimistoon kesäkuussa 2025.
+t062 | Asianajaja Camelia SARTORI toimii pääasiassa seuraavilla aloilla:
+t063 | Perheoikeus ja perheen omaisuus (avioero, ero, avio-oikeusjärjestelmän purkaminen),
+t064 | Perintöoikeus,
+t065 | Alaikäisten oikeus.
+t066 | Varaa aika asianajaja DE SANTISin kanssa
+t067 | Asianajaja Rosmunda DE SANTISilla on Master II -tutkinto syventävästä siviilioikeudesta Milano-Bicoccan yliopistosta, ja hän aloitti asianajajakoulun tammikuussa 2023.
+t068 | Jatkettuaan koulutustaan harjoittelijalakimiehenä Milanossa hän liittyi toimistoon marraskuussa 2024 ja vannoi virkavalansa Milanon hovioikeudessa saman vuoden joulukuussa.
+t069 | Asianajaja DE SANTIS toimii pääasiassa henkilöiden, perheen ja heidän omaisuutensa oikeuden alalla ja erityisesti seuraavilla aloilla:
+t070 | Avioero, ero ja avio-oikeusjärjestelmien purkaminen,
+t071 | Sukututkimukseen liittyvät riidat,
+t072 | Yhteisomistuksen hallinta.
+t073 | Varaa aika asianajaja GUADAGNOn kanssa
+t074 | Varaa aika asianajaja CAVALLEROn kanssa
+t075 | Asianajaja Semplicio CAVALLEROlla on Master II -tutkinto henkilöiden ja perheen oikeudesta Paviian yliopistosta, ja hän aloitti asianajajakoulun tammikuussa 2020.
+t076 | Hänen koko opintopolkunsa on suuntautunut perheoikeuteen; hän koulutti itseään erityisesti Milanon hovioikeuden perheasioiden jaostossa ennen kuin vannoi virkavalansa joulukuussa 2021.
+t077 | Hän toimii Milanon asianajajayhdistyksessä ja liittyi toimistoon heinäkuussa 2026.
+t078 | Asianajaja Semplicio CAVALLERO toimii pääasiassa seuraavilla aloilla:
+t126 | Edellinen
+t127 | Seuraava
+t129 | Asianajaja Abramo FURLAN
+t131 | Asianajaja Ancilla GIANGRANDE
+t133 | Asianajaja Fiorenza GUADAGNO
+t134 | Asianajaja Camelia SARTORI
+t135 | Asianajaja Rosmunda DE SANTIS
+t136 | Asianajaja Semplicio CAVALLERO
+t139 | Milanon kartta
+t140 | Furlan & Associés – Perheoikeuden asianajotoimisto Milanossa
+t141 | Perhe- ja perintöoikeuteen erikoistunut asianajotoimisto Milanossa: avioero, perinnöt, varallisuuden siirto, kansainvälinen oikeus.
+t156 | Toimistomme – Furlan & Associés
+t157 | Tutustu toimistoon Furlan & Associés, sen asianajajatiimiin ja arvoihin: luottamus, läpinäkyvyys ja kuuntelu.
+t216 | Perhe- ja perintöoikeus – Furlan & Associés
+t217 | Perinnöt, avioeron verotus, rajat ylittävä avioero ja perintö, varallisuuden siirto, kansainvälinen yksityisoikeus Milanossa.
+t223 | Ajankohtaista – Furlan & Associés
+t224 | Asianajotoimisto Furlan & Associésin uutiset perheoikeudessa Milanossa.
+t243 | Perhe- ja varallisuusoikeuden haasteet: miksi kannattaa kääntyä erikoistuneen asianajajan puoleen? – Furlan & Associés
+t244 | Avioero, perintö, lahja, varainhoito: miksi kannattaa kääntyä perhe- ja varallisuusoikeuteen erikoistuneen toimiston puoleen.
+t246 | Etunimi
+t247 | Sukunimi
+t248 | Sähköpostiosoite
+t249 | Viesti
+t250 | Ajanvaraus – Furlan & Associés
+t251 | Varaa aika suoraan perheoikeuden asianajajalle Milanossa.
+t291 | Tietosuojaseloste – Furlan & Associés
+t292 | Sivuston pessia-associes.fr tietosuojaseloste.
+t313 | Käyttöehdot – Furlan & Associés
+t314 | Sivuston pessia-associes.fr käyttöehdot.
+t317 | Sivua ei löytynyt – Furlan & Associés
+t318 | Tätä sivua ei löytynyt.
+u.close | Sulje
+u.lang | Kieli
+u.nextmonth | Seuraava kuukausi
+u.pickday | Valitse ensin vapaa päivä (maanantaista perjantaihin).
+u.prevmonth | Edellinen kuukausi
+u.times | Ajat

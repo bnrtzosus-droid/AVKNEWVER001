@@ -71,3 +71,21 @@ Les pictogrammes de contact (téléphone, adresse, e-mail) sont des icônes Mate
 
 Les formulaires (rendez-vous, « Une question ? ») n'envoient pas encore de message : ils attendent un
 service d'envoi (e-mail, Resend, etc.).
+
+
+## Langues (i18n)
+
+Le site existe en 6 langues : English (par défaut), Deutsch, Français, Suomi, Svenska, Italiano.
+
+* **Choix de la langue** : préférence enregistrée (`localStorage`, clé `pa-lang`) › langue du navigateur
+  (`navigator.languages` puis `navigator.language`, variantes régionales comprises : `it-IT`, `de-DE`…) › anglais.
+  La décision est prise par un petit script dans le `<head>` : la page reste masquée (`html.i18n-wait`) le temps
+  d'appliquer la traduction, il n'y a donc jamais de « flash » dans la mauvaise langue.
+* **Textes** : les pages sont écrites en français (`src/`). `tools/build.py` repère chaque texte et lui donne un
+  identifiant (`h001` = HTML, `t002` = texte brut ; table dans `tools/i18n/fr.json`, les identifiants ne changent plus).
+* **Traductions** : `tools/i18n/<langue>.txt` (une ligne `identifiant | texte`) ; le build les compile en
+  `locales/<langue>/translation.json` et signale tout texte manquant ou dont les balises HTML diffèrent.
+  Pour ajouter ou modifier un texte : éditer la page dans `src/`, lancer `python3 tools/build.py`, puis compléter
+  les 5 fichiers `.txt` pour les nouveaux identifiants listés par le build.
+* **Code** : `assets/js/i18n.js` (application des textes, sélecteur de langues), drapeaux dans `assets/img/flags/`.
+* **Tests** : `node tests/i18n.test.js` (détection, priorité, persistance, absence de flash, 6 langues × 8 pages…).

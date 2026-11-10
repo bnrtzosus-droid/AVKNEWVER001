@@ -2,6 +2,8 @@
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var tr = function (id, fb) { return window.PA_I18N ? window.PA_I18N.t(id, fb) : fb; };
+  var curLang = function () { return window.PA_I18N ? window.PA_I18N.lang() : "fr"; };
   var esc = function (s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); };
 
   /* ---------- mobile side menu ---------- */
@@ -27,17 +29,17 @@
     if (!b) return;
     var h = "";
     b.blocks.forEach(function (x) {
-      h += '<div><p style="margin:0">' + esc(x.text) + "</p>";
-      if (x.hasItems) h += '<ul style="margin:8px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:4px">' + x.items.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
+      h += '<div><p style="margin:0">' + esc(tr(x.id, x.text)) + "</p>";
+      if (x.hasItems) h += '<ul style="margin:8px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:4px">' + x.items.map(function (t, k) { return "<li>" + esc(tr(x.iids && x.iids[k], t)) + "</li>"; }).join("") + "</ul>";
       h += "</div>";
     });
     $("#bio-root").innerHTML =
       '<div id="bio-bg" role="dialog" aria-modal="true" aria-label="' + esc(b.name) + '" style="position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;display:flex;align-items:center;justify-content:center;padding:24px">' +
       '<div style="background:#fff;border-radius:10px;max-width:880px;width:100%;max-height:90vh;overflow:auto;position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;padding:32px">' +
-      '<button id="bio-x" aria-label="Fermer" style="position:absolute;top:10px;right:14px;background:none;border:0;font-size:28px;color:#666;cursor:pointer;line-height:1">×</button>' +
+      '<button id="bio-x" aria-label="' + esc(tr("u.close", "Fermer")) + '" style="position:absolute;top:10px;right:14px;background:none;border:0;font-size:28px;color:#666;cursor:pointer;line-height:1">×</button>' +
       (b.photo ? '<img src="' + esc(b.photo) + '" alt="' + esc(b.name) + '" style="width:100%;border-radius:8px;object-fit:cover;background:#dde9ec;aspect-ratio:4/5">' : "") +
       '<div style="display:flex;flex-direction:column;gap:12px;font-size:15px"><h3 style="margin:0;font-size:24px;font-weight:700;color:#428c9e">' + esc(b.name) + "</h3>" + h +
-      '<div><a href="/rendez-vous" style="display:inline-block;margin-top:6px;background:#428c9e;color:#fff;border-radius:100px;padding:10px 26px;font-size:16px;font-weight:500;border:1px solid #428c9e">' + esc(b.cta) + "</a></div></div></div></div>";
+      '<div><a href="/rendez-vous" style="display:inline-block;margin-top:6px;background:#428c9e;color:#fff;border-radius:100px;padding:10px 26px;font-size:16px;font-weight:500;border:1px solid #428c9e">' + esc(tr(b.cid, b.cta)) + "</a></div></div></div></div>";
     document.body.style.overflow = "hidden";
     $("#bio-bg").addEventListener("click", function (e) { if (e.target === this) closeBio(); });
     $("#bio-x").addEventListener("click", closeBio);
@@ -66,6 +68,7 @@
     }
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeBio(); setNav(false); } });
+  document.addEventListener("pa:lang", closeBio);
   $$("[data-bio]").forEach(function (el) {
     el.setAttribute("tabindex", "0");
     el.setAttribute("role", "button");
@@ -147,14 +150,14 @@
     var today = new Date(); today.setHours(0, 0, 0, 0);
     var view = new Date(today.getFullYear(), today.getMonth(), 1), sel = null, hour = "";
     var HOURS = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00"];
-    var DAYS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."];
-    var fmt = function (d, o) { return d.toLocaleDateString("fr-FR", o); };
+    var fmt = function (d, o) { return d.toLocaleDateString(curLang(), o); };
+    var days = function () { var r = []; for (var i = 1; i <= 7; i++) r.push(fmt(new Date(2024, 0, i), { weekday: "short" })); return r; };
     function draw() {
       var first = (view.getDay() + 6) % 7, n = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
-      var h = '<div><div class="cal-h"><button type="button" data-m="-1" aria-label="Mois précédent"' +
+      var h = '<div><div class="cal-h"><button type="button" data-m="-1" aria-label="' + esc(tr("u.prevmonth", "Mois précédent")) + '"' +
         (view <= new Date(today.getFullYear(), today.getMonth(), 1) ? " disabled" : "") + '>‹</button><span>' +
-        fmt(view, { month: "long", year: "numeric" }) + '</span><button type="button" data-m="1" aria-label="Mois suivant">›</button></div><div class="cal-g">';
-      DAYS.forEach(function (d) { h += "<span>" + d + "</span>"; });
+        fmt(view, { month: "long", year: "numeric" }) + '</span><button type="button" data-m="1" aria-label="' + esc(tr("u.nextmonth", "Mois suivant")) + '">›</button></div><div class="cal-g">';
+      days().forEach(function (d) { h += "<span>" + esc(d) + "</span>"; });
       for (var i = 0; i < first; i++) h += "<i></i>";
       for (var d = 1; d <= n; d++) {
         var dt = new Date(view.getFullYear(), view.getMonth(), d), wk = dt.getDay() % 6 === 0;
@@ -164,9 +167,9 @@
       h += '</div></div><div class="cal-t">';
       if (sel) {
         h += "<b>" + esc(fmt(sel, { weekday: "long", day: "numeric", month: "long" })) + '</b><div class="cal-s">';
-        HOURS.forEach(function (t) { h += '<button type="button" data-h="' + t + '"' + (t === hour ? ' class="sel"' : "") + ">" + t.replace(":", "h") + "</button>"; });
+        HOURS.forEach(function (t) { h += '<button type="button" data-h="' + t + '"' + (t === hour ? ' class="sel"' : "") + ">" + (curLang() === "fr" ? t.replace(":", "h") : t) + "</button>"; });
         h += "</div>";
-      } else h += "<b>Horaires</b><p>Choisissez d’abord un jour disponible (du lundi au vendredi).</p>";
+      } else h += "<b>" + esc(tr("u.times", "Horaires")) + "</b><p>" + esc(tr("u.pickday", "Choisissez d’abord un jour disponible (du lundi au vendredi).")) + "</p>";
       cal.innerHTML = h + "</div>";
       $("#rdv-date").value = sel ? sel.getFullYear() + "-" + ("0" + (sel.getMonth() + 1)).slice(-2) + "-" + ("0" + sel.getDate()).slice(-2) : "";
       $("#rdv-heure").value = hour;
@@ -180,6 +183,7 @@
       draw();
     });
     draw();
+    document.addEventListener("pa:lang", draw);
   })();
 
 
