@@ -7,12 +7,12 @@
   /* ---------- mobile side menu ---------- */
   function setNav(open) {
     var nav = $("#mobnav"), b = $("#burger");
-    if (nav) nav.style.display = open ? "block" : "none";
+    if (nav) nav.classList.toggle("open", open);
     if (b) b.setAttribute("aria-expanded", open ? "true" : "false");
     document.body.style.overflow = open ? "hidden" : "";
     if (!open) {
       var s = $("#msubs"), pl = $(".msub");
-      if (s) s.style.display = "none";
+      if (s) s.classList.remove("open");
       if (pl) { pl.textContent = "+"; pl.setAttribute("aria-expanded", "false"); }
     }
   }
@@ -50,8 +50,8 @@
     if (!t) return;
     if (t.id === "burger") { setNav(true); return; }
     if (t.classList.contains("msub")) {
-      var s = $("#msubs"), open = s.style.display !== "flex";
-      s.style.display = open ? "flex" : "none";
+      var s = $("#msubs"), open = !s.classList.contains("open");
+      s.classList.toggle("open", open);
       t.textContent = open ? "−" : "+";
       t.setAttribute("aria-expanded", open ? "true" : "false");
       return;
