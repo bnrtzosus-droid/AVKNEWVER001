@@ -6,6 +6,7 @@
 Edit the partials/pages in src/, then re-run this script and commit the result.
 Change BASE_URL below if the production domain is not pessia-associes.fr.
 """
+import hashlib
 import html
 import os
 import re
@@ -15,7 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'src')
 BASE_URL = 'https://pessia-associes.fr'
 SITE = 'Pessia & Associés'
-LOGO = 'https://pessia-associes.fr/wp-content/uploads/2024/09/Logo-Picto-PESSIA-AVOCATS_S.png'
+LOGO = '/assets/img/Logo-Picto-PESSIA-AVOCATS_S.png'
 
 # key, output file, url path, <title>, meta description, active menu item, extra scripts
 PAGES = [
@@ -37,6 +38,12 @@ PAGES = [
     ('cgu', 'cgu.html', '/cgu', 'Conditions générales d’utilisation – Pessia & Associés',
      'Conditions générales d’utilisation du site pessia-associes.fr.', None, []),
 ]
+
+
+def ver(path):
+    """Short content hash used as cache-busting query string."""
+    with open(os.path.join(ROOT, path.lstrip('/')), 'rb') as f:
+        return hashlib.md5(f.read()).hexdigest()[:8]
 
 
 def read(*p):
@@ -61,7 +68,9 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
     head = header
     if nav:
         head = head.replace('class="nl" data-nav="%s"' % nav, 'class="nl active" data-nav="%s" aria-current="page"' % nav)
-    extra = ''.join('<script src="%s" defer></script>\n' % s for s in scripts)
+    preload = '<link rel="preload" href="/assets/img/Rectangle-2.webp" as="image" fetchpriority="high">\n' if '/assets/img/Rectangle-2.webp' in body else ''
+    extra = ''.join('<script src="%s?v=%s" defer></script>\n' % (s, ver(s)) for s in scripts)
+    CSS_V, JS_V = ver('/assets/css/style.css'), ver('/assets/js/site.js')
     return f'''<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -78,12 +87,10 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{BASE_URL}{url}">
-<meta property="og:image" content="{LOGO}">
+<meta property="og:image" content="{BASE_URL}{LOGO}">
 <link rel="icon" href="{LOGO}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+{preload}<link rel="stylesheet" href="/assets/css/style.css?v={CSS_V}">
 <script>try{{if(localStorage.getItem("pa-cookie")==="1")document.documentElement.setAttribute("data-ck","1")}}catch(e){{}}</script>
 </head>
 <body>
@@ -96,7 +103,7 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
 {cookie}
 <div id="bio-root"></div>
 </div>
-<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/site.js?v={JS_V}" defer></script>
 {extra}</body>
 </html>
 '''
