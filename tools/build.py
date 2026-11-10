@@ -95,7 +95,8 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
     head = header
     if nav:
         head = head.replace('class="nl" data-nav="%s"' % nav, 'class="nl active" data-nav="%s" aria-current="page"' % nav)
-    preload = '<link rel="preload" href="/assets/img/Rectangle-2.webp" as="image" fetchpriority="high">\n' if '/assets/img/Rectangle-2.webp' in body else ''
+    hero = re.search(r'url\((/assets/img/[^)]+\.webp)\)', body)
+    preload = ('<link rel="preload" href="%s" as="image" fetchpriority="high">\n' % hero.group(1)) if hero else ''
     extra = ''.join('<script src="%s?v=%s" defer></script>\n' % (s, ver(s)) for s in scripts)
     CSS_V, JS_V = ver('/assets/css/style.css'), ver('/assets/js/site.js')
     return f'''<!DOCTYPE html>
@@ -115,7 +116,8 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{BASE_URL}{url}">
 <meta property="og:image" content="{BASE_URL}{LOGO}">
-<link rel="icon" href="{LOGO}">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 {preload}<link rel="stylesheet" href="/assets/css/style.css?v={CSS_V}">
 <script>document.documentElement.classList.add("js");try{{if(localStorage.getItem("pa-cookie")==="1")document.documentElement.setAttribute("data-ck","1")}}catch(e){{}}</script>
