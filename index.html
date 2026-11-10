@@ -4,167 +4,623 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pessia &amp; Associés – Cabinet d’avocats en droit de la famille à Lyon &amp; Annecy</title>
+<meta name="description" content="Cabinet d’avocats en droit de la famille et des successions à Lyon et Annecy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-html{scroll-behavior:smooth}
 body{margin:0;font-family:'Montserrat',Helvetica,Arial,sans-serif;color:#666;background:#fff;-webkit-font-smoothing:antialiased}
 a{color:#428c9e;text-decoration:none}a:hover{color:#2f6c7b}*{box-sizing:border-box}
-#pa-track::-webkit-scrollbar{display:none}
-button{transition:background .2s,color .2s}
-.dd-menu{display:none}.dd:hover .dd-menu,.dd:focus-within .dd-menu{display:flex}
-.h0:hover{color:#428c9e !important}
-.h1:hover{background:rgba(66,140,158,.08) !important;color:#428c9e !important}
-.h2:hover{background:#fff !important;color:#428c9e !important}
-.h3:hover{background:#fff !important;color:#428c9e !important;border-color:#428c9e !important}
-.h4:hover{background:rgba(255,255,255,.26) !important;color:#fff !important}
+.pa-track::-webkit-scrollbar{display:none}input,select,textarea,button{font-family:inherit}
+button{transition:background .2s,color .2s}a,.nl{transition:color .2s}
+[data-route]{display:none}
+.nl.active{color:#428c9e !important}
+.dd-wrap{display:none}.dd:hover .dd-wrap,.dd:focus-within .dd-wrap{display:contents}
+.mob{display:none}#mobnav{display:none}#cookie{display:none}
+@media(max-width:980px){.desk{display:none !important}.mob{display:contents}}
+@media(min-width:981px){#mobnav{display:none !important}}
+@media(max-width:767px){.not-phone{display:none}.hero-btns{flex-direction:column !important}[data-b2]{border:0 !important}}
+.h0:hover{background:rgba(66,140,158,.08) !important;color:#428c9e !important}
+.h1:hover{background:#fff !important;color:#428c9e !important}
+.h2:hover{background:#fff !important;color:#428c9e !important;border-color:#428c9e !important}
+.h3:hover{background:rgba(255,255,255,.26) !important;color:#fff !important}
+.h4:hover{background:transparent !important;color:#fff !important}
 .h5:hover{background:#428c9e !important;color:#fff !important}
-.h6:hover{background:transparent !important;color:#fff !important}
+.h6:hover{color:#428c9e !important;font-size:21px !important}
 </style>
 </head>
 <body>
-<!-- Top bar -->
-<div style="background:#428c9e;color:#fff">
-<div style="max-width:1280px;margin:0 auto;padding:8px 40px;text-align:right;font-size:15px"><a href="tel:0428870161" style="color:#fff">04 28 87 01 61</a> – <a href="mailto:contact@pessia-associes.fr" style="color:#fff">contact@pessia-associes.fr</a></div>
-</div>
+<div style="font-family:'Montserrat',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.7;color:#666;background:#fff">
 
-<!-- Header -->
+<div class="not-phone"><div style="background:#428c9e;color:#fff">
+<div style="width:95%;margin:0 auto;padding:8px 0;text-align:right;font-size:16px"><a href="tel:0428870161" style="color:#fff">04 28 87 01 61</a> – <a href="mailto:contact@pessia-associes.fr" style="color:#fff">contact@pessia-associes.fr</a></div>
+</div></div>
+
 <header style="background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.1);position:sticky;top:0;z-index:50">
-<div style="max-width:1280px;margin:0 auto;padding:6px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-<a href="#top" style="display:block;line-height:0"><img src="https://pessia-associes.fr/wp-content/uploads/2024/09/Logo-Picto-PESSIA-AVOCATS_S.png" alt="Pessia &amp; Associés" style="width:72px;height:72px;object-fit:contain"></a>
-<nav style="display:flex;align-items:center;justify-content:center;flex:1 1 auto;gap:clamp(12px,2.2vw,32px);flex-wrap:wrap;font-size:clamp(14px,1.6vw,18px);font-weight:500">
-<a href="#top" style="color:#428c9e">Accueil</a>
-<a href="#cabinet" class="h0" style="color:rgba(0,0,0,.6)">Notre cabinet</a>
+<div style="width:95%;max-width:2560px;margin:0 auto;padding:15px 0 5px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<a href="#/" style="display:block;line-height:0"><img src="https://pessia-associes.fr/wp-content/uploads/2024/09/Logo-Picto-PESSIA-AVOCATS_S.png" alt="Pessia &amp; Associés" style="width:72px;height:72px;object-fit:contain"></a>
+<div class="desk"><nav style="display:flex;align-items:center;justify-content:center;flex:1 1 auto;gap:clamp(12px,2.2vw,32px);flex-wrap:wrap;font-size:clamp(14px,1.6vw,18px);font-weight:500">
+<a href="#/" class="nl" data-nav="home" style="color:rgba(0,0,0,.6)">Accueil</a>
+<a href="#/cabinet" class="nl" data-nav="cabinet" style="color:rgba(0,0,0,.6)">Notre cabinet</a>
 <div style="position:relative" class="dd">
-<a href="#expertise" class="h0" style="color:rgba(0,0,0,.6);display:block;padding:20px 0">Droit de la famille <span style="font-size:12px">▾</span></a>
-<div class="dd-menu" style="position:absolute;top:100%;left:-20px;width:290px;background:#fff;border-top:3px solid #428c9e;box-shadow:0 2px 5px rgba(0,0,0,.1);padding:14px 0;flex-direction:column"><a class="h1" href="#expertise" style="padding:7px 24px;font-size:15px;color:#666">Droit des successions</a><a class="h1" href="#expertise" style="padding:7px 24px;font-size:15px;color:#666">Divorce transfrontalier</a><a class="h1" href="#expertise" style="padding:7px 24px;font-size:15px;color:#666">Succession transfrontalière</a><a class="h1" href="#expertise" style="padding:7px 24px;font-size:15px;color:#666">Fiscalité du divorce</a><a class="h1" href="#expertise" style="padding:7px 24px;font-size:15px;color:#666">Droit de la famille</a><a class="h1" href="#expertise" style="padding:7px 24px;font-size:15px;color:#666">Transmission de patrimoine</a><a class="h1" href="#expertise" style="padding:7px 24px;font-size:15px;color:#666">Droit international</a></div>
+<a href="#/famille" class="nl" data-nav="famille" style="color:rgba(0,0,0,.6);display:block;padding:20px 0">Droit de la famille <span style="font-size:12px">▾</span></a>
+<div class="dd-wrap">
+<div style="position:absolute;top:100%;left:-20px;width:290px;background:#fff;border-top:3px solid #428c9e;box-shadow:0 2px 5px rgba(0,0,0,.1);padding:14px 0;display:flex;flex-direction:column">
+<a href="#/famille/succesion" class="h0" style="padding:7px 24px;font-size:15px;color:#666">Droit des successions</a><a href="#/famille/divorce-transfrontalier" class="h0" style="padding:7px 24px;font-size:15px;color:#666">Divorce transfrontalier</a><a href="#/famille/succession-transfrontaliere" class="h0" style="padding:7px 24px;font-size:15px;color:#666">Succession transfrontalière</a><a href="#/famille/divorce" class="h0" style="padding:7px 24px;font-size:15px;color:#666">Fiscalité du divorce</a><a href="#/famille/famille" class="h0" style="padding:7px 24px;font-size:15px;color:#666">Droit de la famille</a><a href="#/famille/patrimoine" class="h0" style="padding:7px 24px;font-size:15px;color:#666">Transmission de patrimoine</a><a href="#/famille/dip" class="h0" style="padding:7px 24px;font-size:15px;color:#666">Droit international</a>
 </div>
-<a href="#actualites" class="h0" style="color:rgba(0,0,0,.6)">Actualités</a>
-</nav>
-<a href="#rdv" class="h2" style="background:#428c9e;color:#fff;border-radius:100px;padding:9px 24px;font-size:clamp(14px,1.6vw,18px);font-weight:500;border:1px solid #428c9e;white-space:nowrap">Prendre RDV</a>
+</div>
+</div>
+<a href="#/actualites" class="nl" data-nav="actualites" style="color:rgba(0,0,0,.6)">Actualités</a>
+</nav></div>
+<div style="display:flex;align-items:center;gap:14px">
+<a href="#/rdv" class="h1" style="background:#428c9e;color:#fff;border-radius:100px;padding:9px 24px;font-size:clamp(14px,1.6vw,18px);font-weight:500;border:1px solid #428c9e;white-space:nowrap">Prendre RDV</a>
+<div class="mob"><button id="burger" aria-label="Menu" style="width:44px;height:44px;border:0;background:none;cursor:pointer;color:#428c9e;font-size:30px;line-height:1">☰</button></div>
+</div>
+</div>
+<div id="mobnav">
+<div style="background:#fff;border-top:3px solid #428c9e;box-shadow:0 8px 12px rgba(0,0,0,.08);padding:10px 6%;display:flex;flex-direction:column">
+<a href="#/" style="padding:12px 0;font-size:18px;font-weight:500;color:#333">Accueil</a>
+<a href="#/cabinet" style="padding:12px 0;font-size:18px;font-weight:500;color:#333">Notre cabinet</a>
+<a href="#/famille" style="padding:12px 0;font-size:18px;font-weight:500;color:#333">Droit de la famille</a>
+<a href="#/famille/succesion" style="padding:8px 0 8px 18px;font-size:15px;color:#666">Droit des successions</a><a href="#/famille/divorce-transfrontalier" style="padding:8px 0 8px 18px;font-size:15px;color:#666">Divorce transfrontalier</a><a href="#/famille/succession-transfrontaliere" style="padding:8px 0 8px 18px;font-size:15px;color:#666">Succession transfrontalière</a><a href="#/famille/divorce" style="padding:8px 0 8px 18px;font-size:15px;color:#666">Fiscalité du divorce</a><a href="#/famille/famille" style="padding:8px 0 8px 18px;font-size:15px;color:#666">Droit de la famille</a><a href="#/famille/patrimoine" style="padding:8px 0 8px 18px;font-size:15px;color:#666">Transmission de patrimoine</a><a href="#/famille/dip" style="padding:8px 0 8px 18px;font-size:15px;color:#666">Droit international</a>
+<a href="#/actualites" style="padding:12px 0;font-size:18px;font-weight:500;color:#333">Actualités</a>
+</div>
 </div>
 </header>
 
-<!-- Hero -->
-<section id="top" style="background:#2d6574 url(https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-2.png) center/cover no-repeat;padding:150px 0 200px">
-<div style="max-width:1280px;margin:0 auto;padding:66px 40px 0">
-<h1 style="margin:0;padding:0 0 10px;font-size:70px;line-height:1.05;font-weight:600;color:#fff">Pessia &amp; Associés</h1>
-<h2 style="margin:10px 0 0;padding:0;font-size:36px;line-height:1.25;font-weight:300;color:#fff;max-width:760px">Cabinet d’avocats<br>en droit de la famille à Lyon &amp; Annecy</h2>
-<div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:56px">
-<a href="#rdv" class="h3" style="background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid transparent">Prendre RDV</a>
-<a href="#cabinet" class="h4" style="color:#fff;border:1px solid #fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500">En savoir plus</a>
+<!-- ================= ACCUEIL ================= -->
+<div data-route="home">
+<section style="background:#2d6574 url(https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-2.png) center/cover no-repeat;padding:clamp(60px,10vw,150px) 0 clamp(90px,18vw,250px);margin-top:-6px">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;padding-top:clamp(20px,5vw,66px)">
+<h1 style="margin:0;padding:0 0 10px;font-size:clamp(44px,6vw,70px);line-height:1.05;font-weight:600;color:#fff">Pessia &amp; Associés</h1>
+<h2 style="margin:10px 0 0;padding:0;font-size:clamp(24px,3vw,36px);line-height:1.2;font-weight:300;color:#fff;max-width:760px">Cabinet d’avocats<br>en droit de la famille à Lyon &amp; Annecy</h2>
+<div class="hero-btns" style="display:flex;gap:20px;flex-wrap:wrap;margin-top:50px;flex-direction:row;align-items:flex-start">
+<a href="#/rdv" class="h2" style="background:#428c9e;color:#fff;border-radius:100px;padding:.3em 45px .3em 35px;font-size:18px;line-height:1.7;font-weight:500;border:1px solid transparent">Prendre RDV →</a>
+<a href="#/cabinet" data-b2 class="h3" style="color:#fff;border:1px solid #fff;border-radius:100px;padding:.3em 45px .3em 35px;font-size:18px;line-height:1.7;font-weight:500">En savoir plus →</a>
 </div>
 </div>
 </section>
 
-<!-- Valeurs -->
-<section id="cabinet" style="background:#fff;padding:80px 0">
-<div style="max-width:1080px;margin:0 auto;padding:0 40px">
-<h2 style="margin:0 0 50px;padding:0;font-size:36px;line-height:1.2;font-weight:700;color:#428c9e">P&amp;A vous accompagne dans vos démarches</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:48px">
-<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-48.png" alt="" style="width:100px;height:100px;object-fit:contain"><h4 style="margin:18px 0 10px;font-size:20px;font-weight:700;color:#333">Confiance</h4><p style="margin:0;text-align:justify">Nous nous engageons à établir des relations solides avec nos clients, en maintenant une confidentialité absolue.</p></div>
-<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Transparence.png" alt="" style="width:100px;height:100px;object-fit:contain"><h4 style="margin:18px 0 10px;font-size:20px;font-weight:700;color:#333">Transparence</h4><p style="margin:0;text-align:justify">Nous vous tiendrons informés à chaque étape de votre affaire, en vous expliquant clairement les enjeux et les décisions prises.</p></div>
-<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Ecoute.png" alt="" style="width:100px;height:100px;object-fit:contain"><h4 style="margin:18px 0 10px;font-size:20px;font-weight:700;color:#333">Écoute</h4><p style="margin:0;text-align:justify">Nous accordons une attention particulière à comprendre vos besoins et vous fournir des conseils juridiques adaptés à votre situation.</p></div>
+<section style="background:#fff;padding:clamp(48px,8vw,80px) 0 76px">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h2 style="margin:0 0 40px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:rgba(66,140,158,.91);text-align:center">P&amp;A vous accompagne dans vos démarches</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:5.5%">
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-48.png" alt="" style="width:150px;height:150px;object-fit:contain"><h4 style="margin:30px 0 10px;padding:0;font-size:18px;line-height:1.2;font-weight:600;color:#333">Confiance</h4><p style="margin:0;font-size:15px;font-weight:300;color:#000;text-align:justify">Nous nous engageons à établir des relations solides avec nos clients, en maintenant une confidentialité absolue.</p></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Transparence.png" alt="" style="width:150px;height:150px;object-fit:contain"><h4 style="margin:30px 0 10px;padding:0;font-size:18px;line-height:1.2;font-weight:600;color:#333">Transparence</h4><p style="margin:0;font-size:15px;font-weight:300;color:#000;text-align:justify">Nous vous tiendrons informés à chaque étape de votre affaire, en vous expliquant clairement les enjeux et les décisions prises.</p></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Ecoute.png" alt="" style="width:150px;height:150px;object-fit:contain"><h4 style="margin:30px 0 10px;padding:0;font-size:18px;line-height:1.2;font-weight:600;color:#333">Écoute</h4><p style="margin:0;font-size:15px;font-weight:300;color:#000;text-align:justify">Nous accordons une attention particulière à comprendre vos besoins et vous fournir des conseils juridiques adaptés à votre situation.</p></div>
 </div>
 </div>
 </section>
 
-<!-- Expertise -->
-<section id="expertise" style="background:#428c9e;padding:80px 0">
-<div style="max-width:1280px;margin:0 auto;padding:0 40px">
-<h2 style="margin:0;padding:0 0 10px;font-size:36px;line-height:1.2;font-weight:700;color:#fff">Droit de la famille et des successions</h2>
-<h3 style="margin:0 0 48px;padding:0;font-size:22px;line-height:1.4;font-weight:400;color:#fff">Facilitez vos démarches de succession et de transmission de patrimoine</h3>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px">
-<a href="#expertise" style="background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;color:#666"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Succession-500.png" alt="" style="width:100%;height:200px;object-fit:cover;background:#e8f1f3"><div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1"><h4 style="margin:0;font-size:20px;line-height:1.3;font-weight:700;color:#428c9e">Droit des successions</h4><p style="margin:0">Protégez vos droits et obtenez le règlement juste et équitable de votre héritage, tout en préservant les intérêts de vos proches.</p><span style="margin-top:auto;padding-top:8px;font-weight:600;color:#428c9e">En savoir plus →</span></div></a>
-<a href="#expertise" style="background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;color:#666"><img src="https://pessia-associes.fr/wp-content/uploads/2024/10/kelly-sikkema-3-Tc_5LROrM-unsplash-1.jpg" alt="" style="width:100%;height:200px;object-fit:cover;background:#e8f1f3"><div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1"><h4 style="margin:0;font-size:20px;line-height:1.3;font-weight:700;color:#428c9e">Fiscalité du divorce et des successions</h4><p style="margin:0">Optimisez la fiscalité des pensions alimentaires, prestations compensatoires, successions et transmissions de patrimoine.</p><span style="margin-top:auto;padding-top:8px;font-weight:600;color:#428c9e">En savoir plus →</span></div></a>
-<a href="#expertise" style="background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;color:#666"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/carrie-allen-www-carrieallen-com-1H1LBKvD7ew-unsplash-1.jpg" alt="" style="width:100%;height:200px;object-fit:cover;background:#e8f1f3"><div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1"><h4 style="margin:0;font-size:20px;line-height:1.3;font-weight:700;color:#428c9e">Divorce transfrontalier</h4><p style="margin:0">Naviguez sereinement entre les législations franco-suisses pour sécuriser vos droits, le partage de votre prévoyance et le règlement de votre procédure.</p><span style="margin-top:auto;padding-top:8px;font-weight:600;color:#428c9e">En savoir plus →</span></div></a>
-<a href="#expertise" style="background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;color:#666"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/sasun-bughdaryan-NB1dUts3ROU-unsplash-1-1.jpg" alt="" style="width:100%;height:200px;object-fit:cover;background:#e8f1f3"><div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1"><h4 style="margin:0;font-size:20px;line-height:1.3;font-weight:700;color:#428c9e">Succession transfrontalière</h4><p style="margin:0">Anticipez et gérez le règlement de successions internationales complexes en optimisant l’impact fiscal et juridique sur vos biens situés en France et à l’étranger.</p><span style="margin-top:auto;padding-top:8px;font-weight:600;color:#428c9e">En savoir plus →</span></div></a>
-<a href="#expertise" style="background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;color:#666"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Droit-de-la-famille-image.png" alt="" style="width:100%;height:200px;object-fit:cover;background:#e8f1f3"><div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1"><h4 style="margin:0;font-size:20px;line-height:1.3;font-weight:700;color:#428c9e">Droit de la famille</h4><p style="margin:0">Protégez vos droits et facilitez une transition harmonieuse vers un nouveau chapitre de votre vie.</p><span style="margin-top:auto;padding-top:8px;font-weight:600;color:#428c9e">En savoir plus →</span></div></a>
-<a href="#expertise" style="background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;color:#666"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/shalev-cohen-QKZdcN15Cog-unsplash-1.jpg" alt="" style="width:100%;height:200px;object-fit:cover;background:#e8f1f3"><div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1"><h4 style="margin:0;font-size:20px;line-height:1.3;font-weight:700;color:#428c9e">Transmission de patrimoine</h4><p style="margin:0">Optimisez la gestion et le transfert de votre patrimoine, tout en sécurisant l’avenir de vos proches.</p><span style="margin-top:auto;padding-top:8px;font-weight:600;color:#428c9e">En savoir plus →</span></div></a>
-<a href="#expertise" style="background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;color:#666"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Droit-international-1.png" alt="" style="width:100%;height:200px;object-fit:cover;background:#e8f1f3"><div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1"><h4 style="margin:0;font-size:20px;line-height:1.3;font-weight:700;color:#428c9e">Droit International</h4><p style="margin:0">Retrouvez une stabilité familiale dans le respect de la législation internationale.</p><span style="margin-top:auto;padding-top:8px;font-weight:600;color:#428c9e">En savoir plus →</span></div></a>
+<section style="background:#428c9e url(https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-25.png) center/cover no-repeat;padding:clamp(48px,8vw,80px) 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h2 style="margin:0;padding:0 0 10px;font-size:clamp(28px,5vw,40px);line-height:1.1;font-weight:700;color:#fff">Droit de la famille et des successions</h2>
+<h3 style="margin:0 0 20px;padding:0;font-size:25px;line-height:1.2;font-weight:300;color:#fff">Facilitez vos démarches de succession et de transmission de patrimoine</h3>
+<a href="#/rdv" class="h4" style="display:inline-block;background:#fff;color:#428c9e;border-radius:100px;padding:.3em 1.2em;font-size:18px;line-height:1.7;font-weight:500;border:1px solid #fff;margin-bottom:40px">Prendre RDV →</a>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px 5.5%">
+<a href="#/famille/succesion" style="background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;color:#000;max-width:340px"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Succession-500.png" alt="" style="width:100%;height:150px;object-fit:cover;background:#e8f1f3"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1"><h4 style="margin:0;padding:0;font-size:19px;line-height:1.2;font-weight:600;color:#333">Droit des successions</h4><p style="margin:0;font-size:15px;font-weight:300;line-height:1.6">Protégez vos droits et obtenez le règlement juste et équitable de votre héritage, tout en préservant les intérêts de vos proches.</p><span style="margin-top:auto;padding-top:6px;font-size:18px;font-weight:500;color:#428c9e">En savoir plus →</span></div></a>
+<a href="#/famille/fiscalite" style="background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;color:#000;max-width:340px"><img src="https://pessia-associes.fr/wp-content/uploads/2024/10/kelly-sikkema-3-Tc_5LROrM-unsplash-1.jpg" alt="" style="width:100%;height:150px;object-fit:cover;background:#e8f1f3"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1"><h4 style="margin:0;padding:0;font-size:19px;line-height:1.2;font-weight:600;color:#333">Fiscalité du divorce et des successions</h4><p style="margin:0;font-size:15px;font-weight:300;line-height:1.6">Optimisez la fiscalité des pensions alimentaires, prestations compensatoires, successions et transmissions de patrimoine.</p><span style="margin-top:auto;padding-top:6px;font-size:18px;font-weight:500;color:#428c9e">En savoir plus →</span></div></a>
+<a href="#/famille/divorce-transfrontalier" style="background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;color:#000;max-width:340px"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/carrie-allen-www-carrieallen-com-1H1LBKvD7ew-unsplash-1.jpg" alt="" style="width:100%;height:150px;object-fit:cover;background:#e8f1f3"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1"><h4 style="margin:0;padding:0;font-size:19px;line-height:1.2;font-weight:600;color:#333">Divorce transfrontalier</h4><p style="margin:0;font-size:15px;font-weight:300;line-height:1.6">Naviguez sereinement entre les législations franco-suisses pour sécuriser vos droits, le partage de votre prévoyance et le règlement de votre procédure.</p><span style="margin-top:auto;padding-top:6px;font-size:18px;font-weight:500;color:#428c9e">En savoir plus →</span></div></a>
+<a href="#/famille/succession-transfrontaliere" style="background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;color:#000;max-width:340px"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/sasun-bughdaryan-NB1dUts3ROU-unsplash-1-1.jpg" alt="" style="width:100%;height:150px;object-fit:cover;background:#e8f1f3"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1"><h4 style="margin:0;padding:0;font-size:19px;line-height:1.2;font-weight:600;color:#333">Succession transfrontalière</h4><p style="margin:0;font-size:15px;font-weight:300;line-height:1.6">Anticipez et gérez le règlement de successions internationales complexes en optimisant l’impact fiscal et juridique sur vos biens situés en France et à l’étranger.</p><span style="margin-top:auto;padding-top:6px;font-size:18px;font-weight:500;color:#428c9e">En savoir plus →</span></div></a>
+<a href="#/famille/famille" style="background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;color:#000;max-width:340px"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Droit-de-la-famille-image.png" alt="" style="width:100%;height:150px;object-fit:cover;background:#e8f1f3"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1"><h4 style="margin:0;padding:0;font-size:19px;line-height:1.2;font-weight:600;color:#333">Droit de la famille</h4><p style="margin:0;font-size:15px;font-weight:300;line-height:1.6">Protégez vos droits et facilitez une transition harmonieuse vers un nouveau chapitre de votre vie</p><span style="margin-top:auto;padding-top:6px;font-size:18px;font-weight:500;color:#428c9e">En savoir plus →</span></div></a>
+<a href="#/famille/patrimoine" style="background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;color:#000;max-width:340px"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/shalev-cohen-QKZdcN15Cog-unsplash-1.jpg" alt="" style="width:100%;height:150px;object-fit:cover;background:#e8f1f3"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1"><h4 style="margin:0;padding:0;font-size:19px;line-height:1.2;font-weight:600;color:#333">Transmission de patrimoine</h4><p style="margin:0;font-size:15px;font-weight:300;line-height:1.6">Optimisez la gestion et le transfert de votre patrimoine, tout en sécurisant l’avenir de vos proches.</p><span style="margin-top:auto;padding-top:6px;font-size:18px;font-weight:500;color:#428c9e">En savoir plus →</span></div></a>
+<a href="#/famille/dip" style="background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;color:#000;max-width:340px"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Droit-international-1.png" alt="" style="width:100%;height:150px;object-fit:cover;background:#e8f1f3"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1"><h4 style="margin:0;padding:0;font-size:19px;line-height:1.2;font-weight:600;color:#333">Droit International</h4><p style="margin:0;font-size:15px;font-weight:300;line-height:1.6">Retrouvez une stabilité familiale dans le respect de la législation internationale.</p><span style="margin-top:auto;padding-top:6px;font-size:18px;font-weight:500;color:#428c9e">En savoir plus →</span></div></a>
 </div>
 </div>
 </section>
 
-<!-- Témoignages -->
-<section id="actualites" style="background:#fff;padding:80px 0">
-<div style="max-width:1280px;margin:0 auto;padding:0 40px">
+<section style="background:#fff;border-top:1px solid rgba(0,0,0,.16);padding:clamp(48px,8vw,80px) 0 40px">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h2 style="margin:0 0 20px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:rgba(66,140,158,.91);text-align:center">Nos clients témoignent</h2>
+<div style="display:flex;gap:10px;justify-content:flex-end;margin-bottom:10px">
+<button data-scroll="-1" aria-label="Précédent" class="h5" style="width:38px;height:38px;border-radius:100px;border:1px solid #428c9e;background:#fff;color:#428c9e;font-size:18px;cursor:pointer">←</button>
+<button data-scroll="1" aria-label="Suivant" class="h5" style="width:38px;height:38px;border-radius:100px;border:1px solid #428c9e;background:#fff;color:#428c9e;font-size:18px;cursor:pointer">→</button>
+</div>
+<div class="pa-track" id="pa-track-home" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 12px">
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">Al Smith</strong><span style="font-size:12px;color:#888">18 septembre 2024</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">Un avocat réactif, à l'écoute, compétent et charismatique : je recommande sans réserve</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">Akira</strong><span style="font-size:12px;color:#888">15 juillet 2024</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">La réactivité de Maître Pessia est exemplaire, merci à lui !</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">Nadia OUADAH</strong><span style="font-size:12px;color:#888">11 juin 2024</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">Très bon accueil, un véritable écoute et une bonne démarche. Rassurant et honnête</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">Henry Benmoyal</strong><span style="font-size:12px;color:#888">14 mars 2024</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">Maître Pessia est un avocat sérieux compétent professionnel disponible et d’une rare efficacité</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">Carmen Mosset</strong><span style="font-size:12px;color:#888">6 mars 2024</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">Nous avions choisi Me Pessia pour ses doubles connaissances dans les domaines notariales et juridiques. Il s’est immédiatement avéré que notre choix fut parfait car les compétences de Me Pessia nous ont permises de clore notre affaire rapidement et avec satisfaction. J’ajoute que par ses conseils avertis, son anticipation des événements, nous sommes restés rassurés et convaincus de sa manière à nous défendre. Outre cela, nous lui sommes reconnaissants pour sa disponibilité et sa réactivité à répondre à chaque besoin. Nous ne pouvons que recommander Me Pessia. Philippe &amp; Carmen Mosset</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">Jeanne Roux</strong><span style="font-size:12px;color:#888">28 juillet 2023</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">J'ai rencontré maître peissia à 2 reprises chez mon amie pour une affaire très compliquée et douloureuse concernant les enfants de son fils. J'ai remarqué, en plus, chez cet avocat, personne très humaine, très à l'écoute et dont le professionnalisme a fait ses preuves en gagnant le procès. J'ai vu une famille reprendre espoir et le sourire. Je recommande très fortement et sans hesitation maître peissia. Bravo et merci pour eux Mme Roux jeannette</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">sylvie Kerdekachian</strong><span style="font-size:12px;color:#888">28 juillet 2023</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">Maître pessia a été une rencontre exceptionnelle l. Depuis 1 an il s'est battu pour que mon fils puisse revoir ses enfants et il a gagné. Professionnel, d'une disponibilité sensationnelle. A chaque fois que nous avions des questions, des doutes (par mails, téléphone) il prenait son temps pour nous répondre et toujours avec bienveillance et réalité face à notre situation. Maître pessia a redonner à mon fils l'espoir et le sourire qu'il avait perdu depuis tous ces longs mois. Bravo maître. Je vous recommande, en toute sincérité et les yeux fermés maître pessia. Une maman très soulagée et heureuse pour son fils. Merci maître d'avoir été à nos côtés</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">Roland Corbe</strong><span style="font-size:12px;color:#888">18 mai 2023</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">Maître, Je tiens à vous remercier vivement pour votre engagement dans mon divorce. Votre professionnalisme et votre dévouement ont été précieux pour moi dans ces moments difficiles .J'ai beaucoup apprécié votre humanisme et je vous en suis très reconnaissant . Maître, mes salutations les plus respectueuses</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+<article style="flex:0 0 300px;max-width:88vw;scroll-snap-align:start;background:#f3f3f3;border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;max-height:300px;overflow:hidden">
+<strong style="color:#333;font-weight:600;line-height:1.3;font-size:15px">Severine Muller</strong><span style="font-size:12px;color:#888">3 mai 2023</span>
+<div style="color:#f5a623;letter-spacing:2px;font-size:15px">★★★★★</div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#333;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">Je ne peux que recommander Maître Pessia. Affaire résolue grâce à son implication, sa persévérance et son professionnalisme à toute épreuve. À l'écoute, factuel tout en étant agréable : un bonheur d'être représenté par un avocat éthique ! Merci encore pour tout. Je remercie également son élève avocate à qui je souhaite un bel avenir professionnel.</p>
+<img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:18px;height:18px;position:absolute;top:12px;right:12px">
+</article>
+
+</div>
+</div>
+</section>
+
+<section style="background:#fff;padding:20px 0 60px">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h2 style="margin:0 0 36px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:rgba(66,140,158,.91);text-align:center">Prenez rendez-vous avec un avocat</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px 5.5%">
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/09/Andrea-1.jpg" alt="Maître Andrea PESSIA" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Andrea PESSIA</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat spécialiste en droit des successions et droit de la famille</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/09/Flora-1.jpg" alt="Maître Flora GARON" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Flora GARON</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/Design-sans-titre-19-1-1.png" alt="Maître Caroline JOURDRAIN" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Caroline JOURDRAIN</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Elisa-9-1.png" alt="Maître Elisa PHILIBERT" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Elisa PHILIBERT</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Cameille-7-1.png" alt="Maître Camille ORIOL" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Camille ORIOL</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/Design-sans-titre-18-3-1.png" alt="Maître Louise LAUBERNY" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Louise LAUBERNY</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff;padding:20px 0 60px">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h3 style="margin:0 0 28px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:rgba(66,140,158,.91)">Nos coordonnées</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px 40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<a href="mailto:contact@pessia-associes.fr" class="h6" style="display:flex;gap:15px;align-items:center;font-size:16px;font-weight:300;color:#333"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/at-circle-sharp.png" alt="" style="width:32px;height:32px">contact@pessia-associes.fr</a>
+<a href="tel:0428870161" class="h6" style="display:flex;gap:15px;align-items:center;font-size:16px;font-weight:300;color:#333"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/call-sharp.png" alt="" style="width:32px;height:32px">04 28 87 01 61</a>
+</div>
+<div><h4 style="margin:0 0 10px;padding:0;font-size:16px;font-weight:700;color:#333">Lyon</h4><a href="https://goo.gl/maps/mj4V7yKtryCX1kYS7" class="h6" style="display:flex;gap:15px;align-items:center;font-size:16px;font-weight:300;color:#333"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/location-sharp.png" alt="" style="width:32px;height:32px">14 Rue Robert, 69006, LYON</a></div>
+<div><h4 style="margin:0 0 10px;padding:0;font-size:16px;font-weight:700;color:#333">Annecy</h4><a href="https://maps.app.goo.gl/jfY5onap5Ee9g9xe6" class="h6" style="display:flex;gap:15px;align-items:center;font-size:16px;font-weight:300;color:#333"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/location-sharp.png" alt="" style="width:32px;height:32px">19 rue Henry BORDEAUX 74000 ANNECY</a></div>
+</div>
+</div>
+</section>
+<iframe title="Carte Lyon" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.3571166543934!2d4.845269615567498!3d45.76403287910567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eaf591b2e059%3A0xb5d9d10150f226f!2s14%20Rue%20Robert%2C%2069006%20Lyon!5e0!3m2!1sfr!2sfr!4v1690792833666!5m2!1sfr!2sfr" style="display:block;width:100%;height:380px;border:0" loading="lazy"></iframe>
+</div>
+
+<!-- ================= NOTRE CABINET ================= -->
+<div data-route="cabinet">
+<section style="background:#2d6574 url(https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-2.png) center/cover no-repeat;padding:clamp(60px,9vw,110px) 0 clamp(70px,10vw,130px)">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h1 style="margin:0;padding:0 0 10px;font-size:clamp(40px,5.5vw,60px);line-height:1.05;font-weight:600;color:#fff">Notre cabinet</h1>
+<h2 style="margin:10px 0 0;padding:0;font-size:clamp(20px,3vw,32px);line-height:1.25;font-weight:300;color:#fff;max-width:760px">Découvrez notre cabinet en droit de la famille et des successions à Lyon</h2>
+<a href="#/rdv" class="h2" style="display:inline-block;margin-top:40px;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid transparent">Prendre RDV</a>
+</div>
+</section>
+
+<section style="background:#fff;padding:clamp(48px,8vw,80px) 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h2 style="margin:0 0 48px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Notre équipe</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:36px 5.5%">
+<div data-bio="0" style="cursor:pointer;text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Design-sans-titre.png" alt="Maitre Andrea PESSIA" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h2 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maitre Andrea PESSIA</h2><p style="margin:0;font-size:14px;color:#666">Avocat spécialisé en droit de la famille et des successions</p><span style="display:inline-block;margin-top:6px;font-size:14px;font-weight:600;color:#428c9e">Voir le profil →</span></div>
+<div data-bio="1" style="cursor:pointer;text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Flora.png" alt="Maitre Flora GARON" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h2 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maitre Flora GARON</h2><p style="margin:0;font-size:14px;color:#666">Avocat</p><span style="display:inline-block;margin-top:6px;font-size:14px;font-weight:600;color:#428c9e">Voir le profil →</span></div>
+<div data-bio="2" style="cursor:pointer;text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Elisa-8.png" alt="Maitre Elisa PHILIBERT" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h2 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maitre Elisa PHILIBERT</h2><p style="margin:0;font-size:14px;color:#666">Avocat</p><span style="display:inline-block;margin-top:6px;font-size:14px;font-weight:600;color:#428c9e">Voir le profil →</span></div>
+<div data-bio="3" style="cursor:pointer;text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Camille-6.png" alt="Maitre Camille ORIOL" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h2 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maitre Camille ORIOL</h2><p style="margin:0;font-size:14px;color:#666">Avocat</p><span style="display:inline-block;margin-top:6px;font-size:14px;font-weight:600;color:#428c9e">Voir le profil →</span></div>
+<div data-bio="4" style="cursor:pointer;text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/Design-sans-titre-17-1.png" alt="Maitre Caroline JOURDRAIN" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h2 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maitre Caroline JOURDRAIN</h2><p style="margin:0;font-size:14px;color:#666">Avocat</p><span style="display:inline-block;margin-top:6px;font-size:14px;font-weight:600;color:#428c9e">Voir le profil →</span></div>
+<div data-bio="5" style="cursor:pointer;text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/Design-sans-titre-18-1.png" alt="Maitre Louise LAUBERNY" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h2 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maitre Louise LAUBERNY</h2><p style="margin:0;font-size:14px;color:#666">Avocat</p><span style="display:inline-block;margin-top:6px;font-size:14px;font-weight:600;color:#428c9e">Voir le profil →</span></div>
+</div>
+</div>
+</section>
+
+<section style="background:#f3f3f3;padding:clamp(48px,8vw,80px) 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:center">
+<div><h2 style="margin:0 0 24px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Les valeurs de notre cabinet</h2>
+<p style="margin:0 0 28px;text-align:justify">Chez <strong>Pessia &amp; Associés</strong>, nous reconnaissons l’importance cruciale de la fiscalité dans les questions familiales et patrimoniales. Nous vous offrons un accompagnement personnalisé dans la gestion des aspects fiscaux, qu’il s’agisse de la planification successorale, de l’optimisation fiscale lors des partages et transmissions de biens, ou encore de la gestion des impôts liés aux successions. Nous nous assurons que chaque décision soit en accord avec vos intérêts financiers et patrimoniaux.</p>
+<a href="#/rdv" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Prendre RDV</a></div>
+<img src="https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-47.png" alt="" style="width:100%;border-radius:8px;object-fit:cover;background:#dde9ec;min-height:240px">
+</div>
+</section>
+
+<section style="background:#fff;padding:clamp(48px,8vw,80px) 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px">
-<h2 style="margin:0;padding:0;font-size:36px;line-height:1.2;font-weight:700;color:#428c9e">Nos clients témoignent</h2>
+<h2 style="margin:0;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Nos clients témoignent</h2>
 <div style="display:flex;gap:10px">
-<button id="prev" aria-label="Précédent" class="h5" style="width:46px;height:46px;border-radius:100px;border:1px solid #428c9e;background:#fff;color:#428c9e;font-size:20px;cursor:pointer;font-family:inherit">←</button>
-<button id="next" aria-label="Suivant" class="h5" style="width:46px;height:46px;border-radius:100px;border:1px solid #428c9e;background:#fff;color:#428c9e;font-size:20px;cursor:pointer;font-family:inherit">→</button>
+<button data-scroll="-1" aria-label="Précédent" class="h5" style="width:46px;height:46px;border-radius:100px;border:1px solid #428c9e;background:#fff;color:#428c9e;font-size:20px;cursor:pointer">←</button>
+<button data-scroll="1" aria-label="Suivant" class="h5" style="width:46px;height:46px;border-radius:100px;border:1px solid #428c9e;background:#fff;color:#428c9e;font-size:20px;cursor:pointer">→</button>
 </div>
 </div>
-<div id="pa-track" style="display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 12px">
+<div class="pa-track" id="pa-track-cab" style="display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 12px">
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">Al Smith</strong><span style="font-size:13px;color:#888">18 septembre 2024</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">Un avocat réactif, à l'écoute, compétent et charismatique : je recommande sans réserve</p>
+</article>
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">Akira</strong><span style="font-size:13px;color:#888">15 juillet 2024</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">La réactivité de Maître Pessia est exemplaire, merci à lui !</p>
+</article>
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">Nadia OUADAH</strong><span style="font-size:13px;color:#888">11 juin 2024</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">Très bon accueil, un véritable écoute et une bonne démarche. Rassurant et honnête</p>
+</article>
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">Henry Benmoyal</strong><span style="font-size:13px;color:#888">14 mars 2024</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">Maître Pessia est un avocat sérieux compétent professionnel disponible et d’une rare efficacité</p>
+</article>
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">Carmen Mosset</strong><span style="font-size:13px;color:#888">6 mars 2024</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">Nous avions choisi Me Pessia pour ses doubles connaissances dans les domaines notariales et juridiques. Il s’est immédiatement avéré que notre choix fut parfait car les compétences de Me Pessia nous ont permises de clore notre affaire rapidement et avec satisfaction. J’ajoute que par ses conseils avertis, son anticipation des événements, nous sommes restés rassurés et convaincus de sa manière à nous défendre. Outre cela, nous lui sommes reconnaissants pour sa disponibilité et sa réactivité à répondre à chaque besoin. Nous ne pouvons que recommander Me Pessia. Philippe &amp; Carmen Mosset</p>
+</article>
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">Jeanne Roux</strong><span style="font-size:13px;color:#888">28 juillet 2023</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">J'ai rencontré maître peissia à 2 reprises chez mon amie pour une affaire très compliquée et douloureuse concernant les enfants de son fils. J'ai remarqué, en plus, chez cet avocat, personne très humaine, très à l'écoute et dont le professionnalisme a fait ses preuves en gagnant le procès. J'ai vu une famille reprendre espoir et le sourire. Je recommande très fortement et sans hesitation maître peissia. Bravo et merci pour eux Mme Roux jeannette</p>
+</article>
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">sylvie Kerdekachian</strong><span style="font-size:13px;color:#888">28 juillet 2023</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">Maître pessia a été une rencontre exceptionnelle l. Depuis 1 an il s'est battu pour que mon fils puisse revoir ses enfants et il a gagné. Professionnel, d'une disponibilité sensationnelle. A chaque fois que nous avions des questions, des doutes (par mails, téléphone) il prenait son temps pour nous répondre et toujours avec bienveillance et réalité face à notre situation. Maître pessia a redonner à mon fils l'espoir et le sourire qu'il avait perdu depuis tous ces longs mois. Bravo maître. Je vous recommande, en toute sincérité et les yeux fermés maître pessia. Une maman très soulagée et heureuse pour son fils. Merci maître d'avoir été à nos côtés</p>
+</article>
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">Roland Corbe</strong><span style="font-size:13px;color:#888">18 mai 2023</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">Maître, Je tiens à vous remercier vivement pour votre engagement dans mon divorce. Votre professionnalisme et votre dévouement ont été précieux pour moi dans ces moments difficiles .J'ai beaucoup apprécié votre humanisme et je vous en suis très reconnaissant . Maître, mes salutations les plus respectueuses</p>
+</article>
+
+<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><strong style="color:#333;font-weight:600;display:block;line-height:1.3">Severine Muller</strong><span style="font-size:13px;color:#888">3 mai 2023</span></div><img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" style="width:20px;height:20px"></div>
+<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
+<p style="margin:0;font-size:15px">Je ne peux que recommander Maître Pessia. Affaire résolue grâce à son implication, sa persévérance et son professionnalisme à toute épreuve. À l'écoute, factuel tout en étant agréable : un bonheur d'être représenté par un avocat éthique ! Merci encore pour tout. Je remercie également son élève avocate à qui je souhaite un bel avenir professionnel.</p>
+</article>
 
 </div>
 </div>
 </section>
 
-<!-- Équipe -->
-<section style="background:#f3f3f3;padding:80px 0">
-<div style="max-width:1280px;margin:0 auto;padding:0 40px">
-<h2 style="margin:0 0 48px;padding:0;font-size:36px;line-height:1.2;font-weight:700;color:#428c9e">Prenez rendez-vous avec un avocat</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:32px">
-<div><img src="https://pessia-associes.fr/wp-content/uploads/2024/09/Andrea-1.jpg" alt="Maître Andrea PESSIA" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;background:#dde9ec"><h3 style="margin:16px 0 4px;font-size:20px;font-weight:700;color:#333">Maître Andrea PESSIA</h3><h4 style="margin:0;font-size:15px;font-weight:500;color:#428c9e;line-height:1.5">Avocat spécialiste en droit des successions et droit de la famille</h4></div>
-<div><img src="https://pessia-associes.fr/wp-content/uploads/2024/09/Flora-1.jpg" alt="Maître Flora GARON" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;background:#dde9ec"><h3 style="margin:16px 0 4px;font-size:20px;font-weight:700;color:#333">Maître Flora GARON</h3><h4 style="margin:0;font-size:15px;font-weight:500;color:#428c9e">Avocat</h4></div>
-<div><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/Design-sans-titre-19-1-1.png" alt="Maître Caroline JOURDRAIN" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;background:#dde9ec"><h3 style="margin:16px 0 4px;font-size:20px;font-weight:700;color:#333">Maître Caroline JOURDRAIN</h3><h4 style="margin:0;font-size:15px;font-weight:500;color:#428c9e">Avocat</h4></div>
-<div><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Elisa-9-1.png" alt="Maître Elisa PHILIBERT" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;background:#dde9ec"><h3 style="margin:16px 0 4px;font-size:20px;font-weight:700;color:#333">Maître Elisa PHILIBERT</h3><h4 style="margin:0;font-size:15px;font-weight:500;color:#428c9e">Avocat</h4></div>
-<div><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Cameille-7-1.png" alt="Maître Camille ORIOL" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;background:#dde9ec"><h3 style="margin:16px 0 4px;font-size:20px;font-weight:700;color:#333">Maître Camille ORIOL</h3><h4 style="margin:0;font-size:15px;font-weight:500;color:#428c9e">Avocat</h4></div>
-<div><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/Design-sans-titre-18-3-1.png" alt="Maître Louise LAUBERNY" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;background:#dde9ec"><h3 style="margin:16px 0 4px;font-size:20px;font-weight:700;color:#333">Maître Louise LAUBERNY</h3><h4 style="margin:0;font-size:15px;font-weight:500;color:#428c9e">Avocat</h4></div>
+<section style="background:#428c9e;padding:clamp(48px,8vw,80px) 0">
+<div style="max-width:760px;margin:0 auto;padding:0 40px">
+<h2 style="margin:0 0 8px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#fff">Une question ? On vous écoute.</h2>
+<p style="margin:0 0 32px;color:#fff">Notre équipe se charge de répondre à toutes vos questions dans les plus brefs délais</p>
+<form onsubmit="return false" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px">
+<label style="color:#fff;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Prénom<input type="text" style="padding:12px 14px;border:0;border-radius:6px;font-size:16px;color:#333"></label>
+<label style="color:#fff;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Nom<input type="text" style="padding:12px 14px;border:0;border-radius:6px;font-size:16px;color:#333"></label>
+<label style="grid-column:1/-1;color:#fff;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Adresse e-mail<input type="email" style="padding:12px 14px;border:0;border-radius:6px;font-size:16px;color:#333"></label>
+<label style="grid-column:1/-1;color:#fff;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Quel est le sujet de votre demande ?<select style="padding:12px 14px;border:0;border-radius:6px;font-size:16px;color:#333;background:#fff"><option>Droit de la famille</option><option>Succession</option><option>Transmission de patrimoine</option><option>Droit international</option></select></label>
+<label style="grid-column:1/-1;color:#fff;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Message<textarea rows="5" style="padding:12px 14px;border:0;border-radius:6px;font-size:16px;color:#333;resize:vertical"></textarea></label>
+<div style="grid-column:1/-1"><button type="submit" class="h4" style="background:#fff;color:#428c9e;border:1px solid #fff;border-radius:100px;padding:11px 32px;font-size:18px;font-weight:600;cursor:pointer">Envoyer ma demande</button></div>
+</form>
+</div>
+</section>
+</div>
+
+<!-- ================= DROIT DE LA FAMILLE ================= -->
+<div data-route="famille">
+<section style="background:#2d6574 url(https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-2.png) center/cover no-repeat;padding:clamp(60px,9vw,110px) 0 clamp(70px,10vw,130px)">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h1 style="margin:0;padding:0 0 10px;font-size:clamp(40px,5.5vw,60px);line-height:1.05;font-weight:600;color:#fff">Droit de la famille</h1>
+<h2 style="margin:10px 0 0;padding:0;font-size:clamp(20px,3vw,32px);line-height:1.25;font-weight:300;color:#fff;max-width:820px">Découvrez notre cabinet en droit de la famille et des successions à Lyon</h2>
+<a href="#/rdv" class="h2" style="display:inline-block;margin-top:40px;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid transparent">Contacter un avocat</a>
+</div>
+</section>
+
+<section style="background:#fff;padding:60px 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;text-align:justify">
+<p style="margin:0 0 18px">Le Cabinet Pessia &amp; Associés vous accompagne dans tous les aspects du droit de la famille et du patrimoine, avec une expertise particulière en successions, donations et gestion patrimoniale. Nous intervenons notamment en <a href="#/famille/succesion"><strong>droit des successions</strong></a>, <a href="#/famille/fiscalite"><strong>fiscalité du divorce et des successions</strong></a>, <a href="#/famille/famille"><strong>droit de la famille</strong></a>, <a href="#/famille/patrimoine"><strong>transmission de patrimoine</strong></a> et <a href="#/famille/dip"><strong>Droit International Privé (DIP)</strong></a>, en vous offrant des solutions sur mesure adaptées à vos besoins.</p>
+<p style="margin:0">Le cabinet PESSIA et associés dispose d’un cabinet secondaire à <strong>Annecy (74000) en Haute-Savoie</strong>. Nous vous accompagnons dans les procédures présentant des <a href="#/famille/divorce-transfrontalier"><strong>particularités transfrontalières.</strong></a></p>
+</div>
+</section>
+
+<section id="succesion" style="background:#f3f3f3;padding:70px 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+<div><h2 style="margin:0 0 20px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Droit des successions</h2>
+<img src="https://pessia-associes.fr/wp-content/uploads/2024/08/Droit-des-succession.png" alt="Droit des successions" style="width:100%;border-radius:8px;background:#dde9ec;max-height:340px;object-fit:cover"></div>
+<div>
+<ul style="margin:0 0 20px;padding-left:22px;display:flex;flex-direction:column;gap:6px"><li>Testament, donation et legs</li><li>Gérer et anticiper les successions</li><li>Liquidation des successions</li><li>Indivision successorale</li><li>Partage judiciaire</li><li>Contrat d’assurance-vie</li><li>Généalogie successorale</li></ul>
+<p style="margin:0 0 14px;text-align:justify">L’assurance-vie, en principe, ne fait pas partie de la succession. Elle échappe donc aux règles protectrices des héritiers réservataires, telles que la réduction des donations et legs excessifs, ainsi qu’aux dispositions relatives au rapport successoral, qui visent à garantir l’égalité entre les héritiers.</p>
+<p style="margin:0 0 14px;text-align:justify">Cependant, le Code des assurances prévoit que les primes manifestement exagérées versées sur un contrat d’assurance-vie peuvent être réintégrées dans la succession. L’enjeu est d’apprécier la proportionnalité entre les montants versés sur le contrat et les revenus ou le patrimoine du défunt.</p>
+<p style="margin:0 0 26px;text-align:justify">Le <strong>Cabinet Pessia &amp; Associés</strong> vous accompagne tout au long des négociations concernant cette évaluation. Si aucune solution amiable ne permet de résoudre le litige, nous vous guiderons vers la meilleure voie judiciaire pour défendre vos intérêts.</p>
+<a href="#/rdv" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">J'ai besoin d'un avocat</a>
 </div>
 </div>
 </section>
 
-<!-- Coordonnées -->
-<section id="rdv" style="background:#fff;padding:80px 0">
-<div style="max-width:1080px;margin:0 auto;padding:0 40px">
-<h3 style="margin:0 0 36px;padding:0;font-size:36px;line-height:1.2;font-weight:700;color:#428c9e">Nos coordonnées</h3>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px">
-<div style="display:flex;flex-direction:column;gap:18px">
-<a href="mailto:contact@pessia-associes.fr" style="display:flex;gap:14px;align-items:center;font-size:18px;font-weight:500;color:#333"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/at-circle-sharp.png" alt="" style="width:32px;height:32px">contact@pessia-associes.fr</a>
-<a href="tel:0428870161" style="display:flex;gap:14px;align-items:center;font-size:18px;font-weight:500;color:#333"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/call-sharp.png" alt="" style="width:32px;height:32px">04 28 87 01 61</a>
-</div>
-<div><h4 style="margin:0 0 8px;font-size:20px;font-weight:700;color:#428c9e">Lyon</h4><a href="https://goo.gl/maps/mj4V7yKtryCX1kYS7" style="display:flex;gap:14px;align-items:center;color:#333"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/location-sharp.png" alt="" style="width:32px;height:32px">14 Rue Robert, 69006, LYON</a></div>
-<div><h4 style="margin:0 0 8px;font-size:20px;font-weight:700;color:#428c9e">Annecy</h4><a href="https://maps.app.goo.gl/jfY5onap5Ee9g9xe6" style="display:flex;gap:14px;align-items:center;color:#333"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/location-sharp.png" alt="" style="width:32px;height:32px">19 rue Henry BORDEAUX 74000 ANNECY</a></div>
+<section id="fiscalite" style="background:#fff;padding:70px 0">
+<span id="divorce"></span>
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+<div><h2 style="margin:0 0 20px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Fiscalité du divorce et des successions</h2>
+<img src="https://pessia-associes.fr/wp-content/uploads/2024/09/divorce-et-fiscalite-678x381-1.webp" alt="" style="width:100%;border-radius:8px;background:#dde9ec;max-height:340px;object-fit:cover"></div>
+<div>
+<p style="margin:0 0 18px;text-align:justify">Nous vous accompagnons et vous conseillons dans tous les aspects fiscaux liés à la fiscalité de la famille. Que ce soit pour le partage de biens, la liquidation de régime matrimonial, la rédaction ou la modification de votre contrat de mariage, la planification de la transmission anticipée de votre patrimoine ou encore le règlement des successions, nous sommes là pour vous fournir des conseils éclairés et des solutions fiscales optimisées.</p>
+<ul style="margin:0 0 26px;padding-left:22px;display:flex;flex-direction:column;gap:6px"><li>Fiscalité des pensions alimentaires</li><li>Fiscalité de la prestation compensatoire</li><li>Fiscalité successorale française et internationale (cumul des droits fiscaux)</li><li>Vérification de la déclaration de succession et des droits de successions appelés</li><li>Contestation des pénalités et intérêts de retard suite à une déclaration ou un règlement tardif des droits de successions</li></ul>
+<a href="#/rdv" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Prendre rendez-vous</a>
 </div>
 </div>
 </section>
 
-<!-- Footer -->
-<footer style="background:#428c9e;color:#fff;padding:60px 0 0">
-<div style="max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
-<div style="display:flex;flex-direction:column;gap:6px"><h2 style="margin:0 0 10px;padding:0;font-size:20px;font-weight:700;color:#fff">Notre cabinet</h2><a href="mailto:contact@pessia-associes.fr" style="color:#fff">contact@pessia-associes.fr</a><a href="tel:0428870161" style="color:#fff">04 28 87 01 61</a><a href="https://goo.gl/maps/mj4V7yKtryCX1kYS7" style="color:#fff">14 Rue Robert, 69006 LYON</a><a href="https://maps.app.goo.gl/jfY5onap5Ee9g9xe6" style="color:#fff">19 rue Henry BORDEAUX 74000 ANNECY</a></div>
-<div style="display:flex;flex-direction:column;gap:6px"><h2 style="margin:0 0 10px;padding:0;font-size:20px;font-weight:700;color:#fff">Notre équipe</h2><a href="https://www.linkedin.com/in/andrea-pessia-65b830148/" style="color:#fff">Maître Andrea PESSIA</a><a href="https://www.linkedin.com/in/flora-garon-974929194/" style="color:#fff">Maître Flora GARON</a><a href="https://www.linkedin.com/in/elisa-philibert-983541171/" style="color:#fff">Maître Elisa PHILIBERT</a><a href="https://www.linkedin.com/in/camille-oriol-4a3a72b9/" style="color:#fff">Maître Camille ORIOL</a><a href="https://www.linkedin.com/in/caroline-jourdrain-003b1a93/" style="color:#fff">Maître Caroline JOURDRAIN</a><a href="https://www.linkedin.com/in/louise-lauberny-5618a3170/" style="color:#fff">Maître Louise LAUBERNY</a></div>
-<div style="display:flex;flex-direction:column;gap:6px"><h2 style="margin:0 0 10px;padding:0;font-size:20px;font-weight:700;color:#fff">Notre expertise</h2><a href="#expertise" style="color:#fff">Droit de la famille</a><a href="#expertise" style="color:#fff">Fiscalité du Divorce</a><a href="#expertise" style="color:#fff">Divorce transfrontalier</a><a href="#expertise" style="color:#fff">Succession transfrontalière</a><a href="#expertise" style="color:#fff">Transmission de patrimoine et succession</a><a href="#expertise" style="color:#fff">Droit International</a></div>
-<div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start"><h2 style="margin:0;padding:0;font-size:20px;font-weight:700;color:#fff">Rendez-vous</h2><a href="#rdv" class="h6" style="background:#fff;color:#428c9e;border-radius:100px;padding:10px 28px;font-weight:600;border:1px solid #fff">Je prends RDV</a></div>
+<section id="divorce-transfrontalier" style="background:#f3f3f3;padding:70px 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+<div><h2 style="margin:0 0 20px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Divorce transfrontalier</h2>
+<img src="https://pessia-associes.fr/wp-content/uploads/2026/07/carrie-allen-www-carrieallen-com-1H1LBKvD7ew-unsplash-1.jpg" alt="" style="width:100%;border-radius:8px;background:#dde9ec;max-height:340px;object-fit:cover"></div>
+<div style="text-align:justify;display:flex;flex-direction:column;gap:14px">
+<p style="margin:0">Nous comprenons les complexités liées aux litiges locaux qui présentent des particularités transfrontalières et nous vous accompagnons à chaque étape de la procédure.</p>
+<p style="margin:0">Le cabinet dispose d’une expertise particulière en matière de partage du second pilier suisse ainsi que concernant le splitting de la rente AVS (1er pilier).</p>
+<p style="margin:0">Le partage de la prévoyance professionnelle constitue en effet un des effets accessoires du divorce en Suisse qui doit nécessairement être pris en compte.</p>
+<p style="margin:0">Le cabinet maitrise également la question des avances EPL, à savoir l’hypothèse d’un prêt de la Caisse de prévoyance professionnelle au conjoint, qui a notamment lieu en cas d’achat du domicile conjugal.</p>
+<p style="margin:0">Cette question se pose en effet régulièrement.</p>
+<p style="margin:0 0 12px">Lorsque cette vente s’inscrit dans une procédure de divorce, il est primordial de qualifier juridiquement cette avance et de la prendre en compte dans les opérations de comptes, liquidation et partage du régime matrimonial des époux.</p>
+<div><a href="#/rdv" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Prendre rendez-vous</a></div>
 </div>
-<div style="margin-top:48px;border-top:1px solid rgba(255,255,255,.35);padding:20px 40px;text-align:center;font-size:14px">Cabinet Pessia &amp; Associés – Tous droits réservés – <a href="#" style="color:#fff;text-decoration:underline">Politique de confidentialité</a> – <a href="#" style="color:#fff;text-decoration:underline">CGU</a> – <a href="mailto:contact@pessia-associes.fr" style="color:#fff">contact@pessia-associes.fr</a> – 04 28 87 01 61</div>
+</div>
+</section>
+
+<section id="succession-transfrontaliere" style="background:#fff;padding:70px 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+<div><h2 style="margin:0 0 20px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Succession transfrontalière</h2>
+<img src="https://pessia-associes.fr/wp-content/uploads/2026/07/sasun-bughdaryan-NB1dUts3ROU-unsplash-1.jpg" alt="" style="width:100%;border-radius:8px;background:#dde9ec;max-height:340px;object-fit:cover"></div>
+<div style="text-align:justify">
+<p style="margin:0 0 14px">Le cabinet PESSIA et associés est compétent en matière de successions internationales et vous accompagne notamment dans le cadre du règlement de successions transfrontalières.</p>
+<p style="margin:0 0 14px">Nous mettons pour cela en œuvre les instruments internationaux notamment le règlement européen n°650/2012 et la loi fédérale sur le droit international privé (LDIP) applicable en suisse.</p>
+<p style="margin:0 0 10px">Nous vous accompagnons dans toutes les étapes du règlement d’une succession transfrontalière :</p>
+<ul style="margin:0 0 26px;padding-left:22px;display:flex;flex-direction:column;gap:6px"><li>Détermination des héritiers légaux, réservataires, institués et leurs parts (système des trois parentèles),</li><li>Droits du conjoint survivant (qui depuis le 1er janvier 2023 perd sa qualité d’héritier réservataire si une procédure de divorce est pendante au moment du décès et si les conjoints étaient d’accord sur le principe du divorce ou avaient déjà vécu séparés pendant deux ans au moins),</li><li>Détermination de la masse à partage et de la masse de calcul des réserves,</li><li>Partage,</li><li>Instruments de planification successorale suisses,</li><li>Contentieux en droit successoral suisse.</li></ul>
+<a href="#/rdv" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Trouver un avocat en droit de la famille</a>
+</div>
+</div>
+</section>
+
+<section id="famille" style="background:#f3f3f3;padding:70px 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+<div><h2 style="margin:0 0 20px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Droit de la famille</h2>
+<img src="https://pessia-associes.fr/wp-content/uploads/2024/08/image-famille-divorce-droit-de-la-famille.png" alt="" style="width:100%;border-radius:8px;background:#dde9ec;max-height:340px;object-fit:cover"></div>
+<div style="text-align:justify">
+<p style="margin:0 0 18px"><strong>Pessia &amp; Associés</strong> vous accompagne à chaque étape des aspects juridiques liés à votre situation matrimoniale. Que vous envisagiez une union, une séparation ou un divorce, notre équipe spécialisée en droit de la famille est à votre disposition pour vous offrir un accompagnement professionnel et personnalisé. La fiscalité du divorce étant un élément crucial, nous vous conseillons sur les impacts fiscaux de votre situation, afin de vous aider à prendre des décisions éclairées et adaptées à vos besoins.</p>
+<ul style="margin:0 0 26px;padding-left:22px;display:flex;flex-direction:column;gap:6px"><li>Rédaction de convention de PACS</li><li>Nullité du mariage</li><li>Divorce par consentement mutuel non judiciaire</li><li>Divorce judiciaire</li><li>Fiscalité du divorce</li><li>Prestation compensatoire</li><li>Séparation de corps</li><li>Séparation des couples non mariés (PACS et concubinage)</li><li>Liquidation et partage de régime matrimonial (communauté légale, séparation de biens, participations aux acquêts etc)</li></ul>
+<a href="#/rdv" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Trouver un avocat en droit de la famille</a>
+</div>
+</div>
+</section>
+
+<section id="patrimoine" style="background:#fff;padding:70px 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+<div><h2 style="margin:0 0 20px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Transmission de patrimoine</h2>
+<img src="https://pessia-associes.fr/wp-content/uploads/2026/07/shalev-cohen-QKZdcN15Cog-unsplash-1.jpg" alt="" style="width:100%;border-radius:8px;background:#dde9ec;max-height:340px;object-fit:cover"></div>
+<div style="text-align:justify">
+<p style="margin:0 0 18px">Nous vous offrons un accompagnement complet et des conseils sur mesure concernant la fiscalité familiale. Qu’il s’agisse du partage des biens, de la liquidation de régimes matrimoniaux, de la création et gestion d’une SCI, de la rédaction ou modification de contrats de mariage, ou encore de la planification d’une transmission anticipée de votre patrimoine, nous vous proposons des solutions optimisées et adaptées à vos besoins.</p>
+<ul style="margin:0 0 26px;padding-left:22px;display:flex;flex-direction:column;gap:6px"><li>Fiscalité familiale</li><li>Fiscalité liée au partage des biens</li><li>Société Civile Immobilière (SCI)</li><li>Conseils pour la rédaction ou modification de contrats de mariage</li><li>Transmission anticipée du patrimoine</li></ul>
+<a href="#/rdv" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Contacter un avocat en droit des successions</a>
+</div>
+</div>
+</section>
+
+<section id="dip" style="background:#f3f3f3;padding:70px 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+<div><h2 style="margin:0 0 20px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Droit international (DIP)</h2>
+<img src="https://pessia-associes.fr/wp-content/uploads/2024/08/Droit-international-DIP.png" alt="" style="width:100%;border-radius:8px;background:#dde9ec;max-height:340px;object-fit:cover"></div>
+<div style="text-align:justify">
+<p style="margin:0 0 18px">Nous comprenons les défis et les complexités auxquels vous êtes confrontés en matière d’enlèvement international d’enfant ou de procédure d’exequatur. C’est pourquoi notre équipe est là pour vous apporter son expertise et vous offrir un soutien juridique adapté dans ces situations sensibles.</p>
+<ul style="margin:0 0 26px;padding-left:22px;display:flex;flex-direction:column;gap:6px"><li>Enlèvement international d’enfant</li><li>Procédure d’exequatur</li></ul>
+<a href="#/rdv" class="h1" style="display:inline-block;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid #428c9e">Contacter un avocat en droit international</a>
+</div>
+</div>
+</section>
+
+<iframe title="Carte Lyon" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.3571166543934!2d4.845269615567498!3d45.76403287910567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eaf591b2e059%3A0xb5d9d10150f226f!2s14%20Rue%20Robert%2C%2069006%20Lyon!5e0!3m2!1sfr!2sfr!4v1690792833666!5m2!1sfr!2sfr" style="display:block;width:100%;height:380px;border:0" loading="lazy"></iframe>
+</div>
+
+<!-- ================= ACTUALITÉS ================= -->
+<div data-route="actualites">
+<section style="background:#2d6574 url(https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-2.png) center/cover no-repeat;padding:clamp(60px,9vw,110px) 0 clamp(70px,10vw,130px)">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h1 style="margin:0;padding:0 0 10px;font-size:clamp(40px,5.5vw,60px);line-height:1.05;font-weight:600;color:#fff">Actualités</h1>
+<h2 style="margin:10px 0 0;padding:0;font-size:clamp(20px,3vw,32px);line-height:1.25;font-weight:300;color:#fff;max-width:820px">Découvrez les actualités de notre cabinet en droit de la famille à Lyon.</h2>
+<a href="#/rdv" class="h2" style="display:inline-block;margin-top:40px;background:#428c9e;color:#fff;border-radius:100px;padding:10px 30px;font-size:18px;font-weight:500;border:1px solid transparent">Prendre RDV</a>
+</div>
+</section>
+<section style="background:#fff;padding:clamp(48px,8vw,80px) 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:32px">
+<article style="border-radius:8px;overflow:hidden;box-shadow:0 2px 18px rgba(0,0,0,.1);background:#fff;display:flex;flex-direction:column">
+<a href="#/article" style="line-height:0"><img src="https://pessia-associes.fr/wp-content/uploads/2024/07/wes-hicks-UWtWuoLgZRw-unsplash-2-400x250.jpg" alt="" style="width:100%;height:220px;object-fit:cover;background:#dde9ec"></a>
+<div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1">
+<h2 style="margin:0;padding:0;font-size:20px;line-height:1.3;font-weight:700"><a href="#/article" style="color:#333">Les enjeux du droit de la famille et du patrimoine : Pourquoi faire appel à un avocat spécialisé ?</a></h2>
+<span style="font-size:14px;color:#888">24 Juil 2024</span>
+<p style="margin:0;font-size:15px">La gestion du patrimoine familial, les successions, les donations ou encore les divorces sont autant de situations complexes qui nécessitent une expertise juridique pointue. C’est dans ces moments cruciaux que l’accompagnement...</p>
+<a href="#/article" style="margin-top:auto;padding-top:6px;font-weight:600">lire plus</a>
+</div>
+</article>
+</div>
+</section>
+</div>
+
+<!-- ================= ARTICLE ================= -->
+<div data-route="article">
+<article style="background:#fff;padding:70px 0">
+<div style="max-width:860px;margin:0 auto;padding:0 40px">
+<h1 style="margin:0 0 14px;padding:0;font-size:clamp(24px,4vw,34px);line-height:1.25;font-weight:700;color:#333">Les enjeux du droit de la famille et du patrimoine : Pourquoi faire appel à un avocat spécialisé ?</h1>
+<p style="margin:0 0 24px;font-size:14px;color:#888">par FloFrndz | Juil 24, 2024 | Uncategorized | 0 commentaires</p>
+<img src="https://pessia-associes.fr/wp-content/uploads/2024/07/wes-hicks-UWtWuoLgZRw-unsplash-2-1080x675.jpg" alt="" style="width:100%;border-radius:8px;margin-bottom:28px;background:#dde9ec;aspect-ratio:1080/675;object-fit:cover">
+<div style="display:flex;flex-direction:column;gap:16px;text-align:justify">
+<p style="margin:0">La gestion du patrimoine familial, les successions, les donations ou encore les divorces sont autant de situations complexes qui nécessitent une expertise juridique pointue. C’est dans ces moments cruciaux que l’accompagnement d’un cabinet spécialisé en <strong>droit de la famille et du patrimoine</strong> devient indispensable pour garantir une résolution sereine et sécurisée des problématiques rencontrées.</p>
+<h4 style="margin:12px 0 0;font-size:20px;font-weight:700;color:#428c9e">Le droit de la famille : Un domaine au cœur de la vie quotidienne</h4>
+<p style="margin:0">Le <strong>droit de la famille</strong> touche à des aspects fondamentaux de nos vies. Qu’il s’agisse de <strong>divorces</strong>, de <strong>séparations</strong>, de la garde des enfants ou de la liquidation des régimes matrimoniaux, chaque décision prise peut avoir des conséquences durables sur la structure familiale et le bien-être des personnes concernées.</p>
+<p style="margin:0">Chez <strong>Pessia &amp; Associés</strong>, nous comprenons l’importance de ces enjeux. Notre cabinet, spécialisé en droit de la famille, vous accompagne dans la gestion de ces moments délicats en vous offrant un soutien juridique personnalisé, dans le respect de vos intérêts et ceux de votre famille. Nos avocats mettent tout en œuvre pour favoriser des solutions amiables, tout en étant prêts à défendre vos droits avec détermination en cas de contentieux.</p>
+<h4 style="margin:12px 0 0;font-size:20px;font-weight:700;color:#428c9e">Le droit patrimonial : Préserver et transmettre son patrimoine</h4>
+<p style="margin:0">Le <strong>droit patrimonial de la famille</strong> inclut la gestion et la transmission des biens. Les questions liées aux <strong>successions</strong>, aux <strong>donations</strong>, ou encore à la <strong>liquidation des régimes matrimoniaux</strong> sont souvent sources de tensions au sein des familles. Il est donc essentiel de faire appel à un avocat spécialisé pour anticiper ces situations et prendre des décisions éclairées.</p>
+<p style="margin:0">Le <strong>Cabinet Pessia &amp; Associés</strong> intervient pour vous accompagner dans toutes les étapes de la <strong>gestion patrimoniale</strong>. Que vous souhaitiez préparer votre succession ou que vous fassiez face à des litiges familiaux liés à la répartition des biens, nous vous offrons un conseil personnalisé et des solutions adaptées à vos besoins. Nous nous engageons à protéger vos intérêts tout en assurant une transmission patrimoniale respectueuse de la volonté des parties concernées.</p>
+<h4 style="margin:12px 0 0;font-size:20px;font-weight:700;color:#428c9e">Pourquoi choisir Pessia &amp; Associés ?</h4>
+<p style="margin:0">En choisissant le <strong>Cabinet Pessia &amp; Associés</strong>, vous faites le choix de l’expertise, de l’écoute et de la réactivité. Notre équipe, composée d’avocats spécialisés en <strong>droit des personnes, de la famille et du patrimoine</strong>, vous accompagne à chaque étape de vos démarches pour vous garantir des solutions juridiques adaptées à vos besoins spécifiques.</p>
+<p style="margin:0">Nous mettons un point d’honneur à vous offrir un suivi personnalisé, que ce soit dans le cadre de contentieux familiaux, de la gestion patrimoniale ou de litiges successoraux. Grâce à notre expertise, nous vous aidons à anticiper les conflits potentiels et à faire valoir vos droits avec une approche humaine et bienveillante.</p>
+<h4 style="margin:12px 0 0;font-size:20px;font-weight:700;color:#428c9e">Nos domaines d’expertise :</h4>
+<ul style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px"><li><strong>Droit de la famille</strong> : Divorce, séparation, garde des enfants, adoption, liquidation de régimes matrimoniaux</li><li><strong>Droit des successions</strong> : Règlement des successions, litiges successoraux, donation</li><li><strong>Droit patrimonial de la famille</strong> : Gestion et protection du patrimoine familial, contentieux fiscaux, transmission de biens</li></ul>
+<h4 style="margin:12px 0 0;font-size:20px;font-weight:700;color:#428c9e">Conclusion</h4>
+<p style="margin:0">Chez <strong>Pessia &amp; Associés</strong>, nous comprenons l’importance de prendre des décisions éclairées dans les moments les plus sensibles de la vie familiale. Notre équipe se tient à vos côtés pour vous conseiller, vous représenter et vous offrir un soutien juridique de qualité dans tous les domaines du <strong>droit de la famille</strong> et du <strong>patrimoine</strong>. Faites confiance à notre expertise pour garantir la sécurité de vos droits et la protection de votre patrimoine.</p>
+</div>
+<a href="#/actualites" style="display:inline-block;margin-top:36px;font-weight:600">← Retour aux actualités</a>
+</div>
+</article>
+</div>
+
+<!-- ================= RENDEZ-VOUS ================= -->
+<div data-route="rdv">
+<section style="background:#2d6574 url(https://pessia-associes.fr/wp-content/uploads/2024/07/Rectangle-2.png) center/cover no-repeat;padding:clamp(60px,9vw,110px) 0 clamp(70px,10vw,130px)">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<h1 style="margin:0;padding:0 0 10px;font-size:clamp(40px,5.5vw,60px);line-height:1.05;font-weight:600;color:#fff">Rendez-vous</h1>
+<h2 style="margin:10px 0 0;padding:0;font-size:clamp(20px,3vw,32px);line-height:1.25;font-weight:300;color:#fff;max-width:820px">Prenez directement rendez-vous avec un avocat en droit de la famille.</h2>
+</div>
+</section>
+<section style="background:#fff;padding:clamp(48px,8vw,80px) 0">
+<div style="max-width:760px;margin:0 auto;padding:0 40px">
+<h2 style="margin:0 0 32px;padding:0;font-size:30px;line-height:1.2;font-weight:600;color:#428c9e">Prenez rendez-vous avec un avocat</h2>
+<form onsubmit="return false" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px">
+<label style="color:#333;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Prénom<input type="text" style="padding:12px 14px;border:1px solid #ccc;border-radius:6px;font-size:16px;color:#333"></label>
+<label style="color:#333;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Nom<input type="text" style="padding:12px 14px;border:1px solid #ccc;border-radius:6px;font-size:16px;color:#333"></label>
+<label style="grid-column:1/-1;color:#333;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Adresse e-mail<input type="email" style="padding:12px 14px;border:1px solid #ccc;border-radius:6px;font-size:16px;color:#333"></label>
+<label style="grid-column:1/-1;color:#333;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Quel est le sujet de votre demande ?<select style="padding:12px 14px;border:1px solid #ccc;border-radius:6px;font-size:16px;color:#333;background:#fff"><option>Droit de la famille</option><option>Succession</option><option>Fiscalité du divorce</option><option>Transmission de patrimoine</option><option>Droit international</option></select></label>
+<label style="grid-column:1/-1;color:#333;font-weight:500;font-size:15px;display:flex;flex-direction:column;gap:6px">Message<textarea rows="5" style="padding:12px 14px;border:1px solid #ccc;border-radius:6px;font-size:16px;color:#333;resize:vertical"></textarea></label>
+<div style="grid-column:1/-1"><button type="submit" class="h1" style="background:#428c9e;color:#fff;border:1px solid #428c9e;border-radius:100px;padding:11px 32px;font-size:18px;font-weight:600;cursor:pointer">Envoyer ma demande</button></div>
+</form>
+</div>
+</section>
+<section style="background:#f3f3f3;padding:clamp(48px,8vw,80px) 0">
+<div style="width:min(1080px,88%);margin:0 auto;padding:0">
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:36px 5.5%">
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/09/Andrea-1.jpg" alt="Maître Andrea PESSIA" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Andrea PESSIA</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat spécialiste en droit des successions et droit de la famille</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2024/09/Flora-1.jpg" alt="Maître Flora GARON" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Flora GARON</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/Design-sans-titre-19-1-1.png" alt="Maître Caroline JOURDRAIN" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Caroline JOURDRAIN</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Elisa-9-1.png" alt="Maître Elisa PHILIBERT" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Elisa PHILIBERT</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2025/10/Cameille-7-1.png" alt="Maître Camille ORIOL" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Camille ORIOL</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+<div style="text-align:center"><img src="https://pessia-associes.fr/wp-content/uploads/2026/07/Design-sans-titre-18-3-1.png" alt="Maître Louise LAUBERNY" style="width:min(80%,230px);aspect-ratio:1/1;object-fit:cover;border-radius:200px;background:#dde9ec"><h3 style="margin:14px 0 2px;padding:0;font-size:18px;line-height:1.3;font-weight:600;color:#428c9e">Maître Louise LAUBERNY</h3><h4 style="margin:0;padding:0;font-size:14px;font-weight:400;color:#666;line-height:1.5">Avocat</h4></div>
+</div>
+</div>
+</section>
+<iframe title="Carte Lyon" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.3571166543934!2d4.845269615567498!3d45.76403287910567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eaf591b2e059%3A0xb5d9d10150f226f!2s14%20Rue%20Robert%2C%2069006%20Lyon!5e0!3m2!1sfr!2sfr!4v1690792833666!5m2!1sfr!2sfr" style="display:block;width:100%;height:380px;border:0" loading="lazy"></iframe>
+</div>
+
+<!-- ================= CONFIDENTIALITÉ ================= -->
+<div data-route="conf">
+<article style="background:#fff;padding:70px 0">
+<div style="max-width:860px;margin:0 auto;padding:0 40px;text-align:justify">
+<h1 style="margin:0 0 10px;padding:0;font-size:clamp(24px,4vw,34px);line-height:1.25;font-weight:700;color:#428c9e">Politique de Confidentialité</h1>
+<p style="margin:0 0 20px"><strong>Dernière mise à jour : 01/10/2024</strong></p>
+<p style="margin:0 0 20px">Chez Pessia &amp; Associés, nous nous engageons à protéger votre vie privée. La présente politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos données personnelles lorsque vous visitez notre site pessia-associes.fr.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">1. Collecte des données personnelles</h4>
+<p style="margin:0 0 10px">Nous collectons des données personnelles lorsque vous interagissez avec notre site, notamment lorsque vous :</p>
+<ul style="margin:0 0 12px;padding-left:22px;display:flex;flex-direction:column;gap:4px"><li>Remplissez un formulaire de contact</li><li>Vous inscrivez à notre newsletter</li><li>Téléchargez des documents</li><li>Participez à des enquêtes</li></ul>
+<p style="margin:0">Les données que nous collectons peuvent inclure votre nom, adresse e-mail, numéro de téléphone, et toute autre information que vous choisissez de fournir.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">2. Utilisation des données personnelles</h4>
+<p style="margin:0 0 10px">Nous utilisons vos données personnelles pour :</p>
+<ul style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px"><li>Répondre à vos demandes et questions</li><li>Améliorer notre site et nos services</li><li>Vous envoyer des informations et des mises à jour</li><li>Vous informer sur nos produits et services</li><li>Analyser l’utilisation de notre site</li></ul>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">3. Partage des données personnelles</h4>
+<p style="margin:0 0 10px">Nous ne vendons ni ne louons vos données personnelles à des tiers. Nous pouvons partager vos données avec :</p>
+<ul style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px"><li>Des prestataires de services qui agissent en notre nom (ex. : services d’hébergement, de marketing)</li><li>Les autorités légales si cela est requis par la loi ou pour protéger nos droits</li></ul>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">4. Sécurité des données</h4>
+<p style="margin:0">Nous prenons des mesures raisonnables pour protéger vos données personnelles contre la perte, le vol, et l’accès non autorisé. Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n’est 100% sécurisée.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">5. Vos droits</h4>
+<p style="margin:0 0 10px">Conformément au Règlement Général sur la Protection des Données (RGPD), vous avez le droit de :</p>
+<ul style="margin:0 0 12px;padding-left:22px;display:flex;flex-direction:column;gap:4px"><li>Accéder à vos données personnelles</li><li>Rectifier vos données inexactes</li><li>Demander la suppression de vos données</li><li>Limiter le traitement de vos données</li><li>Vous opposer au traitement de vos données</li><li>Demander la portabilité de vos données</li></ul>
+<p style="margin:0">Pour exercer ces droits, veuillez nous contacter à l’adresse suivante : contact@pessia-associes.fr</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">6. Cookies</h4>
+<p style="margin:0">Notre site utilise des cookies pour améliorer votre expérience de navigation. Vous pouvez gérer vos préférences de cookies à tout moment via votre navigateur.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">7. Modifications de la politique de confidentialité</h4>
+<p style="margin:0">Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications seront publiées sur cette page avec la date de mise à jour. Nous vous encourageons à consulter régulièrement cette politique.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">8. Contact</h4>
+<p style="margin:0">Pour toute question concernant cette politique de confidentialité, veuillez nous contacter à l’adresse suivante : contact@pessia-associes.fr</p>
+<a href="#/" style="display:inline-block;margin-top:36px;font-weight:600">← Retour au site</a>
+</div>
+</article>
+</div>
+
+<!-- ================= CGU ================= -->
+<div data-route="cgu">
+<article style="background:#fff;padding:70px 0">
+<div style="max-width:860px;margin:0 auto;padding:0 40px;text-align:justify">
+<h1 style="margin:0 0 10px;padding:0;font-size:clamp(24px,4vw,34px);line-height:1.25;font-weight:700;color:#428c9e">Conditions Générales d’Utilisation (CGU)</h1>
+<p style="margin:0 0 20px"><strong>Dernière mise à jour : 01/10/2024</strong></p>
+<p style="margin:0">Bienvenue sur le site pessia-associes.fr. En accédant à ce site, vous acceptez de respecter les présentes conditions générales d’utilisation. Si vous n’acceptez pas ces conditions, veuillez ne pas utiliser ce site.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">1. Objet</h4>
+<p style="margin:0">Les présentes CGU ont pour objet de définir les modalités d’accès et d’utilisation du site pessia-associes.fr.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">2. Propriété intellectuelle</h4>
+<p style="margin:0">Tout le contenu présent sur ce site, y compris mais sans s’y limiter, les textes, images, logos, graphismes, est la propriété de Pessia &amp; Associés ou de tiers ayant autorisé leur utilisation. Toute reproduction, distribution ou modification sans autorisation écrite est interdite.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">3. Accès au site</h4>
+<p style="margin:0">L’accès au site est gratuit. Pessia &amp; Associés s’efforce d’assurer un accès continu au site, mais ne peut garantir une disponibilité permanente. L’utilisateur est responsable de son équipement et de sa connexion Internet.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">4. Utilisation du site</h4>
+<p style="margin:0">L’utilisateur s’engage à utiliser le site conformément aux lois en vigueur et aux présentes CGU. Il est interdit d’utiliser le site à des fins illégales ou nuisibles.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">5. Liens vers des sites tiers</h4>
+<p style="margin:0">Le site peut contenir des liens vers d’autres sites. Pessia &amp; Associés n’est pas responsable du contenu de ces sites et ne peut être tenu responsable des dommages pouvant en résulter.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">6. Protection des données personnelles</h4>
+<p style="margin:0">Pessia &amp; Associés s’engage à respecter la confidentialité des données personnelles de ses utilisateurs. Les informations collectées sont traitées conformément à notre politique de confidentialité.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">7. Modification des CGU</h4>
+<p style="margin:0">Pessia &amp; Associés se réserve le droit de modifier les présentes CGU à tout moment. Les modifications prendront effet dès leur publication sur le site. Il est de la responsabilité de l’utilisateur de consulter régulièrement les CGU.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">8. Droit applicable</h4>
+<p style="margin:0">Les présentes CGU sont régies par le droit français. En cas de litige, les tribunaux français seront compétents.</p>
+<h4 style="margin:28px 0 10px;font-size:20px;font-weight:700;color:#333">9. Contact</h4>
+<p style="margin:0">Pour toute question concernant ces CGU, veuillez nous contacter à l’adresse suivante : contact@pessia-associes.fr.</p>
+<a href="#/" style="display:inline-block;margin-top:36px;font-weight:600">← Retour au site</a>
+</div>
+</article>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+<div style="background:rgba(66,140,158,.91);color:#fff;padding:0 0 9px">
+<div style="width:90%;margin:0 auto;padding:54px 0 6px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px">
+<div><h2 style="margin:0 0 19px;padding:0;font-size:24px;line-height:1.2;font-weight:600;color:#fff">Notre cabinet</h2><div style="width:50%;border-top:1px solid #fff;margin-bottom:10px"></div><div style="display:flex;flex-direction:column;gap:2px;font-weight:300;font-size:15px"><a href="mailto:contact@pessia-associes.fr" style="color:#fff">contact@pessia-associes.fr</a><a href="tel:0428870161" style="color:#fff">04 28 87 01 61</a><strong style="font-weight:600">Lyon</strong><a href="https://goo.gl/maps/mj4V7yKtryCX1kYS7" style="color:#fff">14 Rue Robert, 69006 LYON</a><strong style="font-weight:600">Annecy</strong><a href="https://maps.app.goo.gl/jfY5onap5Ee9g9xe6" style="color:#fff">19 rue Henry BORDEAUX 74000 ANNECY</a></div></div>
+<div><h2 style="margin:0 0 19px;padding:0;font-size:24px;line-height:1.2;font-weight:600;color:#fff">Notre équipe</h2><div style="width:50%;border-top:1px solid #fff;margin-bottom:10px"></div><div style="display:flex;flex-direction:column;gap:2px;font-weight:300;font-size:15px"><a href="https://www.linkedin.com/in/andrea-pessia-65b830148/" style="color:#fff">Maître Andrea PESSIA</a><a href="https://www.linkedin.com/in/flora-garon-974929194/" style="color:#fff">Maître Flora GARON</a><a href="https://www.linkedin.com/in/elisa-philibert-983541171/" style="color:#fff">Maître Elisa PHILIBERT</a><a href="https://www.linkedin.com/in/camille-oriol-4a3a72b9/" style="color:#fff">Maître Camille ORIOL</a><a href="https://www.linkedin.com/in/caroline-jourdrain-003b1a93/" style="color:#fff">Maître Caroline JOURDRAIN</a><a href="https://www.linkedin.com/in/louise-lauberny-5618a3170/" style="color:#fff">Maître Louise LAUBERNY</a></div></div>
+<div><h2 style="margin:0 0 19px;padding:0;font-size:24px;line-height:1.2;font-weight:600;color:#fff">Notre expertise</h2><div style="width:50%;border-top:1px solid #fff;margin-bottom:10px"></div><div style="display:flex;flex-direction:column;gap:2px;font-weight:300;font-size:15px"><a href="#/famille" style="color:#fff">Droit de la famille</a><a href="#/famille" style="color:#fff">Fiscalité du Divorce</a><span>Divorce transfrontalier</span><span>Succession transfrontalière</span><a href="#/famille" style="color:#fff">Transmission de patrimoine et succession</a><a href="#/famille" style="color:#fff">Droit International</a></div></div>
+<div><h2 style="margin:0 0 19px;padding:0;font-size:24px;line-height:1.2;font-weight:600;color:#fff">Rendez-vous</h2><div style="width:50%;border-top:1px solid #fff;margin-bottom:16px"></div><a href="#/rdv" style="display:inline-block;background:#fff;color:rgba(66,140,158,.91);border-radius:89px;padding:.3em 2em .3em .7em;font-size:18px;line-height:1.7;font-weight:500">Je prends RDV →</a></div>
+</div>
+</div>
+<div style="background:#fff;padding:10px 0;text-align:center;font-size:14px;font-weight:300;color:#666">Cabinet Pessia &amp; Associés – Tous droits réservés – <a href="#/confidentialite" style="color:#666;text-decoration:underline">Politique de confidentialité</a> – <a href="#/cgu" style="color:#666;text-decoration:underline">CGU</a> – <a href="mailto:contact@pessia-associes.fr" style="color:#666">contact@pessia-associes.fr</a>– <a href="tel:0428870161" style="color:#666">04 28 87 01 61</a></div>
 </footer>
 
-<script>
-const reviews=[
-        { name: 'Al Smith', date: 'Septembre 2024', text: "Un avocat réactif, à l'écoute, compétent et charismatique : je recommande sans réserve" },
-        { name: 'Akira', date: 'Juillet 2024', text: 'La réactivité de Maître Pessia est exemplaire, merci à lui !' },
-        { name: 'Nadia OUADAH', date: 'Juin 2024', text: 'Très bon accueil, un véritable écoute et une bonne démarche. Rassurant et honnête' },
-        { name: 'Henry Benmoyal', date: 'Mars 2024', text: 'Maître Pessia est un avocat sérieux compétent professionnel disponible et d’une rare efficacité' },
-        { name: 'Carmen Mosset', date: 'Mars 2024', text: "Nous avions choisi Me Pessia pour ses doubles connaissances dans les domaines notariales et juridiques. Il s’est immédiatement avéré que notre choix fut parfait car les compétences de Me Pessia nous ont permises de clore notre affaire rapidement et avec satisfaction. Nous ne pouvons que recommander Me Pessia. Philippe & Carmen Mosset" },
-        { name: 'Jeanne Roux', date: 'Juillet 2023', text: "J'ai remarqué, chez cet avocat, personne très humaine, très à l'écoute et dont le professionnalisme a fait ses preuves en gagnant le procès. J'ai vu une famille reprendre espoir et le sourire. Je recommande très fortement et sans hésitation maître Pessia." },
-        { name: 'Sylvie Kerdekachian', date: 'Juillet 2023', text: "Depuis 1 an il s'est battu pour que mon fils puisse revoir ses enfants et il a gagné. Professionnel, d'une disponibilité sensationnelle, toujours avec bienveillance et réalité face à notre situation. Une maman très soulagée et heureuse pour son fils." },
-        { name: 'Roland Corbe', date: 'Mai 2023', text: "Maître, je tiens à vous remercier vivement pour votre engagement dans mon divorce. Votre professionnalisme et votre dévouement ont été précieux pour moi dans ces moments difficiles." },
-        { name: 'Séverine Muller', date: 'Mai 2023', text: "Je ne peux que recommander Maître Pessia. Affaire résolue grâce à son implication, sa persévérance et son professionnalisme à toute épreuve. À l'écoute, factuel tout en étant agréable : un bonheur d'être représenté par un avocat éthique !" }
-]
-.map(r=>r);
-const track=document.getElementById("pa-track");
-track.innerHTML=reviews.map(r=>`<article style="flex:0 0 min(340px,85%);scroll-snap-align:start;background:#f3f3f3;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
-<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><strong style="color:#333;font-weight:600">${r.name}</strong><span style="font-size:13px;color:#888">${r.date}</span></div>
-<div style="color:#f5a623;letter-spacing:2px;font-size:17px">★★★★★</div>
-<p style="margin:0;font-size:15px;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden">${r.text}</p>
-</article>`).join("");
-const scrollBy=d=>track.scrollBy({left:d*364,behavior:"smooth"});
-document.getElementById("prev").onclick=()=>scrollBy(-1);
-document.getElementById("next").onclick=()=>scrollBy(1);
-</script>
+<!-- Cookies -->
+<div id="cookie">
+<div style="position:fixed;left:0;right:0;bottom:0;z-index:90;background:#2d3940;color:#fff;padding:14px 24px;display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:14px">
+<span>Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site web. Si vous continuez à utiliser ce site, nous supposerons que vous en êtes satisfait.</span>
+<button id="cookie-ok" style="background:#428c9e;color:#fff;border:0;border-radius:100px;padding:8px 26px;font-weight:600;font-size:14px;cursor:pointer">OK</button>
+</div>
+</div>
+
+<div id="bio-root"></div>
+</div>
+<script src="bios.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
