@@ -116,7 +116,7 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
 <meta name="description" content="{E(desc)}">
 {('<meta name="robots" content="%s">' % robots) if robots else ''}
 <link rel="canonical" href="{BASE_URL}{url}">
-<meta name="theme-color" content="#428c9e">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="{E(SITE)}">
