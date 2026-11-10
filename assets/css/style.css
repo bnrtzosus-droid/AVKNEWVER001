@@ -132,3 +132,4 @@ main>section:first-child:not(.homehero),main>article:first-child{padding-top:cal
 .cal-s button.sel,.cal-s button:hover{background:#428c9e;color:#fff}
 .cal-t p{margin:0;font-size:14px;color:#888}
 @media(max-width:600px){.cal{grid-template-columns:1fr;padding:14px}}
+@media(max-width:767px){[style*="text-align:justify"]{text-align:left !important}}
