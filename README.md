@@ -59,7 +59,7 @@ Photos libres de droits ([licence Unsplash](https://unsplash.com/license)) :
 | Transmission de patrimoine (maison) | Ries Bosch |
 | Droit international (statue de la Justice) | Sasun Bughdaryan |
 | Bandeau Cabinet (salle de réunion) | Benjamin Child |
-| Valeurs du cabinet (poignée de main) | Rock Staar |
+| Valeurs du cabinet (poignée de main) | Cytonn Photography |
 | Bandeau Actualités et page Droit de la famille (façade, famille) | Chris Bischoff, Margo Evardson |
 | Article (palais de justice) | Miles Smith |
 | Bandeau Rendez-vous (marteau et livre) | Sasun Bughdaryan |
