@@ -44,7 +44,7 @@
     var parts = (location.hash || "").replace(/^#\/?/, "").split("/");
     route = ROUTES[parts[0]] || "home";
     var sec = parts[1];
-    $$("[data-route]").forEach(function (el) { el.style.display = el.getAttribute("data-route") === route ? "block" : "none"; });
+    document.documentElement.setAttribute("data-r", route);
     $$(".nl").forEach(function (a) {
       var k = a.getAttribute("data-nav");
       a.classList.toggle("active", k === route || (k === "actualites" && route === "article"));
@@ -52,10 +52,8 @@
     document.title = (route === "home" ? "" : TITLES[route] + " – ") + "Pessia & Associés";
     setNav(false);
     closeBio();
-    setTimeout(function () {
-      var el = sec && document.getElementById(sec);
-      window.scrollTo(0, el ? el.getBoundingClientRect().top + window.scrollY - 110 : 0);
-    }, 80);
+    var el = sec && document.getElementById(sec);
+    window.scrollTo(0, el ? el.getBoundingClientRect().top + window.scrollY - 110 : 0);
   }
 
   document.addEventListener("click", function (e) {
@@ -79,10 +77,7 @@
     el.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openBio(+el.getAttribute("data-bio")); } });
   });
 
-  var ck = $("#cookie"), seen = false;
-  try { seen = localStorage.getItem("pa-cookie") === "1"; } catch (e) {}
-  if (!seen) ck.style.display = "block";
-  var okCk = function () { ck.style.display = "none"; try { localStorage.setItem("pa-cookie", "1"); } catch (e) {} };
+  var okCk = function () { document.documentElement.setAttribute("data-ck", "1"); try { localStorage.setItem("pa-cookie", "1"); } catch (e) {} };
   $("#cookie-ok").addEventListener("click", okCk); $("#cookie-x").addEventListener("click", okCk);
 
   window.addEventListener("hashchange", applyHash);
