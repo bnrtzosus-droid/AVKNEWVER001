@@ -50,19 +50,19 @@ Photos libres de droits ([licence Unsplash](https://unsplash.com/license)) :
 | Emplacement | Photographe |
 |---|---|
 | Bandeau d’accueil (marteau) | Sasun Bughdaryan |
-| Bandeau « Droit de la famille et des successions » (signature) | Dimitri Karastelev |
+| Bandeau « Droit de la famille et des successions » (mains de deux générations) | Rod Long |
 | Droit des successions (album photo) | Laura Fuhrman |
-| Fiscalité du divorce et des successions | Kelly Sikkema |
-| Divorce transfrontalier (alliances) | Micah & Sammie Chaffin |
+| Fiscalité du divorce et des successions (calculatrice) | Towfiqu barbhuiya |
+| Divorce transfrontalier (alliances) | Mariano Rivas |
 | Succession transfrontalière (globe) | Christian Lue |
 | Droit de la famille (promenade) | Filip Rankovic Grobgaard |
 | Transmission de patrimoine (maison) | Ries Bosch |
-| Droit international (passeport) | Global Residence Index |
+| Droit international (aile d’avion) | Johny Goerend |
 | Bandeau Cabinet (salle de réunion) | Benjamin Child |
 | Valeurs du cabinet (poignée de main) | Rock Staar |
 | Bandeau Actualités et page Droit de la famille (façade, famille) | Chris Bischoff, Margo Evardson |
 | Article (palais de justice) | Miles Smith |
-| Bandeau Rendez-vous (agenda) | Eric Rothermel |
+| Bandeau Rendez-vous (horloge) | Moritz Kindler |
 
 Les photos des avocats, les avatars des avis et le logo proviennent du site d’origine pessia-associes.fr.
 Les pictogrammes de contact (téléphone, adresse, e-mail) sont des icônes Material Design (Apache 2.0).
