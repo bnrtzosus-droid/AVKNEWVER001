@@ -23,7 +23,7 @@ PAGES = [
     ('home', 'index.html', '/', 'Furlan & Associés – Cabinet d’avocats en droit de la famille à Lyon & Annecy',
      'Cabinet d’avocats en droit de la famille et des successions à Lyon et Annecy : divorce, successions, transmission de patrimoine, droit international.', 'home', []),
     ('cabinet', 'cabinet.html', '/cabinet', 'Notre cabinet – Furlan & Associés',
-     'Découvrez le cabinet Furlan & Associés, son équipe d’avocats et ses valeurs : confiance, transparence et écoute.', 'cabinet', ['/assets/js/bios.js']),
+     'Découvrez le cabinet Furlan & Associés, son équipe d’avocats et ses valeurs : confiance, transparence et écoute.', 'cabinet', []),
     ('famille', 'droit-de-la-famille.html', '/droit-de-la-famille', 'Droit de la famille et des successions – Furlan & Associés',
      'Successions, fiscalité du divorce, divorce et succession transfrontaliers, transmission de patrimoine, droit international privé à Lyon et Annecy.', 'famille', []),
     ('actualites', 'actualites.html', '/actualites', 'Actualités – Furlan & Associés',
@@ -106,7 +106,7 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
     hero = re.search(r'url\((/assets/img/[^)]+\.webp)\)', body)
     preload = ('<link rel="preload" href="%s" as="image" fetchpriority="high">\n' % hero.group(1)) if hero else ''
     extra = ''.join('<script src="%s?v=%s" defer></script>\n' % (s, ver(s)) for s in scripts)
-    CSS_V, JS_V = ver('/assets/css/style.css'), ver('/assets/js/site.js')
+    CSS_V, JS_V, BIOS_V = ver('/assets/css/style.css'), ver('/assets/js/site.js'), ver('/assets/js/bios.js')
     return f'''<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -142,6 +142,7 @@ def layout(title, desc, url, nav, scripts, body, robots=None):
 <div id="bio-root"></div>
 </div>
 <script src="/assets/js/site.js?v={JS_V}" defer></script>
+<script src="/assets/js/bios.js?v={BIOS_V}" defer></script>
 {extra}</body>
 </html>
 '''

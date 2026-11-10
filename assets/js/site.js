@@ -58,7 +58,7 @@
     }
     if (t.id === "mobnav") { if (e.target === t) setNav(false); return; }
     if (t.classList.contains("mclose") || (t.tagName === "A" && t.closest("#mobpanel"))) { setNav(false); return; }
-    if (t.hasAttribute("data-bio")) { openBio(+t.getAttribute("data-bio")); return; }
+    if (t.hasAttribute("data-bio")) { e.preventDefault(); openBio(+t.getAttribute("data-bio")); return; }
     var sec = t.closest("section"), track = sec && $(".pa-track", sec);
     if (track) {
       var it = track.firstElementChild;
@@ -127,6 +127,13 @@
     document.addEventListener("pointerover", prefetch, { passive: true });
     document.addEventListener("touchstart", prefetch, { passive: true });
   }
+
+
+  /* ---------- keep the menu button readable on any background (white pill once the page is scrolled) ---------- */
+  var root = document.documentElement;
+  function onScroll() { root.classList.toggle("scrolled", (window.pageYOffset || 0) > 40); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
   /* ---------- cookie notice ---------- */
   var accept = function () {
