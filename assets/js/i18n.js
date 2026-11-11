@@ -48,6 +48,25 @@
   /* ---------- keep long translated words inside their box (titles shrink just enough, never overflow) ---------- */
   var FIT = ["h1", "h2", "h3", "h4", ".ph1", ".ph2"];
   var fitTimer = 0;
+  function lines(el) {
+    var r = document.createRange(), seen = {}, n = 0;
+    r.selectNodeContents(el);
+    var rects = r.getClientRects();
+    for (var i = 0; i < rects.length; i++) {
+      var k = Math.round(rects[i].top);
+      if (rects[i].width > 0 && !seen[k]) { seen[k] = 1; n++; }
+    }
+    return n;
+  }
+  /* true when a word would be cut: the text overflows its box, or it needs more lines when words may be broken */
+  function needsShrink(el) {
+    el.style.setProperty("overflow-wrap", "normal", "important");
+    var a = lines(el), over = el.scrollWidth > el.clientWidth;
+    el.style.setProperty("overflow-wrap", "break-word", "important");
+    var b = lines(el);
+    el.style.removeProperty("overflow-wrap");
+    return over || b > a;
+  }
   function fitAll() {
     var sel = [];
     FIT.forEach(function (f) { sel.push("main " + f); });
@@ -59,12 +78,10 @@
       if (el._fit[0]) el.style.setProperty("font-size", el._fit[0], el._fit[1]); else el.style.removeProperty("font-size");
       if (!el.clientWidth) continue;
       var size = parseFloat(getComputedStyle(el).fontSize), min = size * 0.55;
-      el.style.setProperty("overflow-wrap", "normal", "important");   // measure the longest word, not the broken one
-      while (el.scrollWidth > el.clientWidth && size > min) {
+      while (needsShrink(el) && size > min) {
         size -= 0.5;
         el.style.setProperty("font-size", size + "px", "important");
       }
-      el.style.removeProperty("overflow-wrap");
     }
   }
   function fitSoon() { clearTimeout(fitTimer); fitTimer = setTimeout(fitAll, 120); }

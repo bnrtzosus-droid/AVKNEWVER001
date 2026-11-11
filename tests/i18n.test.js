@@ -278,7 +278,11 @@ const where = (p) => new URL(p.url()).pathname;
             document.querySelectorAll('main h1,main h2,main h3,main h4,main a.h1,main a.h4,main button').forEach((el) => {
               if (!el.clientWidth || el.closest('.cal') || getComputedStyle(el).display === 'none') return;
               el.style.setProperty('overflow-wrap', 'normal', 'important');
-              if (el.scrollWidth > el.clientWidth + 1) out.push('broken word in "' + el.textContent.trim().slice(0, 30) + '"');
+              if (/^H[1-4]$/.test(el.tagName)) {
+                const cnt = () => { const rg = document.createRange(); rg.selectNodeContents(el); const seen = new Set(); [...rg.getClientRects()].forEach((q) => { if (q.width > 0) seen.add(Math.round(q.top)); }); return seen.size; };
+                const n1 = cnt(); el.style.setProperty('overflow-wrap', 'break-word', 'important'); const n2 = cnt();
+                if (n2 > n1 || el.scrollWidth > el.clientWidth) out.push('broken word in "' + el.textContent.trim().slice(0, 30) + '"');
+              } else if (el.scrollWidth > el.clientWidth + 1) out.push('broken word in "' + el.textContent.trim().slice(0, 30) + '"');
               el.style.removeProperty('overflow-wrap');
             });
             document.querySelectorAll('main .cards, main .cards > *').forEach((el) => { if (el.scrollWidth > el.clientWidth + 1) out.push('cards overflow'); });

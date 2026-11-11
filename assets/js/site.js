@@ -46,6 +46,11 @@
     $("#bio-x").focus();
   }
 
+  /* biography photos are fetched once the page is idle, so the dialog never opens on an empty grey box */
+  window.addEventListener("load", function () {
+    setTimeout(function () { (window.PA_BIOS || []).forEach(function (b) { if (b.photo) { var i = new Image(); i.src = b.photo; } }); }, 400);
+  });
+
   /* ---------- delegated clicks ---------- */
   document.addEventListener("click", function (e) {
     var t = e.target.closest ? e.target.closest("[data-bio],[data-scroll],#burger,.mclose,.msub,#mobpanel a,#mobnav") : null;
@@ -59,7 +64,14 @@
       return;
     }
     if (t.id === "mobnav") { if (e.target === t) setNav(false); return; }
-    if (t.classList.contains("mclose") || (t.tagName === "A" && t.closest("#mobpanel"))) { setNav(false); return; }
+    if (t.classList.contains("mclose")) { setNav(false); return; }
+    if (t.tagName === "A" && t.closest("#mobpanel")) {
+      // following a link: hide the menu at once (no fade) so the page change never shows a half-open menu
+      var mn = $("#mobnav"), pn = $("#mobpanel");
+      if (mn && pn) { mn.style.transition = "none"; pn.style.transition = "none"; }
+      setNav(false);
+      return;
+    }
     if (t.hasAttribute("data-bio")) { e.preventDefault(); openBio(+t.getAttribute("data-bio")); return; }
     var sec = t.closest("section"), track = sec && $(".pa-track", sec);
     if (track) {
@@ -76,7 +88,11 @@
     });
   });
   // leaving the page through the browser's back/forward cache must not keep the menu open
-  window.addEventListener("pageshow", function () { setNav(false); });
+  window.addEventListener("pageshow", function () {
+    var mn = $("#mobnav"), pn = $("#mobpanel");
+    if (mn) mn.style.transition = ""; if (pn) pn.style.transition = "";
+    setNav(false);
+  });
 
 
 
