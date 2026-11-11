@@ -20,9 +20,13 @@
   }
 
   /* ---------- team biography dialog (cabinet page) ---------- */
+  var bioClosing = false;
   function closeBio() {
-    var r = $("#bio-root");
-    if (r && r.innerHTML) { r.innerHTML = ""; document.body.style.overflow = ""; }
+    var r = $("#bio-root"), bg = $("#bio-bg");
+    if (!r || !r.innerHTML || bioClosing) return;
+    bioClosing = true;
+    var done = function () { r.innerHTML = ""; document.body.style.overflow = ""; document.body.style.paddingRight = ""; bioClosing = false; };
+    if (bg) { bg.style.opacity = "0"; setTimeout(done, 260); } else done();
   }
   function openBio(i) {
     var b = (window.PA_BIOS || [])[i];
@@ -34,16 +38,27 @@
       h += "</div>";
     });
     $("#bio-root").innerHTML =
-      '<div id="bio-bg" role="dialog" aria-modal="true" aria-label="' + esc(b.name) + '" style="position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;display:flex;align-items:center;justify-content:center;padding:24px">' +
+      '<div id="bio-bg" role="dialog" aria-modal="true" aria-label="' + esc(b.name) + '" style="position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .25s ease">' +
       '<div style="background:#fff;border-radius:10px;max-width:880px;width:100%;max-height:90vh;overflow:auto;position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;padding:32px">' +
       '<button id="bio-x" aria-label="' + esc(tr("u.close", "Fermer")) + '" style="position:absolute;top:10px;right:14px;background:none;border:0;font-size:28px;color:#666;cursor:pointer;line-height:1">×</button>' +
       (b.photo ? '<img src="' + esc(b.photo) + '" alt="' + esc(b.name) + '" style="width:100%;border-radius:8px;object-fit:cover;background:#dde9ec;aspect-ratio:4/5">' : "") +
       '<div style="display:flex;flex-direction:column;gap:12px;font-size:15px"><h3 style="margin:0;font-size:24px;font-weight:700;color:#428c9e">' + esc(b.name) + "</h3>" + h +
       '<div><a href="' + (window.PA_I18N ? window.PA_I18N.href("/rendez-vous") : "/rendez-vous") + '" style="display:inline-block;margin-top:6px;background:#428c9e;color:#fff;border-radius:100px;padding:10px 26px;font-size:16px;font-weight:500;border:1px solid #428c9e">' + esc(b.cta) + "</a></div></div></div></div>";
+    var sw = window.innerWidth - document.documentElement.clientWidth;      // keep the page from jumping when the scrollbar disappears
     document.body.style.overflow = "hidden";
+    if (sw > 0) document.body.style.paddingRight = sw + "px";
     $("#bio-bg").addEventListener("click", function (e) { if (e.target === this) closeBio(); });
     $("#bio-x").addEventListener("click", closeBio);
-    $("#bio-x").focus();
+    $("#bio-x").focus({ preventScroll: true });
+    // the dialog is revealed (soft fade) only once its photo is decoded: it never opens on an empty box
+    var photo = $("#bio-bg img"), shown = false;
+    var show = function () {
+      if (shown) return;
+      shown = true;
+      requestAnimationFrame(function () { var bg = $("#bio-bg"); if (bg) bg.style.opacity = "1"; });
+    };
+    if (photo && photo.decode) photo.decode().then(show, show); else show();
+    setTimeout(show, 900);
   }
 
   /* biography photos are fetched once the page is idle, so the dialog never opens on an empty grey box */

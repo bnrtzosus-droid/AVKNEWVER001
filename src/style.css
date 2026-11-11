@@ -175,3 +175,8 @@ html[lang=de] [style*="text-align:justify"],html[lang=fi] [style*="text-align:ju
 #mobpanel .langsw.mob .lang-list a .cd{display:block;font-size:12px;letter-spacing:.16em;color:#3f7d8d;font-weight:500}
 #mobpanel .langsw.mob .lang-list a.on{border-radius:12px;background:#e6eff2;color:#1f6b7c;font-weight:700;border-bottom-color:transparent}
 #mobpanel .langsw.mob .lang-list a.on .cd{display:none}
+html{scrollbar-gutter:stable}
+/* no coloured box flashing on a tap (iOS / Android) */
+*{-webkit-tap-highlight-color:transparent}
+[data-bio]:focus:not(:focus-visible){outline:none}
+[data-bio]{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
