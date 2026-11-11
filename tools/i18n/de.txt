@@ -25,7 +25,7 @@ h032 | Steuern bei Scheidung
 h033 | Vermögensübertragung und Erbschaft
 h034 | Internationales Recht
 h035 | Termin buchen
-h036 | Kanzlei Furlan &amp; Associés – Alle Rechte vorbehalten – <a href="/politique-de-confidentialite" style="color:#428c9e">Datenschutzerklärung</a> – <a href="/cgu" style="color:#428c9e">Nutzungsbedingungen</a> – <a href="mailto:contact@furlan-associes.fr" style="color:#428c9e">contact@furlan-associes.fr</a> – <a href="tel:0428870161" style="color:#428c9e">04 28 87 01 61</a>
+h036 | Kanzlei Furlan &amp; Associés – Alle Rechte vorbehalten – <a href="/politique-de-confidentialite" style="color:#428c9e">Datenschutzerklärung</a> – <a href="/cgu" style="color:#428c9e">Nutzungsbedingungen</a> – <a href="mailto:contact@furlan-associes.com" style="color:#428c9e">contact@furlan-associes.com</a> – <a href="tel:0428870161" style="color:#428c9e">04 28 87 01 61</a>
 h037 | Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. Wenn Sie diese Seite weiter nutzen, gehen wir davon aus, dass Sie damit einverstanden sind.
 h080 | Anwaltskanzlei<br/>für Familienrecht in Mailand
 h081 | Mehr erfahren
@@ -195,13 +195,13 @@ h279 | Die Löschung Ihrer Daten zu verlangen
 h280 | Die Verarbeitung Ihrer Daten einzuschränken
 h281 | Der Verarbeitung Ihrer Daten zu widersprechen
 h282 | Die Übertragbarkeit Ihrer Daten zu verlangen
-h283 | Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter folgender Adresse: contact@furlan-associes.fr
+h283 | Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter folgender Adresse: contact@furlan-associes.com
 h284 | 6. Cookies
 h285 | Unsere Website verwendet Cookies, um Ihr Surferlebnis zu verbessern. Sie können Ihre Cookie-Einstellungen jederzeit über Ihren Browser verwalten.
 h286 | 7. Änderungen der Datenschutzerklärung
 h287 | Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Änderungen werden mit dem Datum der Aktualisierung auf dieser Seite veröffentlicht. Wir empfehlen Ihnen, diese Erklärung regelmäßig zu lesen.
 h288 | 8. Kontakt
-h289 | Bei Fragen zu dieser Datenschutzerklärung kontaktieren Sie uns bitte unter folgender Adresse: contact@furlan-associes.fr
+h289 | Bei Fragen zu dieser Datenschutzerklärung kontaktieren Sie uns bitte unter folgender Adresse: contact@furlan-associes.com
 h290 | ← Zurück zur Website
 h293 | Allgemeine Nutzungsbedingungen
 h294 | Willkommen auf der Website furlan-associes.com. Mit dem Zugriff auf diese Website erklären Sie sich damit einverstanden, diese Nutzungsbedingungen einzuhalten. Wenn Sie diese Bedingungen nicht akzeptieren, nutzen Sie diese Website bitte nicht.
@@ -222,7 +222,7 @@ h308 | Furlan &amp; Associés behält sich das Recht vor, diese Nutzungsbedingun
 h309 | 8. Anwendbares Recht
 h310 | Diese Nutzungsbedingungen unterliegen französischem Recht. Im Streitfall sind die französischen Gerichte zuständig.
 h311 | 9. Kontakt
-h312 | Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns bitte unter folgender Adresse: contact@furlan-associes.fr.
+h312 | Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns bitte unter folgender Adresse: contact@furlan-associes.com.
 h315 | Diese Seite wurde nicht gefunden.
 h316 | Zurück zur Startseite
 t015 | Menü

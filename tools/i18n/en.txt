@@ -25,7 +25,7 @@ h032 | Divorce taxation
 h033 | Wealth transfer and inheritance
 h034 | International law
 h035 | Book a meeting
-h036 | Furlan &amp; Associés firm – All rights reserved – <a href="/politique-de-confidentialite" style="color:#428c9e">Privacy policy</a> – <a href="/cgu" style="color:#428c9e">Terms of use</a> – <a href="mailto:contact@furlan-associes.fr" style="color:#428c9e">contact@furlan-associes.fr</a> – <a href="tel:0428870161" style="color:#428c9e">04 28 87 01 61</a>
+h036 | Furlan &amp; Associés firm – All rights reserved – <a href="/politique-de-confidentialite" style="color:#428c9e">Privacy policy</a> – <a href="/cgu" style="color:#428c9e">Terms of use</a> – <a href="mailto:contact@furlan-associes.com" style="color:#428c9e">contact@furlan-associes.com</a> – <a href="tel:0428870161" style="color:#428c9e">04 28 87 01 61</a>
 h037 | We use cookies to ensure that we give you the best experience on our website. If you continue to use this site, we will assume that you are happy with it.
 h080 | Law firm<br/>specialising in family law in Milan
 h081 | Learn more
@@ -195,13 +195,13 @@ h279 | Request the deletion of your data
 h280 | Restrict the processing of your data
 h281 | Object to the processing of your data
 h282 | Request the portability of your data
-h283 | To exercise these rights, please contact us at the following address: contact@furlan-associes.fr
+h283 | To exercise these rights, please contact us at the following address: contact@furlan-associes.com
 h284 | 6. Cookies
 h285 | Our website uses cookies to improve your browsing experience. You can manage your cookie preferences at any time through your browser.
 h286 | 7. Changes to the privacy policy
 h287 | We reserve the right to modify this privacy policy at any time. Changes will be published on this page with the date of the update. We encourage you to consult this policy regularly.
 h288 | 8. Contact
-h289 | For any question regarding this privacy policy, please contact us at the following address: contact@furlan-associes.fr
+h289 | For any question regarding this privacy policy, please contact us at the following address: contact@furlan-associes.com
 h290 | ← Back to the site
 h293 | Terms of Use
 h294 | Welcome to the website furlan-associes.com. By accessing this site, you agree to comply with these terms of use. If you do not accept these terms, please do not use this site.
@@ -222,7 +222,7 @@ h308 | Furlan &amp; Associés reserves the right to modify these Terms at any ti
 h309 | 8. Applicable law
 h310 | These Terms are governed by French law. In the event of a dispute, the French courts shall have jurisdiction.
 h311 | 9. Contact
-h312 | For any question regarding these Terms, please contact us at the following address: contact@furlan-associes.fr.
+h312 | For any question regarding these Terms, please contact us at the following address: contact@furlan-associes.com.
 h315 | This page cannot be found.
 h316 | Back to home
 t015 | Menu
