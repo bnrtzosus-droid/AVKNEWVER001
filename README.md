@@ -75,17 +75,24 @@ service d'envoi (e-mail, Resend, etc.).
 
 ## Langues (i18n)
 
-Le site existe en 6 langues : English (par défaut), Deutsch, Français, Suomi, Svenska, Italiano.
+Six langues : Français (racine `/`), English `/en/`, Deutsch `/de/`, Suomi `/fi/`, Svenska `/sv/`, Italiano `/it/`.
+Chaque langue est une **vraie page statique déjà traduite** (`/it/cabinet`, `/de/rendez-vous`…), générée par
+`python3 tools/build.py` : aucune traduction n'est faite dans le navigateur, donc pas de flash et un référencement
+séparé par langue.
 
-* **Choix de la langue** : préférence enregistrée (`localStorage`, clé `pa-lang`) › langue du navigateur
-  (`navigator.languages` puis `navigator.language`, variantes régionales comprises : `it-IT`, `de-DE`…) › anglais.
-  La décision est prise par un petit script dans le `<head>` : la page reste masquée (`html.i18n-wait`) le temps
-  d'appliquer la traduction, il n'y a donc jamais de « flash » dans la mauvaise langue.
-* **Textes** : les pages sont écrites en français (`src/`). `tools/build.py` repère chaque texte et lui donne un
-  identifiant (`h001` = HTML, `t002` = texte brut ; table dans `tools/i18n/fr.json`, les identifiants ne changent plus).
-* **Traductions** : `tools/i18n/<langue>.txt` (une ligne `identifiant | texte`) ; le build les compile en
-  `locales/<langue>/translation.json` et signale tout texte manquant ou dont les balises HTML diffèrent.
-  Pour ajouter ou modifier un texte : éditer la page dans `src/`, lancer `python3 tools/build.py`, puis compléter
-  les 5 fichiers `.txt` pour les nouveaux identifiants listés par le build.
-* **Code** : `assets/js/i18n.js` (application des textes, sélecteur de langues), drapeaux dans `assets/img/flags/`.
-* **Tests** : `node tests/i18n.test.js` (détection, priorité, persistance, absence de flash, 6 langues × 8 pages…).
+* **Balises** : `<html lang>`, `canonical`, `hreflang` pour les 6 langues + `x-default` (anglais), `og:locale` /
+  `og:locale:alternate`, `sitemap.xml` avec les alternatives de chaque page.
+* **Arrivée sur le site** (script dans le `<head>` des pages françaises uniquement) : choix enregistré
+  (`localStorage`, clé `pa-lang`, posé quand on clique une langue du sélecteur) › langue du navigateur
+  (`navigator.languages` puis `navigator.language`, variantes `it-IT`, `de-DE`… comprises) › anglais.
+  Une adresse qui porte déjà un préfixe (`/it/…`) n'est jamais redirigée ; les robots ne sont pas redirigés.
+* **Sélecteur** : 6 liens (drapeaux dans `assets/img/flags/`) vers la même page dans l'autre langue.
+* **Textes** : les pages sont écrites en français (`src/`). Le build repère chaque texte et lui donne un identifiant
+  (`h001` = HTML, `t002` = texte brut ; table dans `tools/i18n/fr.json`, les identifiants ne changent plus).
+  Traductions : `tools/i18n/<langue>.txt` (une ligne `identifiant | texte`), compilées en
+  `locales/<langue>/translation.json`. Le build s'arrête et liste tout texte manquant ou dont les balises HTML diffèrent.
+  Pour ajouter/modifier un texte : éditer la page dans `src/`, lancer le build, puis compléter les 5 fichiers `.txt`.
+* **Parties dynamiques** : biographies (`assets/js/bios.<langue>.js`), textes du calendrier (`window.PA_UI`),
+  `assets/js/i18n.js` (sélecteur, ajustement des titres trop longs).
+* **Tests** : `node tests/i18n.test.js` (détection, priorité, mémorisation, absence de flash, balises SEO,
+  6 langues × 8 pages × 5 largeurs d'écran…).

@@ -29,8 +29,8 @@
     if (!b) return;
     var h = "";
     b.blocks.forEach(function (x) {
-      h += '<div><p style="margin:0">' + esc(tr(x.id, x.text)) + "</p>";
-      if (x.hasItems) h += '<ul style="margin:8px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:4px">' + x.items.map(function (t, k) { return "<li>" + esc(tr(x.iids && x.iids[k], t)) + "</li>"; }).join("") + "</ul>";
+      h += '<div><p style="margin:0">' + esc(x.text) + "</p>";
+      if (x.hasItems) h += '<ul style="margin:8px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:4px">' + x.items.map(function (t, k) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
       h += "</div>";
     });
     $("#bio-root").innerHTML =
@@ -39,7 +39,7 @@
       '<button id="bio-x" aria-label="' + esc(tr("u.close", "Fermer")) + '" style="position:absolute;top:10px;right:14px;background:none;border:0;font-size:28px;color:#666;cursor:pointer;line-height:1">×</button>' +
       (b.photo ? '<img src="' + esc(b.photo) + '" alt="' + esc(b.name) + '" style="width:100%;border-radius:8px;object-fit:cover;background:#dde9ec;aspect-ratio:4/5">' : "") +
       '<div style="display:flex;flex-direction:column;gap:12px;font-size:15px"><h3 style="margin:0;font-size:24px;font-weight:700;color:#428c9e">' + esc(b.name) + "</h3>" + h +
-      '<div><a href="/rendez-vous" style="display:inline-block;margin-top:6px;background:#428c9e;color:#fff;border-radius:100px;padding:10px 26px;font-size:16px;font-weight:500;border:1px solid #428c9e">' + esc(tr(b.cid, b.cta)) + "</a></div></div></div></div>";
+      '<div><a href="' + (window.PA_I18N ? window.PA_I18N.href("/rendez-vous") : "/rendez-vous") + '" style="display:inline-block;margin-top:6px;background:#428c9e;color:#fff;border-radius:100px;padding:10px 26px;font-size:16px;font-weight:500;border:1px solid #428c9e">' + esc(b.cta) + "</a></div></div></div></div>";
     document.body.style.overflow = "hidden";
     $("#bio-bg").addEventListener("click", function (e) { if (e.target === this) closeBio(); });
     $("#bio-x").addEventListener("click", closeBio);
@@ -68,7 +68,6 @@
     }
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeBio(); setNav(false); } });
-  document.addEventListener("pa:lang", closeBio);
   $$("[data-bio]").forEach(function (el) {
     el.setAttribute("tabindex", "0");
     el.setAttribute("role", "button");
@@ -183,7 +182,6 @@
       draw();
     });
     draw();
-    document.addEventListener("pa:lang", draw);
   })();
 
 

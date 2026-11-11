@@ -171,30 +171,66 @@ def _tags(s):
     return sorted(re.findall(r'<[^>]+>', s))
 
 
-def compile_locales(strings):
-    """Write locales/<lang>/translation.json for en, de, fi, sv, it and return the problems found."""
+def strings_for(lang):
+    """(id -> text for one language, problems).  French = the source texts."""
+    used = {k: v for k, v in REG.fr.items() if k in REG.used}
+    if lang == 'fr':
+        return used, []
+    tr = _read_txt(lang)
+    out, problems = {}, []
+    for k, fr in sorted(used.items()):
+        if k in tr:
+            v = tr[k]
+            if k[0] == 'h' and _tags(v) != _tags(fr):
+                problems.append('%s %s: HTML tags differ from the French source' % (lang, k))
+            out[k] = v
+        elif INVARIANT_RE.match(fr) and (fr.startswith('Piazza') or len(fr.split()) <= 4):
+            out[k] = fr
+        else:
+            problems.append('%s %s: missing translation (%s)' % (lang, k, fr[:50]))
+            out[k] = fr
+    for k in tr:
+        if k not in used:
+            problems.append('%s %s: unknown id (not used by the site any more)' % (lang, k))
+    return out, problems
+
+
+def compile_locales():
+    """Write locales/<lang>/translation.json for every language and return the problems found."""
     problems = []
     for lang in LANGS:
-        if lang == 'fr':
-            continue
-        tr = _read_txt(lang)
-        out = {}
-        for k, fr in sorted(strings.items()):
-            if k in tr:
-                v = tr[k]
-                if k[0] == 'h' and _tags(v) != _tags(fr):
-                    problems.append('%s %s: HTML tags differ from the French source' % (lang, k))
-                out[k] = v
-            elif INVARIANT_RE.match(fr) and (fr.startswith('Piazza') or len(fr.split()) <= 4):
-                out[k] = fr
-            else:
-                problems.append('%s %s: missing translation (%s)' % (lang, k, fr[:50]))
-        for k in tr:
-            if k not in strings:
-                problems.append('%s %s: unknown id (not used by the site any more)' % (lang, k))
+        out, pb = strings_for(lang)
+        problems += pb
         d = os.path.join(ROOT, 'locales', lang)
         os.makedirs(d, exist_ok=True)
         with open(os.path.join(d, 'translation.json'), 'w', encoding='utf8', newline='\n') as f:
             json.dump({'lang': lang, 'strings': out}, f, ensure_ascii=False, indent=1)
             f.write('\n')
     return problems
+
+
+def translate_doc(doc, lang, strings, prefix=''):
+    """Apply the strings of one language to a finished HTML document (static, no JavaScript needed).
+    Internal links get the language prefix (/it/...)."""
+    soup = BeautifulSoup(doc, 'html.parser')
+    for el in soup.find_all(attrs={'data-i18n': True}):
+        i = el['data-i18n']
+        if lang != 'fr' and i in strings:
+            if i[0] == 't':
+                el.string = strings[i]
+            else:
+                el.clear()
+                el.append(BeautifulSoup(strings[i], 'html.parser'))
+        del el['data-i18n']
+    for el in soup.find_all(attrs={'data-i18n-attr': True}):
+        for pair in el['data-i18n-attr'].split(','):
+            a, i = pair.split(':')
+            if lang != 'fr' and i in strings:
+                el[a] = strings[i]
+        del el['data-i18n-attr']
+    if prefix:
+        for a in soup.find_all('a', href=True):
+            h = a['href']
+            if h.startswith('/') and not h.startswith('//') and not re.match(r'/(assets|locales)/', h) and not h.startswith(prefix + '/') and not a.has_attr('data-lang'):
+                a['href'] = prefix + h
+    return str(soup)
