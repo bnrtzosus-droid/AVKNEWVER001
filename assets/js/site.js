@@ -9,7 +9,23 @@
   /* ---------- mobile side menu ---------- */
   function setNav(open) {
     var nav = $("#mobnav"), b = $("#burger");
-    if (nav) nav.classList.toggle("open", open);
+    if (nav) {
+      clearTimeout(nav._reset);
+      if (open) {
+        /* iPhone Safari paints the page under its bottom toolbar, but clips fixed elements to the area above it.
+           While the menu is open (page scroll locked) the layer is therefore an absolute block that starts at the top
+           of the screen and runs 400px below it: dark layer and white panel reach the very bottom of the screen. */
+        nav.style.position = "absolute";
+        nav.style.top = (window.pageYOffset || 0) + "px";
+        nav.style.bottom = "auto";
+        nav.style.height = (window.innerHeight + 400) + "px";
+      } else {
+        nav._reset = setTimeout(function () {
+          nav.style.position = nav.style.top = nav.style.bottom = nav.style.height = "";
+        }, 450);
+      }
+      nav.classList.toggle("open", open);
+    }
     if (b) b.setAttribute("aria-expanded", open ? "true" : "false");
     document.body.style.overflow = open ? "hidden" : "";
     if (!open) {

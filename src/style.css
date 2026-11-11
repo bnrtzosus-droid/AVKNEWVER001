@@ -59,8 +59,6 @@ html{scroll-padding-top:110px}
 .logo,.rdvtop{}
 .usr{display:none;position:fixed;top:13px;right:18px;z-index:61;line-height:0}
 #mobnav{position:fixed;left:0;right:0;top:0;bottom:0;z-index:80;background:rgba(0,0,0,.45);visibility:hidden;opacity:0;pointer-events:none;transition:opacity .35s ease,visibility 0s linear .35s;-webkit-tap-highlight-color:transparent}
-/* iPhone Safari: the area under the browser toolbar belongs to the page too; 100lvh (toolbars retracted) makes the dark layer and the white panel reach the very bottom */
-@supports (height:100lvh){#mobnav{bottom:auto;height:100lvh}}
 #mobnav.open{visibility:visible;opacity:1;pointer-events:auto;transition:opacity .35s ease,visibility 0s}
 #mobpanel{transform:translateX(-104%);transition:transform .4s cubic-bezier(.22,.7,.2,1);will-change:transform}
 #mobnav.open #mobpanel{transform:none}
