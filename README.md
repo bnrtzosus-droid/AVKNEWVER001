@@ -86,6 +86,8 @@ séparé par langue.
   (`localStorage`, clé `pa-lang`, posé quand on clique une langue du sélecteur) › langue du navigateur
   (`navigator.languages` puis `navigator.language`, variantes `it-IT`, `de-DE`… comprises) › anglais.
   Une adresse qui porte déjà un préfixe (`/it/…`) n'est jamais redirigée ; les robots ne sont pas redirigés.
+* **Liens `?lang=xx`** : `/?lang=it`, `/cabinet?lang=de`… redirigent vers la page de la langue (`/it/`, `/de/cabinet`) et mémorisent le choix.
+  Les `hreflang` restent sur les adresses par chemin (`/it/…`), seules indexables séparément par les moteurs.
 * **Sélecteur** : 6 liens (drapeaux dans `assets/img/flags/`) vers la même page dans l'autre langue.
 * **Textes** : les pages sont écrites en français (`src/`). Le build repère chaque texte et lui donne un identifiant
   (`h001` = HTML, `t002` = texte brut ; table dans `tools/i18n/fr.json`, les identifiants ne changent plus).

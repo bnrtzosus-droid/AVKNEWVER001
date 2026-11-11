@@ -127,6 +127,16 @@ const where = (p) => new URL(p.url()).pathname;
       await c.close();
     }
 
+
+    console.log('\n4b. ?lang=xx links open the matching language page');
+    for (const [from, want] of [['/?lang=it', '/it/'], ['/cabinet?lang=de', '/de/cabinet'], ['/it/cabinet?lang=fr', '/cabinet'], ['/de/?lang=sv', '/sv/'], ['/cabinet?lang=fi&x=1', '/fi/cabinet?x=1'], ['/?lang=zz', '/en/?lang=zz']]) {
+      const c = await ctx(browser, { locale: 'en-US' });
+      const p = await c.newPage();
+      await p.goto(BASE + from);
+      const got = new URL(p.url()).pathname + new URL(p.url()).search;
+      ok(got === want, from + ' -> ' + want, got);
+      await c.close();
+    }
     console.log('\n5. Returning visitor: Italian with no flash of another language');
     {
       const c = await ctx(browser, { locale: 'en-US' });

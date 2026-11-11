@@ -80,8 +80,12 @@ def lurl(lang, url):
 # runs in <head> of the French (root) pages only, before first paint.
 # Language of a visitor arriving on the root: saved choice > browser language > English.
 # (pages that already carry a language prefix, /it/ ..., are explicit and are never redirected)
-LANG_BOOT = """(function(){var d=document.documentElement;if(d.getAttribute("data-root")!=="1")return;
-var S=["en","de","fr","fi","sv","it"],l;
+LANG_BOOT = """(function(){var d=document.documentElement,S=["en","de","fr","fi","sv","it"],l;
+var q=/[?&]lang=([a-z]{2})(?=&|$)/i.exec(location.search);
+if(q&&S.indexOf(q[1].toLowerCase())>-1){l=q[1].toLowerCase();try{localStorage.setItem("pa-lang",l)}catch(e){}
+var b=location.pathname.replace(/^\\/(en|de|fi|sv|it)(?=\\/|$)/,"")||"/",s=location.search.replace(/([?&])lang=[a-z]{2}(&|$)/i,function(m,a,z){return z?a:""}).replace(/[?&]$/,"");
+location.replace((l==="fr"?b:"/"+l+(b==="/"?"/":b))+s+location.hash);return}
+if(d.getAttribute("data-root")!=="1")return;
 if(/bot|crawl|spider|slurp|google|bing|yandex|baidu|duckduck|facebookexternalhit|linkedin|whatsapp|preview/i.test(navigator.userAgent||""))return;
 try{l=localStorage.getItem("pa-lang")}catch(e){}
 if(S.indexOf(l)<0){l=null;var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""];

@@ -19,8 +19,12 @@
 <link href="/assets/img/favicon-180.png?v=1aacaad6" rel="apple-touch-icon"/>
 <link as="font" crossorigin="" href="/assets/fonts/montserrat-latin.woff2" rel="preload" type="font/woff2"/>
 <link href="/assets/css/style.css?v=7ca57602" rel="stylesheet"/>
-<script>(function(){var d=document.documentElement;if(d.getAttribute("data-root")!=="1")return;
-var S=["en","de","fr","fi","sv","it"],l;
+<script>(function(){var d=document.documentElement,S=["en","de","fr","fi","sv","it"],l;
+var q=/[?&]lang=([a-z]{2})(?=&|$)/i.exec(location.search);
+if(q&&S.indexOf(q[1].toLowerCase())>-1){l=q[1].toLowerCase();try{localStorage.setItem("pa-lang",l)}catch(e){}
+var b=location.pathname.replace(/^\/(en|de|fi|sv|it)(?=\/|$)/,"")||"/",s=location.search.replace(/([?&])lang=[a-z]{2}(&|$)/i,function(m,a,z){return z?a:""}).replace(/[?&]$/,"");
+location.replace((l==="fr"?b:"/"+l+(b==="/"?"/":b))+s+location.hash);return}
+if(d.getAttribute("data-root")!=="1")return;
 if(/bot|crawl|spider|slurp|google|bing|yandex|baidu|duckduck|facebookexternalhit|linkedin|whatsapp|preview/i.test(navigator.userAgent||""))return;
 try{l=localStorage.getItem("pa-lang")}catch(e){}
 if(S.indexOf(l)<0){l=null;var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""];
