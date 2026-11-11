@@ -166,7 +166,7 @@ h242 | ← Torna alle notizie
 h245 | Prenota direttamente un appuntamento con un avvocato di diritto di famiglia.
 h252 | Informativa sulla privacy
 h253 | Ultimo aggiornamento: 01/10/2024
-h254 | Presso Furlan &amp; Associés ci impegniamo a proteggere la tua privacy. La presente informativa sulla privacy descrive come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali quando visiti il nostro sito pessia-associes.fr.
+h254 | Presso Furlan &amp; Associés ci impegniamo a proteggere la tua privacy. La presente informativa sulla privacy descrive come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali quando visiti il nostro sito furlan-associes.com.
 h255 | 1. Raccolta dei dati personali
 h256 | Raccogliamo dati personali quando interagisci con il nostro sito, in particolare quando:
 h257 | Compili un modulo di contatto
@@ -204,9 +204,9 @@ h288 | 8. Contatti
 h289 | Per qualsiasi domanda riguardante questa informativa sulla privacy, ti invitiamo a contattarci al seguente indirizzo: contact@furlan-associes.fr
 h290 | ← Torna al sito
 h293 | Condizioni generali di utilizzo
-h294 | Benvenuto sul sito pessia-associes.fr. Accedendo a questo sito, accetti di rispettare le presenti condizioni generali di utilizzo. Se non accetti queste condizioni, ti invitiamo a non utilizzare questo sito.
+h294 | Benvenuto sul sito furlan-associes.com. Accedendo a questo sito, accetti di rispettare le presenti condizioni generali di utilizzo. Se non accetti queste condizioni, ti invitiamo a non utilizzare questo sito.
 h295 | 1. Oggetto
-h296 | Le presenti condizioni hanno lo scopo di definire le modalità di accesso e di utilizzo del sito pessia-associes.fr.
+h296 | Le presenti condizioni hanno lo scopo di definire le modalità di accesso e di utilizzo del sito furlan-associes.com.
 h297 | 2. Proprietà intellettuale
 h298 | Tutti i contenuti presenti su questo sito, inclusi, a titolo esemplificativo, testi, immagini, loghi e grafiche, sono di proprietà di Furlan &amp; Associés o di terzi che ne hanno autorizzato l’uso. Qualsiasi riproduzione, distribuzione o modifica senza autorizzazione scritta è vietata.
 h299 | 3. Accesso al sito
@@ -296,9 +296,9 @@ t249 | Messaggio
 t250 | Appuntamento – Furlan & Associés
 t251 | Prenota direttamente un appuntamento con un avvocato di diritto di famiglia a Milano.
 t291 | Informativa sulla privacy – Furlan & Associés
-t292 | Informativa sulla privacy del sito pessia-associes.fr.
+t292 | Informativa sulla privacy del sito furlan-associes.com.
 t313 | Condizioni generali di utilizzo – Furlan & Associés
-t314 | Condizioni generali di utilizzo del sito pessia-associes.fr.
+t314 | Condizioni generali di utilizzo del sito furlan-associes.com.
 t317 | Pagina non trovata – Furlan & Associés
 t318 | Questa pagina non è stata trovata.
 u.close | Chiudi

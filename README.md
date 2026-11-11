@@ -32,7 +32,7 @@ python3 tools/build.py      # régénère les pages, le sitemap et robots.txt
 python3 tools/serve.py      # aperçu local sur http://localhost:8000 (mêmes adresses propres)
 ```
 
-Si le domaine de production n'est pas `pessia-associes.fr`, changez `BASE_URL` dans `tools/build.py`
+Si le domaine de production n'est pas `furlan-associes.com`, changez `BASE_URL` dans `tools/build.py`
 (balises canoniques, sitemap, robots.txt) puis relancez le build.
 
 ## Effets et performance
@@ -64,7 +64,7 @@ Photos libres de droits ([licence Unsplash](https://unsplash.com/license)) :
 | Article (Duomo de Milan) | Ouael Ben Salah |
 | Bandeau Rendez-vous (marteau et livre) | Sasun Bughdaryan |
 
-Les photos des avocats, les avatars des avis et le logo proviennent du site d’origine pessia-associes.fr.
+Les photos des avocats, les avatars des avis et le logo proviennent du site d’origine furlan-associes.com.
 Les pictogrammes de contact (téléphone, adresse, e-mail) sont des icônes Material Design (Apache 2.0).
 
 ## À brancher

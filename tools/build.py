@@ -4,7 +4,7 @@
     python3 tools/build.py
 
 Edit the partials/pages in src/, then re-run this script and commit the result.
-Change BASE_URL below if the production domain is not pessia-associes.fr.
+Change BASE_URL below if the production domain is not furlan-associes.com.
 """
 import hashlib
 import html
@@ -18,7 +18,7 @@ import i18n
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'src')
-BASE_URL = 'https://pessia-associes.fr'
+BASE_URL = 'https://furlan-associes.com'
 SITE = 'Furlan & Associés'
 LOGO = '/assets/img/logo-512.png'
 
@@ -38,9 +38,9 @@ PAGES = [
     ('rdv', 'rendez-vous.html', '/rendez-vous', 'Rendez-vous – Furlan & Associés',
      'Prenez directement rendez-vous avec un avocat en droit de la famille à Milan.', 'rdv', []),
     ('conf', 'politique-de-confidentialite.html', '/politique-de-confidentialite', 'Politique de confidentialité – Furlan & Associés',
-     'Politique de confidentialité du site pessia-associes.fr.', None, []),
+     'Politique de confidentialité du site furlan-associes.com.', None, []),
     ('cgu', 'cgu.html', '/cgu', 'Conditions générales d’utilisation – Furlan & Associés',
-     'Conditions générales d’utilisation du site pessia-associes.fr.', None, []),
+     'Conditions générales d’utilisation du site furlan-associes.com.', None, []),
 ]
 
 

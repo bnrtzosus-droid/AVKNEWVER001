@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pessia-associes.fr/sitemap.xml
+Sitemap: https://furlan-associes.com/sitemap.xml

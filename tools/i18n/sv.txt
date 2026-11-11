@@ -166,7 +166,7 @@ h242 | ← Tillbaka till nyheterna
 h245 | Boka direkt tid med en advokat inom familjerätt.
 h252 | Integritetspolicy
 h253 | Senast uppdaterad: 2024-10-01
-h254 | På Furlan &amp; Associés åtar vi oss att skydda din integritet. Denna integritetspolicy beskriver hur vi samlar in, använder och skyddar dina personuppgifter när du besöker vår webbplats pessia-associes.fr.
+h254 | På Furlan &amp; Associés åtar vi oss att skydda din integritet. Denna integritetspolicy beskriver hur vi samlar in, använder och skyddar dina personuppgifter när du besöker vår webbplats furlan-associes.com.
 h255 | 1. Insamling av personuppgifter
 h256 | Vi samlar in personuppgifter när du interagerar med vår webbplats, särskilt när du:
 h257 | Fyller i ett kontaktformulär
@@ -204,9 +204,9 @@ h288 | 8. Kontakt
 h289 | Vid frågor om denna integritetspolicy, kontakta oss på följande adress: contact@furlan-associes.fr
 h290 | ← Tillbaka till webbplatsen
 h293 | Allmänna användarvillkor
-h294 | Välkommen till webbplatsen pessia-associes.fr. Genom att besöka denna webbplats godkänner du att följa dessa allmänna användarvillkor. Om du inte godkänner villkoren, använd inte denna webbplats.
+h294 | Välkommen till webbplatsen furlan-associes.com. Genom att besöka denna webbplats godkänner du att följa dessa allmänna användarvillkor. Om du inte godkänner villkoren, använd inte denna webbplats.
 h295 | 1. Syfte
-h296 | Dessa villkor syftar till att fastställa villkoren för åtkomst till och användning av webbplatsen pessia-associes.fr.
+h296 | Dessa villkor syftar till att fastställa villkoren för åtkomst till och användning av webbplatsen furlan-associes.com.
 h297 | 2. Immateriella rättigheter
 h298 | Allt innehåll på denna webbplats, inklusive men inte begränsat till texter, bilder, logotyper och grafik, tillhör Furlan &amp; Associés eller tredje part som har godkänt dess användning. All reproduktion, spridning eller ändring utan skriftligt tillstånd är förbjuden.
 h299 | 3. Åtkomst till webbplatsen
@@ -296,9 +296,9 @@ t249 | Meddelande
 t250 | Tidsbokning – Furlan & Associés
 t251 | Boka direkt tid med en advokat inom familjerätt i Milano.
 t291 | Integritetspolicy – Furlan & Associés
-t292 | Integritetspolicy för webbplatsen pessia-associes.fr.
+t292 | Integritetspolicy för webbplatsen furlan-associes.com.
 t313 | Allmänna användarvillkor – Furlan & Associés
-t314 | Allmänna användarvillkor för webbplatsen pessia-associes.fr.
+t314 | Allmänna användarvillkor för webbplatsen furlan-associes.com.
 t317 | Sidan hittades inte – Furlan & Associés
 t318 | Den här sidan hittades inte.
 u.close | Stäng

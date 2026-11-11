@@ -166,7 +166,7 @@ h242 | ← Back to news
 h245 | Book an appointment directly with a family law lawyer.
 h252 | Privacy Policy
 h253 | Last updated: 01/10/2024
-h254 | At Furlan &amp; Associés, we are committed to protecting your privacy. This privacy policy describes how we collect, use and protect your personal data when you visit our website pessia-associes.fr.
+h254 | At Furlan &amp; Associés, we are committed to protecting your privacy. This privacy policy describes how we collect, use and protect your personal data when you visit our website furlan-associes.com.
 h255 | 1. Collection of personal data
 h256 | We collect personal data when you interact with our website, in particular when you:
 h257 | Fill in a contact form
@@ -204,9 +204,9 @@ h288 | 8. Contact
 h289 | For any question regarding this privacy policy, please contact us at the following address: contact@furlan-associes.fr
 h290 | ← Back to the site
 h293 | Terms of Use
-h294 | Welcome to the website pessia-associes.fr. By accessing this site, you agree to comply with these terms of use. If you do not accept these terms, please do not use this site.
+h294 | Welcome to the website furlan-associes.com. By accessing this site, you agree to comply with these terms of use. If you do not accept these terms, please do not use this site.
 h295 | 1. Purpose
-h296 | The purpose of these Terms is to define the conditions of access to and use of the website pessia-associes.fr.
+h296 | The purpose of these Terms is to define the conditions of access to and use of the website furlan-associes.com.
 h297 | 2. Intellectual property
 h298 | All the content on this site, including but not limited to texts, images, logos and graphics, is the property of Furlan &amp; Associés or of third parties who have authorised its use. Any reproduction, distribution or modification without written authorisation is prohibited.
 h299 | 3. Access to the site
@@ -296,9 +296,9 @@ t249 | Message
 t250 | Appointment – Furlan & Associés
 t251 | Book an appointment directly with a family law lawyer in Milan.
 t291 | Privacy policy – Furlan & Associés
-t292 | Privacy policy of the website pessia-associes.fr.
+t292 | Privacy policy of the website furlan-associes.com.
 t313 | Terms of use – Furlan & Associés
-t314 | Terms of use of the website pessia-associes.fr.
+t314 | Terms of use of the website furlan-associes.com.
 t317 | Page not found – Furlan & Associés
 t318 | This page cannot be found.
 u.close | Close

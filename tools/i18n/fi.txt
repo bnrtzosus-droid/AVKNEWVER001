@@ -166,7 +166,7 @@ h242 | ← Takaisin uutisiin
 h245 | Varaa aika suoraan perheoikeuden asianajajalle.
 h252 | Tietosuojaseloste
 h253 | Päivitetty viimeksi: 1.10.2024
-h254 | Furlan &amp; Associés -toimistossa sitoudumme suojaamaan yksityisyyttäsi. Tämä tietosuojaseloste kuvaa, miten keräämme, käytämme ja suojaamme henkilötietojasi, kun vierailet verkkosivustollamme pessia-associes.fr.
+h254 | Furlan &amp; Associés -toimistossa sitoudumme suojaamaan yksityisyyttäsi. Tämä tietosuojaseloste kuvaa, miten keräämme, käytämme ja suojaamme henkilötietojasi, kun vierailet verkkosivustollamme furlan-associes.com.
 h255 | 1. Henkilötietojen kerääminen
 h256 | Keräämme henkilötietoja, kun olet vuorovaikutuksessa sivustomme kanssa, erityisesti kun:
 h257 | Täytät yhteydenottolomakkeen
@@ -204,9 +204,9 @@ h288 | 8. Yhteystiedot
 h289 | Jos sinulla on kysyttävää tästä tietosuojaselosteesta, ota meihin yhteyttä seuraavassa osoitteessa: contact@furlan-associes.fr
 h290 | ← Takaisin sivustolle
 h293 | Käyttöehdot
-h294 | Tervetuloa sivustolle pessia-associes.fr. Käyttämällä tätä sivustoa hyväksyt noudattavasi näitä käyttöehtoja. Jos et hyväksy näitä ehtoja, älä käytä tätä sivustoa.
+h294 | Tervetuloa sivustolle furlan-associes.com. Käyttämällä tätä sivustoa hyväksyt noudattavasi näitä käyttöehtoja. Jos et hyväksy näitä ehtoja, älä käytä tätä sivustoa.
 h295 | 1. Tarkoitus
-h296 | Näiden ehtojen tarkoituksena on määritellä sivuston pessia-associes.fr käyttöoikeuden ja käytön edellytykset.
+h296 | Näiden ehtojen tarkoituksena on määritellä sivuston furlan-associes.com käyttöoikeuden ja käytön edellytykset.
 h297 | 2. Immateriaalioikeudet
 h298 | Kaikki tämän sivuston sisältö, mukaan lukien mutta ei rajoittuen tekstit, kuvat, logot ja grafiikka, on Furlan &amp; Associésin tai niiden kolmansien osapuolten omaisuutta, jotka ovat sallineet sen käytön. Kaikki jäljentäminen, levittäminen tai muokkaaminen ilman kirjallista lupaa on kielletty.
 h299 | 3. Pääsy sivustolle
@@ -296,9 +296,9 @@ t249 | Viesti
 t250 | Ajanvaraus – Furlan & Associés
 t251 | Varaa aika suoraan perheoikeuden asianajajalle Milanossa.
 t291 | Tietosuojaseloste – Furlan & Associés
-t292 | Sivuston pessia-associes.fr tietosuojaseloste.
+t292 | Sivuston furlan-associes.com tietosuojaseloste.
 t313 | Käyttöehdot – Furlan & Associés
-t314 | Sivuston pessia-associes.fr käyttöehdot.
+t314 | Sivuston furlan-associes.com käyttöehdot.
 t317 | Sivua ei löytynyt – Furlan & Associés
 t318 | Tätä sivua ei löytynyt.
 u.close | Sulje
