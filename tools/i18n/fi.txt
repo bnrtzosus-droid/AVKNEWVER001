@@ -307,3 +307,11 @@ u.nextmonth | Seuraava kuukausi
 u.pickday | Valitse ensin vapaa päivä (maanantaista perjantaihin).
 u.prevmonth | Edellinen kuukausi
 u.times | Ajat
+t319 | Asianajaja Fiorenza GUADAGNOlla on Master II -tutkinto perhe- ja varallisuusoikeudesta Torinon yliopistosta, ja hän aloitti asianajajakoulun tammikuussa 2021.
+t320 | Tarkkaavainen ja huolellinen hän tukee asiakkaitaan sekä inhimillisellä että strategisella otteella, luottamuksellisuutta ja heidän etujaan kunnioittaen. Vannottuaan virkavalansa Milanon hovioikeudessa joulukuussa 2022 hän liittyi toimistoon syyskuussa 2024.
+t321 | Asianajaja GUADAGNO toimii pääasiassa perhe- ja varallisuusoikeuden alalla ja erityisesti seuraavilla aloilla:
+t322 | Avioero, ero ja lasten asuminen,
+t323 | Perintöoikeus ja lahjat,
+t324 | Avio-oikeusjärjestelmien purkaminen ja jako,
+t325 | Perheen kansainvälinen yksityisoikeus (lapsen kansainvälinen sieppaus, exequatur).
+t326 | Hän tukee myös rajat ylittävissä tilanteissa olevia perheitä, erityisesti Italian ja Sveitsin välillä.

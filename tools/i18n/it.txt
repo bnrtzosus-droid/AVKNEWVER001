@@ -307,3 +307,11 @@ u.nextmonth | Mese successivo
 u.pickday | Scegli prima un giorno disponibile (dal lunedì al venerdì).
 u.prevmonth | Mese precedente
 u.times | Orari
+t319 | Titolare di un Master II in Diritto di famiglia e del patrimonio conseguito presso l’Università di Torino, l’Avv. Fiorenza GUADAGNO ha frequentato la Scuola forense a partire da gennaio 2021.
+t320 | Attenta e rigorosa, accompagna i suoi clienti con un approccio al tempo stesso umano e strategico, nel rispetto della riservatezza e dei loro interessi. Dopo aver prestato giuramento davanti alla Corte d’appello di Milano a dicembre 2022, si è unita allo studio a settembre 2024.
+t321 | L’Avv. GUADAGNO opera principalmente nel diritto di famiglia e del patrimonio, e in particolare nei seguenti ambiti:
+t322 | Divorzio, separazione e collocamento dei figli,
+t323 | Diritto successorio e liberalità,
+t324 | Liquidazione e divisione dei regimi patrimoniali,
+t325 | Diritto internazionale privato della famiglia (sottrazione internazionale di minori, exequatur).
+t326 | Accompagna inoltre le famiglie alle prese con situazioni transfrontaliere, in particolare tra Italia e Svizzera.

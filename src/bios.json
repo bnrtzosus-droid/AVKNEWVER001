@@ -130,7 +130,33 @@
   "name": "Maître Fiorenza GUADAGNO",
   "photo": "/assets/img/Design-sans-titre-19-1.webp",
   "cta": "Prendre RDV avec Maître GUADAGNO",
-  "blocks": []
+  "blocks": [
+   {
+    "text": "Titulaire d’un Master II Droit de la famille et du patrimoine obtenu à l’Université de Turin, Maître Fiorenza GUADAGNO a intégré l’École du Barreau en janvier 2021.",
+    "items": [],
+    "hasItems": false
+   },
+   {
+    "text": "Attentive et rigoureuse, elle accompagne ses clients avec une approche à la fois humaine et stratégique, dans le respect de la confidentialité et de leurs intérêts. Après avoir prêté serment devant la Cour d’appel de Milan en décembre 2022, elle a rejoint le Cabinet en septembre 2024.",
+    "items": [],
+    "hasItems": false
+   },
+   {
+    "text": "Maître GUADAGNO intervient principalement en droit de la famille et du patrimoine, et notamment dans les domaines suivants :",
+    "items": [
+     "Divorce, séparation et résidence des enfants,",
+     "Droit des successions et libéralités,",
+     "Liquidation des régimes matrimoniaux et partage,",
+     "Droit international privé de la famille (enlèvement international d’enfant, exequatur)."
+    ],
+    "hasItems": true
+   },
+   {
+    "text": "Elle accompagne également les familles confrontées à des situations transfrontalières, notamment entre l’Italie et la Suisse.",
+    "items": [],
+    "hasItems": false
+   }
+  ]
  },
  {
   "name": "Maître Semplicio CAVALLERO",

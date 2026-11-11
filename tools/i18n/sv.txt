@@ -307,3 +307,11 @@ u.nextmonth | Nästa månad
 u.pickday | Välj först en ledig dag (måndag till fredag).
 u.prevmonth | Föregående månad
 u.times | Tider
+t319 | Advokat Fiorenza GUADAGNO har en Master II i familje- och förmögenhetsrätt från universitetet i Turin och började på advokatskolan i januari 2021.
+t320 | Uppmärksam och noggrann hjälper hon sina klienter med ett förhållningssätt som är både mänskligt och strategiskt, med respekt för sekretessen och för deras intressen. Efter att ha avlagt sin ed inför hovrätten i Milano i december 2022 kom hon till byrån i september 2024.
+t321 | Advokat GUADAGNO arbetar huvudsakligen inom familje- och förmögenhetsrätt och särskilt inom följande områden:
+t322 | Skilsmässa, separation och barnens boende,
+t323 | Arvsrätt och gåvor,
+t324 | Avveckling och delning av äktenskapliga förmögenhetsregimer,
+t325 | Internationell privaträtt inom familjerätten (internationellt bortförande av barn, exekvatur).
+t326 | Hon hjälper också familjer i gränsöverskridande situationer, särskilt mellan Italien och Schweiz.
