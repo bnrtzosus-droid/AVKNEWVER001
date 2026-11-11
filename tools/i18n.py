@@ -38,7 +38,6 @@ UI = {
     'u.times': 'Horaires',
     'u.pickday': 'Choisissez d’abord un jour disponible (du lundi au vendredi).',
     'u.lang': 'Langue',
-    'u.langtitle': 'Langue du site',
 }
 
 

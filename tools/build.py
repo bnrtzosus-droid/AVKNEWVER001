@@ -145,7 +145,7 @@ def langsw(kind, lang, url):
         '<li role="presentation"><a role="option" href="%s" hreflang="%s" lang="%s" data-lang="%s"%s><img class="flag" src="/assets/img/flags/%s.svg" alt="" width="28" height="28"><span class="nm">%s</span><span class="cd">%s</span>%s</a></li>'
         % (lurl(c, url), c, c, c, ' class="on" aria-selected="true"' if c == lang else ' aria-selected="false"', f, n, c.upper(), CHECK) for c, n, f in LANG_NAMES)
     flag = dict((c, f) for c, n, f in LANG_NAMES)[lang]
-    head = ('<div class="lang-title" data-i18n="u.langtitle">Langue du site</div><div class="lang-sub" translate="no">Select your language</div>' if kind == 'mob' else '')
+    head = ''
     return ('<div class="langsw %s" translate="no">%s<button type="button" class="lang-cur" aria-haspopup="listbox" aria-expanded="false" '
             'aria-label="Langue" data-i18n-attr="aria-label:u.lang"><img class="flag" src="/assets/img/flags/%s.svg" alt="" width="22" height="22">'
             '<span class="lc">%s</span><svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>'

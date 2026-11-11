@@ -302,7 +302,6 @@ t314 | Sivuston furlan-associes.com käyttöehdot.
 t317 | Sivua ei löytynyt – Furlan & Associés
 t318 | Tätä sivua ei löytynyt.
 u.close | Sulje
-u.langtitle | Sivuston kieli
 u.lang | Kieli
 u.nextmonth | Seuraava kuukausi
 u.pickday | Valitse ensin vapaa päivä (maanantaista perjantaihin).

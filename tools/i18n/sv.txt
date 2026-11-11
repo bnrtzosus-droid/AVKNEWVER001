@@ -302,7 +302,6 @@ t314 | Allmänna användarvillkor för webbplatsen furlan-associes.com.
 t317 | Sidan hittades inte – Furlan & Associés
 t318 | Den här sidan hittades inte.
 u.close | Stäng
-u.langtitle | Webbplatsens språk
 u.lang | Språk
 u.nextmonth | Nästa månad
 u.pickday | Välj först en ledig dag (måndag till fredag).

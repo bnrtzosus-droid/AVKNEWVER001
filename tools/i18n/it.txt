@@ -302,7 +302,6 @@ t314 | Condizioni generali di utilizzo del sito furlan-associes.com.
 t317 | Pagina non trovata – Furlan & Associés
 t318 | Questa pagina non è stata trovata.
 u.close | Chiudi
-u.langtitle | Lingua del sito
 u.lang | Lingua
 u.nextmonth | Mese successivo
 u.pickday | Scegli prima un giorno disponibile (dal lunedì al venerdì).
