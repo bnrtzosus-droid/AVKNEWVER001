@@ -129,7 +129,7 @@ def write(path, text):
 
 
 E = lambda s: html.escape(s, quote=True)
-header, footer, cookie = read('partials', 'header.html'), read('partials', 'footer.html'), read('partials', 'cookie.html')
+header, footer = read('partials', 'header.html'), read('partials', 'footer.html')
 
 LANG_NAMES = [('en', 'English', 'gb'), ('de', 'Deutsch', 'de'), ('fr', 'Français', 'fr'),
               ('fi', 'Suomi', 'fi'), ('sv', 'Svenska', 'se'), ('it', 'Italiano', 'it')]
@@ -152,7 +152,7 @@ def langsw(kind, lang, url):
             '<ul class="lang-list" role="listbox" aria-label="Langue" data-i18n-attr="aria-label:u.lang">%s</ul></div>' % (kind, head, flag, lang.upper(), items))
 
 
-header, footer, cookie = i18n.tag(header, 'header'), i18n.tag(footer, 'footer'), i18n.tag(cookie, 'cookie')
+header, footer = i18n.tag(header, 'header'), i18n.tag(footer, 'footer')
 
 
 _dims = {}
@@ -233,7 +233,7 @@ def layout(lang, title, desc, url, nav, scripts, body, robots=None, notfound=Fal
 <link rel="expect" href="#contenu" blocking="render">
 {preload}<link rel="stylesheet" href="/assets/css/style.css?v={CSS_V}">
 <script>{LANG_BOOT}</script>
-<script>window.PA_UI={ui};document.documentElement.classList.add("js");try{{if(localStorage.getItem("pa-cookie")==="1")document.documentElement.setAttribute("data-ck","1")}}catch(e){{}}</script>
+<script>window.PA_UI={ui};document.documentElement.classList.add("js");</script>
 <script type="speculationrules">{{"prerender":[{{"where":{{"and":[{{"href_matches":"/*"}},{{"not":{{"href_matches":"/assets/*"}}}}]}},"eagerness":"moderate"}}]}}</script>
 </head>
 <body>
@@ -243,7 +243,6 @@ def layout(lang, title, desc, url, nav, scripts, body, robots=None, notfound=Fal
 {body}
 </main>
 {footer}
-{cookie}
 <div id="bio-root"></div>
 </div>
 <script src="/assets/js/i18n.js?v={I18N_V}" defer></script>

@@ -26,7 +26,6 @@ h033 | Wealth transfer and inheritance
 h034 | International law
 h035 | Book a meeting
 h036 | Furlan &amp; Associés firm – All rights reserved – <a href="/politique-de-confidentialite" style="color:#428c9e">Privacy policy</a> – <a href="/cgu" style="color:#428c9e">Terms of use</a> – <a href="mailto:contact@furlan-associes.com" style="color:#428c9e">contact@furlan-associes.com</a> – <a href="tel:0428870161" style="color:#428c9e">04 28 87 01 61</a>
-h037 | We use cookies to ensure that we give you the best experience on our website. If you continue to use this site, we will assume that you are happy with it.
 h080 | Law firm<br/>specialising in family law in Milan
 h081 | Learn more
 h082 | F&amp;A supports you through your legal steps
@@ -230,7 +229,6 @@ t016 | Home – Furlan & Associés
 t017 | Main menu
 t018 | Close the menu
 t020 | Expand
-t039 | Close
 t040 | Book an appointment with Attorney FURLAN
 t041 | Attorney Abramo FURLAN holds a Master 2 in civil and notarial law as well as a University Diploma (DU) in Family in Europe.
 t042 | A family law lawyer, Attorney FURLAN was sworn in in December 2018.

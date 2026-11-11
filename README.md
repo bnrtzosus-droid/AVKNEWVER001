@@ -21,10 +21,10 @@ Site statique multi-pages (HTML / CSS / JS, sans dépendance), avec de vraies ad
 
 Les fichiers `.html` à la racine sont **générés** : ne les modifiez pas à la main.
 
-- `src/partials/` : en-tête, pied de page, bandeau cookies (partagés par toutes les pages)
+- `src/partials/` : en-tête et pied de page (partagés par toutes les pages)
 - `src/pages/` : contenu de chaque page
 - `src/style.css` → `assets/css/style.css`
-- `assets/js/site.js` : menu mobile, fiches des avocats, carrousel d'avis, cookies
+- `assets/js/site.js` : menu mobile, fiches des avocats, carrousel d'avis
 - `assets/js/bios.js` : biographies des avocats
 
 ```bash

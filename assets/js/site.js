@@ -264,13 +264,4 @@
       document.documentElement.classList.remove("leaving", "slow");
     });
   })();
-
-  /* ---------- cookie notice ---------- */
-  var accept = function () {
-    document.documentElement.setAttribute("data-ck", "1");
-    try { localStorage.setItem("pa-cookie", "1"); } catch (e) {}
-  };
-  var ok = $("#cookie-ok"), x = $("#cookie-x");
-  if (ok) ok.addEventListener("click", accept);
-  if (x) x.addEventListener("click", accept);
 })();
