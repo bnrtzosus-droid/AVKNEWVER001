@@ -302,6 +302,7 @@ t314 | Terms of use of the website furlan-associes.com.
 t317 | Page not found – Furlan & Associés
 t318 | This page cannot be found.
 u.close | Close
+u.langtitle | Site language
 u.lang | Language
 u.nextmonth | Next month
 u.pickday | First choose an available day (Monday to Friday).

@@ -135,17 +135,21 @@ LANG_NAMES = [('en', 'English', 'gb'), ('de', 'Deutsch', 'de'), ('fr', 'Françai
               ('fi', 'Suomi', 'fi'), ('sv', 'Svenska', 'se'), ('it', 'Italiano', 'it')]
 
 
+CHECK = '<svg class="ck" width="18" height="14" viewBox="0 0 18 14" aria-hidden="true"><path d="M1.5 7.5l4.5 4.5L16.5 1.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+
+
 def langsw(kind, lang, url):
-    """Language selector: a dropdown in the top bar, a plain list in the mobile menu.
+    """Language selector: a dropdown in the top bar, a titled list (flag, name, code, check) in the mobile menu.
     Every option is a real link to the same page in the other language."""
     items = ''.join(
-        '<li role="presentation"><a role="option" href="%s" hreflang="%s" lang="%s" data-lang="%s"%s><img class="flag" src="/assets/img/flags/%s.svg" alt="" width="22" height="22"><span>%s</span></a></li>'
-        % (lurl(c, url), c, c, c, ' class="on" aria-selected="true"' if c == lang else ' aria-selected="false"', f, n) for c, n, f in LANG_NAMES)
+        '<li role="presentation"><a role="option" href="%s" hreflang="%s" lang="%s" data-lang="%s"%s><img class="flag" src="/assets/img/flags/%s.svg" alt="" width="28" height="28"><span class="nm">%s</span><span class="cd">%s</span>%s</a></li>'
+        % (lurl(c, url), c, c, c, ' class="on" aria-selected="true"' if c == lang else ' aria-selected="false"', f, n, c.upper(), CHECK) for c, n, f in LANG_NAMES)
     flag = dict((c, f) for c, n, f in LANG_NAMES)[lang]
-    return ('<div class="langsw %s" translate="no"><button type="button" class="lang-cur" aria-haspopup="listbox" aria-expanded="false" '
+    head = ('<div class="lang-title" data-i18n="u.langtitle">Langue du site</div><div class="lang-sub" translate="no">Select your language</div>' if kind == 'mob' else '')
+    return ('<div class="langsw %s" translate="no">%s<button type="button" class="lang-cur" aria-haspopup="listbox" aria-expanded="false" '
             'aria-label="Langue" data-i18n-attr="aria-label:u.lang"><img class="flag" src="/assets/img/flags/%s.svg" alt="" width="22" height="22">'
             '<span class="lc">%s</span><svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>'
-            '<ul class="lang-list" role="listbox" aria-label="Langue" data-i18n-attr="aria-label:u.lang">%s</ul></div>' % (kind, flag, lang.upper(), items))
+            '<ul class="lang-list" role="listbox" aria-label="Langue" data-i18n-attr="aria-label:u.lang">%s</ul></div>' % (kind, head, flag, lang.upper(), items))
 
 
 header, footer, cookie = i18n.tag(header, 'header'), i18n.tag(footer, 'footer'), i18n.tag(cookie, 'cookie')
