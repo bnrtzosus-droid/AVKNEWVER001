@@ -5,17 +5,23 @@ a{color:#428c9e;text-decoration:none}a:hover{color:#2f6c7b}*{box-sizing:border-b
 button{transition:background .2s,color .2s}a,.nl{transition:color .2s}
 /* ---------- motion ---------- */
 @view-transition{navigation:auto}
-::view-transition-old(root),::view-transition-new(root){mix-blend-mode:normal;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
-::view-transition-old(root){animation:vt-out .22s ease both}
-::view-transition-new(root){animation:vt-in .35s both}
-@keyframes vt-out{to{opacity:0}}
+/* the old page stays fully visible until the new one is completely drawn, then the new one is revealed over it:
+   no dip to white, no half-transparent mix of two pages */
+::view-transition-old(root){animation:none}
+::view-transition-new(root){animation:vt-in .22s ease both}
 @keyframes vt-in{from{opacity:0}}
-@media(min-width:981px){#topfix{view-transition-name:site-header}}
-::view-transition-group(site-header){animation-duration:0s}
+/* what is identical on every page (top bar, burger, logo, cookie notice) never moves nor fades */
+@media(min-width:981px){#topfix{view-transition-name:vt-header}}
+@media(max-width:980px){#hbar{view-transition-name:vt-hbar}#burger{view-transition-name:vt-burger}.usr{view-transition-name:vt-usr}}
+.ckbar{view-transition-name:vt-cookie}
+::view-transition-group(vt-header),::view-transition-group(vt-hbar),::view-transition-group(vt-burger),::view-transition-group(vt-usr),::view-transition-group(vt-cookie){animation-duration:0s}
+::view-transition-old(vt-header),::view-transition-old(vt-hbar),::view-transition-old(vt-burger),::view-transition-old(vt-usr),::view-transition-old(vt-cookie){display:none}
+::view-transition-new(vt-header),::view-transition-new(vt-hbar),::view-transition-new(vt-burger),::view-transition-new(vt-usr),::view-transition-new(vt-cookie){animation:none}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateX(-100%)}to{transform:none}}
-@keyframes ckUp{from{opacity:0;transform:translateY(100%)}to{opacity:1;transform:none}}
-.ckbar{animation:ckUp .6s cubic-bezier(.2,.7,.2,1) .8s both}
+/* while the next page is being prepared the current page stays as it is */
+html.leaving{cursor:progress}
+html.slow::after{content:"";position:fixed;left:0;top:0;right:0;height:3px;background:#428c9e;z-index:300}
 a[style*="border-radius:100px"],button[style*="border-radius:100px"]{transition:background .25s ease,color .25s ease,border-color .25s ease}
 /* width/height attributes only reserve space; CSS decides the displayed size */
 main img{height:auto}

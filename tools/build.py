@@ -174,10 +174,15 @@ def dims(src):
 
 
 def lazy(s):
+    """Intrinsic size on every image; the first 6 images of a page (what is on screen on arrival) load eagerly so they
+    are painted with the page, the others are lazy and fetched right after the page has loaded (see site.js)."""
+    count = [0]
+
     def one(m):
         tag = m.group(0)
-        if 'loading=' not in tag:
-            tag = tag.replace('<img ', '<img loading="lazy" decoding="async" ', 1)
+        count[0] += 1
+        if 'loading=' not in tag and count[0] > 6:
+            tag = tag.replace('<img ', '<img loading="lazy" ', 1)
         src = re.search(r'src="([^"]+)"', tag)
         d = dims(src.group(1)) if src else None
         if d and ' width=' not in tag:
@@ -225,6 +230,7 @@ def layout(lang, title, desc, url, nav, scripts, body, robots=None, notfound=Fal
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="expect" href="#contenu" blocking="render">
 {preload}<link rel="stylesheet" href="/assets/css/style.css?v={CSS_V}">
 <script>{LANG_BOOT}</script>
 <script>window.PA_UI={ui};document.documentElement.classList.add("js");try{{if(localStorage.getItem("pa-cookie")==="1")document.documentElement.setAttribute("data-ck","1")}}catch(e){{}}</script>

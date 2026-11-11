@@ -206,6 +206,65 @@
   if (document.readyState === "complete") setTimeout(warm, 300);
   else window.addEventListener("load", function () { setTimeout(warm, 300); });
 
+  /* ---------- page change: the next page is fetched and its pictures decoded BEFORE it opens ----------
+     The current page stays untouched until everything is ready, so the new page appears complete:
+     no flash, no blink, no photo popping in. */
+  (function () {
+    var ready = {}, going = false;
+    function prepare(u) {
+      var key = u.pathname + u.search;
+      if (ready[key]) return ready[key];
+      ready[key] = fetch(u.href, { credentials: "same-origin" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (html) {
+        if (!html) return;
+        var re = /\/assets\/img\/[A-Za-z0-9_.\-]+\.(?:webp|png|jpg)(?:\?v=[a-f0-9]+)?/g, m, seen = {}, urls = [];
+        while ((m = re.exec(html)) && urls.length < 14) {
+          if (!seen[m[0]] && !/favicon|logo/.test(m[0])) { seen[m[0]] = 1; urls.push(m[0]); }
+        }
+        return Promise.all(urls.map(function (src) {
+          return new Promise(function (res) {
+            var i = new Image();
+            i.src = src;
+            (i.decode ? i.decode() : Promise.resolve()).then(res, res);
+          });
+        }));
+      }).catch(function () {});
+      return ready[key];
+    }
+    function target(a, e) {
+      if (!a || (a.target && a.target !== "_self") || a.hasAttribute("download") || a.hasAttribute("data-bio")) return null;
+      if (e && (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)) return null;
+      var u;
+      try { u = new URL(a.href, location.href); } catch (x) { return null; }
+      if (u.origin !== location.origin || /^\/(assets|locales)\//.test(u.pathname)) return null;
+      if (u.pathname === location.pathname && u.search === location.search) return null;   // same page (#section)
+      return u;
+    }
+    function warm(e) {
+      var u = target(e.target.closest ? e.target.closest("a[href]") : null, null);
+      if (u) prepare(u);
+    }
+    document.addEventListener("pointerover", function (e) { if (e.pointerType === "mouse") warm(e); }, { passive: true });
+    document.addEventListener("touchstart", warm, { passive: true });
+    document.addEventListener("click", function (e) {
+      if (e.defaultPrevented || going) return;
+      var u = target(e.target.closest ? e.target.closest("a[href]") : null, e);
+      if (!u) return;
+      e.preventDefault();
+      going = true;
+      var root = document.documentElement;
+      root.classList.add("leaving");
+      var bar = setTimeout(function () { root.classList.add("slow"); }, 700);
+      Promise.race([prepare(u), new Promise(function (r) { setTimeout(r, 3500); })]).then(function () {
+        clearTimeout(bar);
+        location.assign(u.href);
+      });
+    });
+    window.addEventListener("pageshow", function () {
+      going = false;
+      document.documentElement.classList.remove("leaving", "slow");
+    });
+  })();
+
   /* ---------- cookie notice ---------- */
   var accept = function () {
     document.documentElement.setAttribute("data-ck", "1");
