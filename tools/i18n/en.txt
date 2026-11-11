@@ -267,8 +267,8 @@ t072 | Management of joint ownership.
 t073 | Book an appointment with Attorney GUADAGNO
 t074 | Book an appointment with Attorney CAVALLERO
 t075 | Holding a Master II in the law of persons and family obtained at the University of Pavia, Attorney Semplicio CAVALLERO joined the Lawyers' School in January 2020.
-t076 | Her entire curriculum was oriented towards family law; she trained in particular with the family chamber of the Court of Appeal of Milan, before being sworn in in December 2021.
-t077 | She practises at the Milan Bar and joined the firm in July 2026.
+t076 | His entire curriculum was oriented towards family law; he trained in particular with the family chamber of the Court of Appeal of Milan, before being sworn in in December 2021.
+t077 | He practises at the Milan Bar and joined the firm in July 2026.
 t078 | Attorney Semplicio CAVALLERO practises mainly in the following areas:
 t126 | Previous
 t127 | Next
