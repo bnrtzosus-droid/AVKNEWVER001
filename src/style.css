@@ -18,9 +18,6 @@ button{transition:background .2s,color .2s}a,.nl{transition:color .2s}
 ::view-transition-new(vt-header),::view-transition-new(vt-hbar),::view-transition-new(vt-burger),::view-transition-new(vt-usr){animation:none}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{transform:translateX(-100%)}to{transform:none}}
-/* while the next page is being prepared the current page stays as it is */
-html.leaving{cursor:progress}
-html.slow::after{content:"";position:fixed;left:0;top:0;right:0;height:3px;background:#428c9e;z-index:300}
 a[style*="border-radius:100px"],button[style*="border-radius:100px"]{transition:background .25s ease,color .25s ease,border-color .25s ease}
 /* width/height attributes only reserve space; CSS decides the displayed size */
 main img{height:auto}

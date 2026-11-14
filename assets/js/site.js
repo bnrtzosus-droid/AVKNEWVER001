@@ -237,11 +237,11 @@
   if (document.readyState === "complete") setTimeout(warm, 300);
   else window.addEventListener("load", function () { setTimeout(warm, 300); });
 
-  /* ---------- page change: the next page is fetched and its pictures decoded BEFORE it opens ----------
-     The current page stays untouched until everything is ready, so the new page appears complete:
-     no flash, no blink, no photo popping in. */
+  /* ---------- the next page is warmed up while the pointer is over a link / on touch ----------
+     Its pictures are already in the cache when the click comes. The navigation itself is the browser's own
+     (its normal loading bar, nothing added by the site). */
   (function () {
-    var ready = {}, going = false;
+    var ready = {};
     function prepare(u) {
       var key = u.pathname + u.search;
       if (ready[key]) return ready[key];
@@ -276,23 +276,5 @@
     }
     document.addEventListener("pointerover", function (e) { if (e.pointerType === "mouse") warm(e); }, { passive: true });
     document.addEventListener("touchstart", warm, { passive: true });
-    document.addEventListener("click", function (e) {
-      if (e.defaultPrevented || going) return;
-      var u = target(e.target.closest ? e.target.closest("a[href]") : null, e);
-      if (!u) return;
-      e.preventDefault();
-      going = true;
-      var root = document.documentElement;
-      root.classList.add("leaving");
-      var bar = setTimeout(function () { root.classList.add("slow"); }, 700);
-      Promise.race([prepare(u), new Promise(function (r) { setTimeout(r, 3500); })]).then(function () {
-        clearTimeout(bar);
-        location.assign(u.href);
-      });
-    });
-    window.addEventListener("pageshow", function () {
-      going = false;
-      document.documentElement.classList.remove("leaving", "slow");
-    });
   })();
 })();
